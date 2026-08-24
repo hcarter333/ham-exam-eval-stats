@@ -1,0 +1,652 @@
+[
+  {
+    "number": 1,
+    "cluster": "E0A",
+    "id": "595",
+    "header": "E0A06 (id 595)",
+    "question": "Why are there separate electric (E) and magnetic (H) MPE limits at frequencies below 300 MHz ?",
+    "choices": [
+      "A. The body reacts to electromagnetic radiation from both the E and H fields",
+      "B. Ground reflections and scattering cause the field strength to vary with location",
+      "C. E field and H field radiation intensity peaks can occur at different locations",
+      "D. All these choices are correct"
+    ]
+  },
+  {
+    "number": 2,
+    "cluster": "E1A",
+    "id": "2",
+    "header": "E1A02 (id 2)",
+    "question": "When using a transceiver that displays the carrier frequency of phone signals, which of the following displayed frequencies represents the lowest frequency at which a properly adjusted LSB emission will be totally within the band?",
+    "choices": [
+      "A. The exact lower band edge",
+      "B. 300 Hz above the lower band edge",
+      "C. 1 kHz above the lower band edge",
+      "D. 3 kHz above the lower band edge"
+    ]
+  },
+  {
+    "number": 3,
+    "cluster": "E1B",
+    "id": "18",
+    "header": "E1B07 (id 18)",
+    "question": "To what type of regulations does PRB -1 apply?",
+    "choices": [
+      "A. Homeowners associations",
+      "B. FAA tower height limits",
+      "C. State and local zoning",
+      "D. Use of wireless devices in vehicles"
+    ]
+  },
+  {
+    "number": 4,
+    "cluster": "E1C",
+    "id": "29",
+    "header": "E1C07 (id 29)",
+    "question": "What notifications must be given bef ore transmitting on the 630 - or 2200- meter bands?",
+    "choices": [
+      "A. A special endorsement must be requested from the FCC",
+      "B. An environmental impact statement must be filed with the Department of the Interior",
+      "C. Operators must inform the FAA of their intent to operate, giving their call sign and distance to the nearest runway",
+      "D. Operators must inform the Utilities Technology Council (UTC) of their call sign and coordinates of the station"
+    ]
+  },
+  {
+    "number": 5,
+    "cluster": "E1D",
+    "id": "46",
+    "header": "E1D12 (id 46)",
+    "question": "Which of the following amateur stations may transmit one- way communications?",
+    "choices": [
+      "A. A space station, beacon station, or telecommand station",
+      "B. A local repeater or linked repeater station",
+      "C. A message forwarding station or automatically controlled digital station",
+      "D. All these choices are correct"
+    ]
+  },
+  {
+    "number": 6,
+    "cluster": "E1E",
+    "id": "48",
+    "header": "E1E02 (id 48)",
+    "question": "Who is tasked by Part 97 with maintaining the pools of q uestions for all US amateur license examinations?",
+    "choices": [
+      "A. The VEs",
+      "B. The FCC",
+      "C. The VECs",
+      "D. The ARRL"
+    ]
+  },
+  {
+    "number": 7,
+    "cluster": "E1F",
+    "id": "64",
+    "header": "E1F07 (id 64)",
+    "question": "When may an amateur station send a message to a business?",
+    "choices": [
+      "A. When the pecuniary interest of the amateur or his or her employer is less than $25",
+      "B. When the pecuniary interest of the amateur or his or her empl oyer is less than $50",
+      "C. At no time",
+      "D. When neither the amateur nor their employer has a pecuniary interest in the communications"
+    ]
+  },
+  {
+    "number": 8,
+    "cluster": "E2A",
+    "id": "78",
+    "header": "E2A10 (id 78)",
+    "question": "What type of satellite appears to stay in one position in the sky?",
+    "choices": [
+      "A. HEO",
+      "B. Geostationary",
+      "C. Geomagnetic",
+      "D. LEO"
+    ]
+  },
+  {
+    "number": 9,
+    "cluster": "E2B",
+    "id": "84",
+    "header": "E2B03 (id 84)",
+    "question": "How is an interlaced scanning pattern generated in a fast -scan (NTSC) television system?",
+    "choices": [
+      "A. By scanning two fie lds simultaneously",
+      "B. By scanning each field from bottom -to-top",
+      "C. By scanning lines from left -to-right in one field and right -to-left in the next",
+      "D. By scanning odd -numbered lines in one field and even -numbered lines in the next"
+    ]
+  },
+  {
+    "number": 10,
+    "cluster": "E2C",
+    "id": "105",
+    "header": "E2C12 (id 105)",
+    "question": "What indicates the delay between a control operator action and the corres ponding change in the transmitted signal?",
+    "choices": [
+      "A. Jitter",
+      "B. Hang time",
+      "C. Latency",
+      "D. Anti-VOX"
+    ]
+  },
+  {
+    "number": 11,
+    "cluster": "E2D",
+    "id": "108",
+    "header": "E2D03 (id 108)",
+    "question": "Which of the following digital modes is designed for EME communications?",
+    "choices": [
+      "A. MSK144",
+      "B. PACTOR III",
+      "C. WSPR",
+      "D. Q65"
+    ]
+  },
+  {
+    "number": 12,
+    "cluster": "E2E",
+    "id": "121",
+    "header": "E2E05 (id 121)",
+    "question": "Which of these digital modes does not support keyboard -to-keyboard operation?",
+    "choices": [
+      "A. WSPR",
+      "B. RTTY",
+      "C. PSK31",
+      "D. MFSK 16"
+    ]
+  },
+  {
+    "number": 13,
+    "cluster": "E3A",
+    "id": "140",
+    "header": "E3A11 (id 140)",
+    "question": "What is a typical range for tropospheric duct propagation of microwave signals?",
+    "choices": [
+      "A. 10 miles to 50 miles",
+      "B. 100 miles to 300 miles",
+      "C. 1,200 miles",
+      "D. 2,500 miles"
+    ]
+  },
+  {
+    "number": 14,
+    "cluster": "E3B",
+    "id": "149",
+    "header": "E3B06 (id 149)",
+    "question": "On w hich of the following amateur bands is long -path propagation most frequent ?",
+    "choices": [
+      "A. 160 meters and 80 meters",
+      "B. 40 meters and 20 meters",
+      "C. 10 meters and 6 meters",
+      "D. 6 meters and 2 meters"
+    ]
+  },
+  {
+    "number": 15,
+    "cluster": "E3C",
+    "id": "165",
+    "header": "E3C09 (id 165)",
+    "question": "What type of data is reported by amateur radio propagation reporting networks?",
+    "choices": [
+      "A. Solar flux",
+      "B. Electric field intensity",
+      "C. Magnetic declination",
+      "D. Digital- mode and CW signals"
+    ]
+  },
+  {
+    "number": 16,
+    "cluster": "E4A",
+    "id": "179",
+    "header": "E4A11 (id 179)",
+    "question": "Which of the following can be measured with an anten na analyzer?",
+    "choices": [
+      "A. Velocity factor",
+      "B. Cable length",
+      "C. Resonant frequency of a tuned circuit",
+      "D. All these choices are correct"
+    ]
+  },
+  {
+    "number": 17,
+    "cluster": "E4B",
+    "id": "189",
+    "header": "E4B10 (id 189)",
+    "question": "Which of the following methods measures intermodulation distortion in an SSB transmitter?",
+    "choices": [
+      "A. Modulate the transmitter using two RF signals having non -harmonically related frequencies and observe the RF output with a spectrum analyzer",
+      "B. Modulate the transmitter using two AF signals having non -harmonically related frequencies and observe the RF output with a spectrum analyzer",
+      "C. Modulate the transmitter using two AF signals having harmonically related frequencies and observe the RF output with a peak reading wattmeter",
+      "D. Modulate the transmitter using two RF signals having harmonically related frequencies and observe the RF output with a logic analyzer"
+    ]
+  },
+  {
+    "number": 18,
+    "cluster": "E4C",
+    "id": "199",
+    "header": "E4C09 (id 199)",
+    "question": "Which of the following choices is a good reason for selecting a high IF for a superheterodyne HF or VHF communications receiver?",
+    "choices": [
+      "A. Fewer components in th e receiver",
+      "B. Reduced drift",
+      "C. Easier for front -end circuitry to eliminate image responses",
+      "D. Improved receiver noise figure"
+    ]
+  },
+  {
+    "number": 19,
+    "cluster": "E4D",
+    "id": "217",
+    "header": "E4D13 (id 217)",
+    "question": "What is the received signal level with a transmit power of 10 W (+40 dBm), a transmit antenna gain of 6 dBi, a receive antenna gain of 3 dBi, and a path loss of 100 dB?",
+    "choices": [
+      "A. -51 dBm",
+      "B. -54 dBm",
+      "C. -57 dBm",
+      "D. -60 dBm"
+    ]
+  },
+  {
+    "number": 20,
+    "cluster": "E4E",
+    "id": "219",
+    "header": "E4E01 (id 219)",
+    "question": "What problem can occur when using an automatic notch filter (ANF) to remove interfering carriers while receiving CW signals?",
+    "choices": [
+      "A. Removal of the CW signal as well as the interfering carrier",
+      "B. Any nearby signal passing through the DSP system will overwhelm the desired signal",
+      "C. Excessive ringing",
+      "D. All these choices are correct"
+    ]
+  },
+  {
+    "number": 21,
+    "cluster": "E5A",
+    "id": "240",
+    "header": "E5A08 (id 240)",
+    "question": "What is the phase relationship between the current through and the voltage across a series resonant circuit at resonance?",
+    "choices": [
+      "A. The voltage leads the current by 90 degrees",
+      "B. The current leads the voltage by 90 degrees",
+      "C. The voltage and current are in phase",
+      "D. The voltage and current are 180 degrees out of phase"
+    ]
+  },
+  {
+    "number": 22,
+    "cluster": "E5B",
+    "id": "257",
+    "header": "E5B12 (id 257)",
+    "question": "What is admittance?",
+    "choices": [
+      "A. The inverse of impedance",
+      "B. The term for the gain of a field effect transistor",
+      "C. The inverse of reactance",
+      "D. The term for the on -impedance of a field effect transistor"
+    ]
+  },
+  {
+    "number": 23,
+    "cluster": "E5C",
+    "id": "264",
+    "header": "E5C07 (id 264)",
+    "question": "Where is the impedance of a pure resistance plotted on rectangular coo rdinates?",
+    "choices": [
+      "A. On the vertical axis",
+      "B. On a line through the origin, slanted at 45 degrees",
+      "C. On a horizontal line, offset vertically above the horizontal axis",
+      "D. On the horizontal axis"
+    ]
+  },
+  {
+    "number": 24,
+    "cluster": "E5D",
+    "id": "277",
+    "header": "E5D08 (id 277)",
+    "question": "What is the primary cause of loss in film capacitors at RF?",
+    "choices": [
+      "A. Inductance",
+      "B. Dielectric loss",
+      "C. Self- discharge",
+      "D. Skin effect"
+    ]
+  },
+  {
+    "number": 25,
+    "cluster": "E6A",
+    "id": "289",
+    "header": "E6A08 (id 289)",
+    "question": "What is the term for the frequency at which the grounded -base current gain of a bipolar junction transistor has decreased to 0.7 of the gain obtainable at 1 kHz?",
+    "choices": [
+      "A. Corner frequency",
+      "B. Alpha rejection frequency",
+      "C. Beta cutoff frequency",
+      "D. Alpha c utoff frequency"
+    ]
+  },
+  {
+    "number": 26,
+    "cluster": "E6B",
+    "id": "294",
+    "header": "E6B01 (id 294)",
+    "question": "What is the most useful characteristic of a Zener diode?",
+    "choices": [
+      "A. A constant current drop under conditions of varying voltage",
+      "B. A constant voltage drop under conditions of varying current",
+      "C. A negative resistance region",
+      "D. An internal capacitance that varies with the applied voltage"
+    ]
+  },
+  {
+    "number": 27,
+    "cluster": "E6C",
+    "id": "314",
+    "header": "E6C10 (id 314)",
+    "question": "In Figure E6 -3, which is the schematic symbol for a NOR gate?",
+    "choices": [
+      "A. 1",
+      "B. 2",
+      "C. 3",
+      "D. 4"
+    ]
+  },
+  {
+    "number": 28,
+    "cluster": "E6D",
+    "id": "316",
+    "header": "E6D01 (id 316)",
+    "question": "What is piezoelectricity?",
+    "choices": [
+      "A. The ability of materials to generate electromagnetic waves of a certain frequency when voltage is applied",
+      "B. A characteristic of materials that have an index of refraction which depends on the polarization of the electromagnetic wave passing through it",
+      "C. A characteristic of materials that generate a voltage when stressed and that flex when a voltage is applied",
+      "D. The ability of materials to generate voltage when an electromagnetic wave of a certain frequency is applied"
+    ]
+  },
+  {
+    "number": 29,
+    "cluster": "E6E",
+    "id": "328",
+    "header": "E6E01 (id 328)",
+    "question": "Why is gallium arsenide (GaAs) useful for semiconductor devices operating at UHF and higher frequ encies?",
+    "choices": [
+      "A. Higher noise figures",
+      "B. Higher electron mobility",
+      "C. Lower junction voltage drop",
+      "D. Lower transconductance"
+    ]
+  },
+  {
+    "number": 30,
+    "cluster": "E6F",
+    "id": "343",
+    "header": "E6F04 (id 343)",
+    "question": "What is the photovoltaic effect?",
+    "choices": [
+      "A. The conversion of voltage to current when exposed to light",
+      "B. The conversion of light to electrical energy",
+      "C. The effect that causes a photodiode to emit light when a voltage is applied",
+      "D. The effect that causes a phototransistor’s beta to decrease when exposed to light"
+    ]
+  },
+  {
+    "number": 31,
+    "cluster": "E7A",
+    "id": "361",
+    "header": "E7A11 (id 361)",
+    "question": "What does “positive logic ” mean in reference to logic devices?",
+    "choices": [
+      "A. The logic devices have high noise immunity",
+      "B. High voltage represents a 1, low voltage a 0",
+      "C. The logic circuit is in the “true” condition",
+      "D. 1s and 0s are defined as different positive voltage levels"
+    ]
+  },
+  {
+    "number": 32,
+    "cluster": "E7B",
+    "id": "371",
+    "header": "E7B10 (id 371)",
+    "question": "In Figure E7 -1, what is the purpose of R1 and R2?",
+    "choices": [
+      "A. Load resistors",
+      "B. Voltage divider bias",
+      "C. Self bias",
+      "D. Feedback"
+    ]
+  },
+  {
+    "number": 33,
+    "cluster": "E7C",
+    "id": "375",
+    "header": "E7C02 (id 375)",
+    "question": "What is the frequency response of a T -network with series capacitors and a shunt inductor?",
+    "choices": [
+      "A. Low-pass",
+      "B. High-pass",
+      "C. Band-pass",
+      "D. Notch"
+    ]
+  },
+  {
+    "number": 34,
+    "cluster": "E7D",
+    "id": "394",
+    "header": "E7D10 (id 394)",
+    "question": "Why is a switching type power supply less expensive and l ighter than a n equivalent linear power supply?",
+    "choices": [
+      "A. The inverter design does not require an output filter circuit",
+      "B. The control circuitry uses less current, therefore smaller heat sinks are required",
+      "C. The high frequency inverter design uses much smaller tr ansformers and filter components for an equivalent power output",
+      "D. It recover s power from the unused portion of the AC cycle , thus using fewer components"
+    ]
+  },
+  {
+    "number": 35,
+    "cluster": "E7E",
+    "id": "410",
+    "header": "E7E11 (id 410)",
+    "question": "Which type of detector is used for demodulating SSB signals?",
+    "choices": [
+      "A. Discriminator",
+      "B. Phase detector",
+      "C. Product detector",
+      "D. Phase comparator"
+    ]
+  },
+  {
+    "number": 36,
+    "cluster": "E7F",
+    "id": "423",
+    "header": "E7F13 (id 423)",
+    "question": "What is the function of taps in a digital signal processing filter?",
+    "choices": [
+      "A. To reduce excess signal pressure levels",
+      "B. Provide access for debugging software",
+      "C. Select the point at which baseband signals are generated",
+      "D. Provide incremental signal delays for filter algorithms"
+    ]
+  },
+  {
+    "number": 37,
+    "cluster": "E7G",
+    "id": "426",
+    "header": "E7G02 (id 426)",
+    "question": "What is the frequency response of the circuit in E7 -3 if a capacitor is added across the feedback resistor?",
+    "choices": [
+      "A. High- pass filter",
+      "B. Low-pass filter",
+      "C. Band -pass filter",
+      "D. Notch filter"
+    ]
+  },
+  {
+    "number": 38,
+    "cluster": "E7H",
+    "id": "440",
+    "header": "E7H04 (id 440)",
+    "question": "How is positive feedback supplied in a Colpitts oscillator?",
+    "choices": [
+      "A. Through a tapped coil",
+      "B. Through link coupli ng",
+      "C. Through a capacitive divider",
+      "D. Through a neutralizing capacitor"
+    ]
+  },
+  {
+    "number": 39,
+    "cluster": "E8A",
+    "id": "451",
+    "header": "E8A02 (id 451)",
+    "question": "Which of the following is a type of analog -to-digital conversion?",
+    "choices": [
+      "A. Successive approximation",
+      "B. Harmonic regeneration",
+      "C. Level shifting",
+      "D. Phase reversal"
+    ]
+  },
+  {
+    "number": 40,
+    "cluster": "E8B",
+    "id": "468",
+    "header": "E8B08 (id 468)",
+    "question": "What describes orthogonal frequency -division multiplexin g (OFDM) ?",
+    "choices": [
+      "A. A frequency modulation technique that uses non -harmonically related frequencies",
+      "B. A bandwidth compression technique using Fourier transforms",
+      "C. A digital mode for narrow -band, slow -speed transmissions",
+      "D. A digital modulation technique using s ubcarriers at frequencies chosen to avoid intersymbol interference"
+    ]
+  },
+  {
+    "number": 41,
+    "cluster": "E8C",
+    "id": "485",
+    "header": "E8C14 (id 485)",
+    "question": "What type of addresses do nodes have in a mesh network?",
+    "choices": [
+      "A. Email",
+      "B. Trust server",
+      "C. Internet Protocol (IP)",
+      "D. Talk group"
+    ]
+  },
+  {
+    "number": 42,
+    "cluster": "E8D",
+    "id": "489",
+    "header": "E8D03 (id 489)",
+    "question": "Which describes spread spectrum frequency hopping?",
+    "choices": [
+      "A. If interference is detected by the receiver , it will signal the transmitter to change frequencies",
+      "B. RF signals are clipped to generate a wide band of harmonics which provides redundancy to correct errors",
+      "C. A binary bit stream is used to shift the phase of an RF carrier very rapidly in a pseudorandom sequence",
+      "D. Rapidly varying the frequency of a transmitted signal according to a pseudorandom sequence"
+    ]
+  },
+  {
+    "number": 43,
+    "cluster": "E9A",
+    "id": "501",
+    "header": "E9A04 (id 501)",
+    "question": "Which of the following factors affect the feed point impedance of an antenna?",
+    "choices": [
+      "A. Transmission line length",
+      "B. Antenna height",
+      "C. The settings of an antenna tuner at the transmitter",
+      "D. The input power level"
+    ]
+  },
+  {
+    "number": 44,
+    "cluster": "E9B",
+    "id": "517",
+    "header": "E9B08 (id 517)",
+    "question": "What is the far field of an antenna?",
+    "choices": [
+      "A. The region of the ionosphere where radiated power is not refracted",
+      "B. The region where radiated power dissipates over a specified time period",
+      "C. The region where radiated field strengths are constant",
+      "D. The region where the shape of the radiation pattern no longer varies with distance"
+    ]
+  },
+  {
+    "number": 45,
+    "cluster": "E9C",
+    "id": "534",
+    "header": "E9C14 (id 534)",
+    "question": "How does the radiation pattern of a horizontally -polarized antenna mounted above a long slope compare with the same antenna mounted above flat ground?",
+    "choices": [
+      "A. The main lobe takeoff angle increases in the downhill direction",
+      "B. The main lobe takeoff angle decreases in the downhill direction",
+      "C. The horizontal beamwidth decreases in the downhill direction",
+      "D. The horizo ntal beamwidth increases in the uphill direction"
+    ]
+  },
+  {
+    "number": 46,
+    "cluster": "E9D",
+    "id": "539",
+    "header": "E9D06 (id 539)",
+    "question": "What happens to SWR bandwidth when one or more loading coils are used to resonate an electrically short antenna?",
+    "choices": [
+      "A. It is increased",
+      "B. It is decreased",
+      "C. It is unchanged if the loading coil is located at the feed point",
+      "D. It is unchanged if the loading coil is located at a voltage maximum point"
+    ]
+  },
+  {
+    "number": 47,
+    "cluster": "E9E",
+    "id": "552",
+    "header": "E9E07 (id 552)",
+    "question": "What parameter describes the interaction of a load and transmission line?",
+    "choices": [
+      "A. Characteristic impedance",
+      "B. Reflection coefficient",
+      "C. Velocity factor",
+      "D. Dielectric constant"
+    ]
+  },
+  {
+    "number": 48,
+    "cluster": "E9F",
+    "id": "566",
+    "header": "E9F11 (id 566)",
+    "question": "What impedance does a 1/8 -wavelength transmission line present to an RF generator when the line is open at the far end?",
+    "choices": [
+      "A. The same as the characteristic impedance of the line",
+      "B. An indu ctive reactance",
+      "C. A capacitive reactance",
+      "D. Infinite"
+    ]
+  },
+  {
+    "number": 49,
+    "cluster": "E9G",
+    "id": "574",
+    "header": "E9G07 (id 574)",
+    "question": "On the Smith chart shown in Figure E9 -3, what is the only straight line shown?",
+    "choices": [
+      "A. The reactance axis",
+      "B. The current axis",
+      "C. The voltage axis",
+      "D. The resistance a xis"
+    ]
+  },
+  {
+    "number": 50,
+    "cluster": "E9H",
+    "id": "585",
+    "header": "E9H07 (id 585)",
+    "question": "What is the function of a Beverage antenna’s termination resistor?",
+    "choices": [
+      "A. Increase the front- to-side ratio",
+      "B. Absorb signals from the reverse direction",
+      "C. Decrease SWR bandwidth",
+      "D. Eliminate harmonic reception"
+    ]
+  }
+]

@@ -1,0 +1,255 @@
+{
+ "answers": [
+  {
+   "id": "590",
+   "answer": "B"
+  },
+  {
+   "id": "8",
+   "answer": "B"
+  },
+  {
+   "id": "19",
+   "answer": "D"
+  },
+  {
+   "id": "27",
+   "answer": "A"
+  },
+  {
+   "id": "42",
+   "answer": "A"
+  },
+  {
+   "id": "55",
+   "answer": "A"
+  },
+  {
+   "id": "59",
+   "answer": "C"
+  },
+  {
+   "id": "72",
+   "answer": "B"
+  },
+  {
+   "id": "83",
+   "answer": "C"
+  },
+  {
+   "id": "98",
+   "answer": "B"
+  },
+  {
+   "id": "114",
+   "answer": "A"
+  },
+  {
+   "id": "117",
+   "answer": "B"
+  },
+  {
+   "id": "131",
+   "answer": "B"
+  },
+  {
+   "id": "150",
+   "answer": "C"
+  },
+  {
+   "id": "168",
+   "answer": "B"
+  },
+  {
+   "id": "173",
+   "answer": "D"
+  },
+  {
+   "id": "181",
+   "answer": "A"
+  },
+  {
+   "id": "201",
+   "answer": "D"
+  },
+  {
+   "id": "206",
+   "answer": "A"
+  },
+  {
+   "id": "227",
+   "answer": "C"
+  },
+  {
+   "id": "243",
+   "answer": "C"
+  },
+  {
+   "id": "248",
+   "answer": "B"
+  },
+  {
+   "id": "263",
+   "answer": "B"
+  },
+  {
+   "id": "272",
+   "answer": "C"
+  },
+  {
+   "id": "286",
+   "answer": "C"
+  },
+  {
+   "id": "298",
+   "answer": "D"
+  },
+  {
+   "id": "307",
+   "answer": "A"
+  },
+  {
+   "id": "322",
+   "answer": "D"
+  },
+  {
+   "id": "338",
+   "answer": "D"
+  },
+  {
+   "id": "341",
+   "answer": "A"
+  },
+  {
+   "id": "351",
+   "answer": "C"
+  },
+  {
+   "id": "368",
+   "answer": "D"
+  },
+  {
+   "id": "384",
+   "answer": "C"
+  },
+  {
+   "id": "397",
+   "answer": "C"
+  },
+  {
+   "id": "409",
+   "answer": "A"
+  },
+  {
+   "id": "421",
+   "answer": "B"
+  },
+  {
+   "id": "432",
+   "answer": "D"
+  },
+  {
+   "id": "438",
+   "answer": "C"
+  },
+  {
+   "id": "457",
+   "answer": "C"
+  },
+  {
+   "id": "466",
+   "answer": "A"
+  },
+  {
+   "id": "483",
+   "answer": "C"
+  },
+  {
+   "id": "494",
+   "answer": "D"
+  },
+  {
+   "id": "508",
+   "answer": "C"
+  },
+  {
+   "id": "511",
+   "answer": "C"
+  },
+  {
+   "id": "530",
+   "answer": "B"
+  },
+  {
+   "id": "602",
+   "answer": "D"
+  },
+  {
+   "id": "555",
+   "answer": "A"
+  },
+  {
+   "id": "561",
+   "answer": "C"
+  },
+  {
+   "id": "573",
+   "answer": "B"
+  },
+  {
+   "id": "583",
+   "answer": "A"
+  }
+ ],
+ "parse": "json",
+ "missing_ids": [],
+ "extra_ids": [],
+ "stop_reason": "end_turn",
+ "usage": {
+  "input": 7274,
+  "output": 1773,
+  "cache_read": 1634,
+  "cache_create": 0
+ },
+ "trajectory_id": "cover_jobs_Test10_r3",
+ "job": {
+  "model": "claude-sonnet-4-6",
+  "temperature": null,
+  "thinking": false,
+  "effort": null,
+  "figures": [
+   "figures/E5_E6.png",
+   "figures/E7_E9-1.png",
+   "figures/E9-2_E9-3.png"
+  ],
+  "prompt": null
+ },
+ "score": {
+  "right": 47,
+  "wrong": 3,
+  "unanswered": 0,
+  "total": 50,
+  "pct": 94.0,
+  "passed": true
+ },
+ "misses": [
+  [
+   "27",
+   "E1",
+   "A",
+   "B"
+  ],
+  [
+   "42",
+   "E1",
+   "A",
+   "D"
+  ],
+  [
+   "511",
+   "E9",
+   "C",
+   "D"
+  ]
+ ]
+}

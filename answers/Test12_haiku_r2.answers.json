@@ -1,0 +1,273 @@
+{
+ "answers": [
+  {
+   "id": "597",
+   "answer": "C"
+  },
+  {
+   "id": "1",
+   "answer": "D"
+  },
+  {
+   "id": "12",
+   "answer": "D"
+  },
+  {
+   "id": "25",
+   "answer": "B"
+  },
+  {
+   "id": "44",
+   "answer": "B"
+  },
+  {
+   "id": "51",
+   "answer": "A"
+  },
+  {
+   "id": "68",
+   "answer": "D"
+  },
+  {
+   "id": "77",
+   "answer": "A"
+  },
+  {
+   "id": "91",
+   "answer": "B"
+  },
+  {
+   "id": "95",
+   "answer": "C"
+  },
+  {
+   "id": "113",
+   "answer": "C"
+  },
+  {
+   "id": "120",
+   "answer": "D"
+  },
+  {
+   "id": "135",
+   "answer": "B"
+  },
+  {
+   "id": "144",
+   "answer": "A"
+  },
+  {
+   "id": "166",
+   "answer": "B"
+  },
+  {
+   "id": "172",
+   "answer": "A"
+  },
+  {
+   "id": "190",
+   "answer": "D"
+  },
+  {
+   "id": "200",
+   "answer": "C"
+  },
+  {
+   "id": "211",
+   "answer": "A"
+  },
+  {
+   "id": "223",
+   "answer": "B"
+  },
+  {
+   "id": "245",
+   "answer": "C"
+  },
+  {
+   "id": "255",
+   "answer": "A"
+  },
+  {
+   "id": "268",
+   "answer": "B"
+  },
+  {
+   "id": "280",
+   "answer": "A"
+  },
+  {
+   "id": "285",
+   "answer": "C"
+  },
+  {
+   "id": "303",
+   "answer": "C"
+  },
+  {
+   "id": "305",
+   "answer": "A"
+  },
+  {
+   "id": "320",
+   "answer": "C"
+  },
+  {
+   "id": "334",
+   "answer": "D"
+  },
+  {
+   "id": "347",
+   "answer": "C"
+  },
+  {
+   "id": "360",
+   "answer": "B"
+  },
+  {
+   "id": "365",
+   "answer": "A"
+  },
+  {
+   "id": "374",
+   "answer": "D"
+  },
+  {
+   "id": "393",
+   "answer": "C"
+  },
+  {
+   "id": "407",
+   "answer": "C"
+  },
+  {
+   "id": "416",
+   "answer": "D"
+  },
+  {
+   "id": "428",
+   "answer": "C"
+  },
+  {
+   "id": "448",
+   "answer": "B"
+  },
+  {
+   "id": "460",
+   "answer": "A"
+  },
+  {
+   "id": "465",
+   "answer": "D"
+  },
+  {
+   "id": "473",
+   "answer": "C"
+  },
+  {
+   "id": "495",
+   "answer": "D"
+  },
+  {
+   "id": "505",
+   "answer": "A"
+  },
+  {
+   "id": "512",
+   "answer": "B"
+  },
+  {
+   "id": "524",
+   "answer": "B"
+  },
+  {
+   "id": "536",
+   "answer": "A"
+  },
+  {
+   "id": "553",
+   "answer": "C"
+  },
+  {
+   "id": "557",
+   "answer": "C"
+  },
+  {
+   "id": "571",
+   "answer": "C"
+  },
+  {
+   "id": "581",
+   "answer": "B"
+  }
+ ],
+ "parse": "json",
+ "missing_ids": [],
+ "extra_ids": [],
+ "stop_reason": "end_turn",
+ "usage": {
+  "input": 9121,
+  "output": 711,
+  "cache_read": 0,
+  "cache_create": 0
+ },
+ "trajectory_id": "cover_jobs_Test12_haiku_r2",
+ "job": {
+  "model": "claude-haiku-4-5-20251001",
+  "temperature": null,
+  "thinking": false,
+  "effort": null,
+  "figures": [
+   "figures/E5_E6.png",
+   "figures/E7_E9-1.png",
+   "figures/E9-2_E9-3.png"
+  ],
+  "prompt": null
+ },
+ "score": {
+  "right": 44,
+  "wrong": 6,
+  "unanswered": 0,
+  "total": 50,
+  "pct": 88.0,
+  "passed": true
+ },
+ "misses": [
+  [
+   "51",
+   "E1",
+   "A",
+   "B"
+  ],
+  [
+   "91",
+   "E2",
+   "B",
+   "A"
+  ],
+  [
+   "280",
+   "E5",
+   "A",
+   "B"
+  ],
+  [
+   "303",
+   "E6",
+   "C",
+   "B"
+  ],
+  [
+   "512",
+   "E9",
+   "B",
+   "D"
+  ],
+  [
+   "581",
+   "E9",
+   "B",
+   "D"
+  ]
+ ]
+}

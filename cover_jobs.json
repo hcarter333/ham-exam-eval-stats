@@ -1,0 +1,164 @@
+{
+  "defaults": {
+    "model": "claude-sonnet-4-6",
+    "max_tokens": 16000,
+    "figures": [
+      "figures/E5_E6.png",
+      "figures/E7_E9-1.png",
+      "figures/E9-2_E9-3.png"
+    ],
+    "replicas": 3
+  },
+  "jobs": [
+    {
+      "exam": "exams/Test01.json",
+      "key": "keys/Test01.key.json"
+    },
+    {
+      "exam": "exams/Test01.json",
+      "key": "keys/Test01.key.json",
+      "output": "answers/Test01_haiku.answers.json",
+      "model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "exam": "exams/Test02.json",
+      "key": "keys/Test02.key.json"
+    },
+    {
+      "exam": "exams/Test02.json",
+      "key": "keys/Test02.key.json",
+      "output": "answers/Test02_haiku.answers.json",
+      "model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "exam": "exams/Test03.json",
+      "key": "keys/Test03.key.json"
+    },
+    {
+      "exam": "exams/Test03.json",
+      "key": "keys/Test03.key.json",
+      "output": "answers/Test03_haiku.answers.json",
+      "model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "exam": "exams/Test04.json",
+      "key": "keys/Test04.key.json"
+    },
+    {
+      "exam": "exams/Test04.json",
+      "key": "keys/Test04.key.json",
+      "output": "answers/Test04_haiku.answers.json",
+      "model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "exam": "exams/Test05.json",
+      "key": "keys/Test05.key.json"
+    },
+    {
+      "exam": "exams/Test05.json",
+      "key": "keys/Test05.key.json",
+      "output": "answers/Test05_haiku.answers.json",
+      "model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "exam": "exams/Test06.json",
+      "key": "keys/Test06.key.json"
+    },
+    {
+      "exam": "exams/Test06.json",
+      "key": "keys/Test06.key.json",
+      "output": "answers/Test06_haiku.answers.json",
+      "model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "exam": "exams/Test07.json",
+      "key": "keys/Test07.key.json"
+    },
+    {
+      "exam": "exams/Test07.json",
+      "key": "keys/Test07.key.json",
+      "output": "answers/Test07_haiku.answers.json",
+      "model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "exam": "exams/Test08.json",
+      "key": "keys/Test08.key.json"
+    },
+    {
+      "exam": "exams/Test08.json",
+      "key": "keys/Test08.key.json",
+      "output": "answers/Test08_haiku.answers.json",
+      "model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "exam": "exams/Test09.json",
+      "key": "keys/Test09.key.json"
+    },
+    {
+      "exam": "exams/Test09.json",
+      "key": "keys/Test09.key.json",
+      "output": "answers/Test09_haiku.answers.json",
+      "model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "exam": "exams/Test10.json",
+      "key": "keys/Test10.key.json"
+    },
+    {
+      "exam": "exams/Test10.json",
+      "key": "keys/Test10.key.json",
+      "output": "answers/Test10_haiku.answers.json",
+      "model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "exam": "exams/Test11.json",
+      "key": "keys/Test11.key.json"
+    },
+    {
+      "exam": "exams/Test11.json",
+      "key": "keys/Test11.key.json",
+      "output": "answers/Test11_haiku.answers.json",
+      "model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "exam": "exams/Test12.json",
+      "key": "keys/Test12.key.json"
+    },
+    {
+      "exam": "exams/Test12.json",
+      "key": "keys/Test12.key.json",
+      "output": "answers/Test12_haiku.answers.json",
+      "model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "exam": "exams/Test13.json",
+      "key": "keys/Test13.key.json"
+    },
+    {
+      "exam": "exams/Test13.json",
+      "key": "keys/Test13.key.json",
+      "output": "answers/Test13_haiku.answers.json",
+      "model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "exam": "exams/Test14.json",
+      "key": "keys/Test14.key.json"
+    },
+    {
+      "exam": "exams/Test14.json",
+      "key": "keys/Test14.key.json",
+      "output": "answers/Test14_haiku.answers.json",
+      "model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "exam": "exams/Test15.json",
+      "key": "keys/Test15.key.json"
+    },
+    {
+      "exam": "exams/Test15.json",
+      "key": "keys/Test15.key.json",
+      "output": "answers/Test15_haiku.answers.json",
+      "model": "claude-haiku-4-5-20251001"
+    }
+  ]
+}

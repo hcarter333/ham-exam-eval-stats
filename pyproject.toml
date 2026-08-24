@@ -1,0 +1,39 @@
+[project]
+name = "ham-exam-eval-stats"
+dynamic = ["version"]
+description = "Tools for generating, running, scoring, and reporting ham radio exam evals"
+requires-python = ">=3.10"
+dependencies = [
+    "anthropic",
+]
+
+[project.urls]
+Source = "https://github.com/hcarter333/ham-exam-eval-stats"
+
+[project.scripts]
+hamexam-backfill = "ham_exam_eval_stats.hamexam_backfill:main"
+hamexam-batch = "ham_exam_eval_stats.hamexam_batch:main"
+hamexam-fleet = "ham_exam_eval_stats.hamexam_fleet:main"
+hamexam-make = "ham_exam_eval_stats.hamexam_make:main"
+hamexam-score = "ham_exam_eval_stats.hamexam_score:main"
+hamexam-stats = "ham_exam_eval_stats.hamexam_stats:main"
+
+[dependency-groups]
+dev = [
+    "pytest",
+    "ruff",
+    "Sphinx",
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["ham_exam_eval_stats*"]
+
+[tool.setuptools.dynamic]
+version = {attr = "ham_exam_eval_stats.version.__version__"}
+
+[tool.uv]
+package = true

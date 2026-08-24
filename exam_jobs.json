@@ -1,0 +1,21 @@
+{
+  "defaults": {
+    "model": "claude-sonnet-4-6",
+    "max_tokens": 16000,
+    "temperature": null,
+    "thinking": false,
+    "effort": null,
+    "figures": ["figures/E5_E6.png", "figures/E7_E9-1.png", "figures/E9-2_E9-3.png"],
+    "key": "keys/FirstTest.key.json",
+    "replicas": 1
+  },
+  "jobs": [
+    { "exam": "exams/FirstTest.json", "replicas": 10 },
+    { "exam": "exams/FirstTest.json",
+      "output": "answers/FirstTest_think.answers.json",
+      "thinking": true, "effort": "high", "replicas": 10 },
+    { "exam": "exams/FirstTest.json",
+      "output": "answers/FirstTest_opus.answers.json",
+      "model": "claude-opus-4-8", "replicas": 5 }
+  ]
+}
