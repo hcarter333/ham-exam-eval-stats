@@ -80,12 +80,15 @@ def se_clustered(scores, clusters):
 # -------------------------------------------------------------------- loading
 
 def config_key(r):
-    return (r["model"], bool(r["thinking"]), r["effort"], r["temperature"], r["prompt"])
+    return (r["model"], bool(r["thinking"]), r["effort"], r["temperature"], r["prompt"],
+            r.get("tag"))
 
 
 def config_label(k):
-    model, thinking, effort, temp, prompt = k
+    model, thinking, effort, temp, prompt, tag = k
     bits = [model]
+    if tag:
+        bits.append(tag)
     if thinking:
         bits.append(f"thinking{':' + effort if effort else ''}")
     if temp is not None and temp != 1.0:
@@ -164,6 +167,7 @@ def analyze(runs, answers):
             "per_q": {q: mean(v) for q, v in per_q.items()},
             "per_q_n": {q: len(v) for q, v in per_q.items()},
             "sub": dict(sorted(sub.items())),
+            "served": sorted({r.get("model_served") for r in rs if r.get("model_served")}),
             "flagged": [r for r in rs if r["parse"] != "json"
                         or (r["answered"] or 0) < (r["questions"] or 0)
                         or r["stop_reason"] not in (None, "end_turn")],
@@ -296,6 +300,12 @@ def pool_map_svg(cfg, pool, q_group):
     return "\n".join(out)
 
 
+def served_note(c):
+    if c["served"] and c["served"] != [c["key"][0]]:
+        return f"<div class='sub'>served as {html.escape(', '.join(c['served']))}</div>"
+    return ""
+
+
 def render(an, pool, db_path):
     cfgs, pairs = an["configs"], an["pairs"]
     H = []
@@ -324,6 +334,7 @@ def render(an, pool, db_path):
                  f"<div class='big'>{f(c['score_mean'])} <span class='sub'>± {f(c['score_sd'])} sd</span></div>"
                  f"<div class='sub'>{c['runs']} runs · {c['exams']} exams · {c['questions']} questions · "
                  f"pass {c['pass']}/{c['runs']} · range {c['score_min']}–{c['score_max']}</div>"
+                 f"{served_note(c)}"
                  f"<table style='margin-top:10px'><tr><th class='l'>p̂</th><td>{pct(c['p'])}</td></tr>"
                  f"<tr><th class='l'>SE naive</th><td>{pct(c['se_naive'])}</td></tr>"
                  f"<tr><th class='l'>SE clustered by question</th><td>{pct(c['se_q'])} "
@@ -405,7 +416,7 @@ def render(an, pool, db_path):
              "fewer answers than questions, a stop reason other than end_turn, or failed "
              "outright — check these before trusting their scores.</p>"
              "<details><summary>Show all runs</summary><table><tr><th class='l'>trajectory</th>"
-             "<th class='l'>exam</th><th class='l'>configuration</th><th>score</th><th>answered</th>"
+             "<th class='l'>exam</th><th class='l'>configuration</th><th class='l'>served</th><th>score</th><th>answered</th>"
              "<th>parse</th><th>stop</th><th>in tok</th><th>out tok</th><th class='l'>finished</th></tr>")
     for r in an["runs"]:
         ok = r["result_type"] == "succeeded"
@@ -414,6 +425,7 @@ def render(an, pool, db_path):
         H.append(f"<tr class='{'flag' if flag else ''}'><td>{html.escape(r['trajectory_id'])}</td>"
                  f"<td class='l'>{html.escape(Path(r['exam']).stem if r['exam'] else '')}</td>"
                  f"<td class='l'>{html.escape(config_label(config_key(r)))}</td>"
+                 f"<td class='l'>{html.escape(r.get('model_served') or '')}</td>"
                  f"<td>{r['right'] if ok else html.escape(r['result_type'] or '')}</td>"
                  f"<td>{r['answered'] or ''}/{r['questions'] or ''}</td><td>{r['parse'] or ''}</td>"
                  f"<td>{r['stop_reason'] or ''}</td><td>{r['input_tokens'] or ''}</td>"
