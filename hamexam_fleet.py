@@ -80,6 +80,8 @@ JOB_DEFAULTS = {
     "key": None,
     "replicas": 1,
     "output": None,
+    "tag": None,                        # free label stored with the run; the stats
+                                        # treat it as part of the configuration
 }
 
 _ID_BAD = re.compile(r"[^a-zA-Z0-9_-]")
@@ -113,10 +115,12 @@ CREATE TABLE IF NOT EXISTS runs (
     key               TEXT,
     prompt            TEXT,
     model             TEXT,
+    model_served      TEXT,
     temperature       REAL,
     thinking          INTEGER,
     effort            TEXT,
     figures_json      TEXT,
+    tag               TEXT,
     batch_id          TEXT,
     batch_created_at  TEXT,
     finished_at       TEXT,
@@ -158,6 +162,13 @@ def open_db(path: Path) -> sqlite3.Connection:
     db = sqlite3.connect(path)
     db.execute("PRAGMA journal_mode=WAL")
     db.executescript(SCHEMA)
+    cols = {r[1] for r in db.execute("PRAGMA table_info(runs)")}
+    if "tag" not in cols:                    # migrate dbs created before tags
+        db.execute("ALTER TABLE runs ADD COLUMN tag TEXT")
+    if "model_served" not in cols:
+        db.execute("ALTER TABLE runs ADD COLUMN model_served TEXT")
+        db.execute("UPDATE runs SET model_served = json_extract(message_json, '$.model') "
+                   "WHERE message_json IS NOT NULL")
     if px is not None:
         db.executescript(px.SCHEMA)
     return db
@@ -176,14 +187,15 @@ def next_replica(db: sqlite3.Connection, base: str, floor: int) -> int:
     return best + 1
 
 
-def build_job_params(job: dict, prefix_cache: dict, prompt_text: str | None) -> dict:
+def build_job_params(job: dict, prefix_cache: dict, prompt_text: str | None,
+                     file_ids: dict[str, str] | None = None) -> dict:
     """One job -> Messages API params. The static block (prompt + figures) is
     built once per distinct figure set and shared across jobs so the cache
     breakpoint lands on identical bytes."""
     figs = tuple(str(f) for f in job["figures"])
     if figs not in prefix_cache:
         prefix_cache[figs] = hb.static_blocks(prompt_text or hb.EXAM_PROMPT,
-                                              [Path(f) for f in figs])
+                                              [Path(f) for f in figs], file_ids=file_ids)
     content = list(prefix_cache[figs]) + [hb.exam_block(Path(job["exam"]))]
     params = {"model": job["model"], "max_tokens": job["max_tokens"],
               "messages": [{"role": "user", "content": content}]}
@@ -201,8 +213,13 @@ def build_job_params(job: dict, prefix_cache: dict, prompt_text: str | None) -> 
 
 
 def expand_jobs(manifest: dict, jobs_stem: str, db: sqlite3.Connection,
-                prompt_path) -> dict[str, dict]:
+                prompt_path, client=None, inline_figures: bool = False) -> dict[str, dict]:
     defaults = {**JOB_DEFAULTS, **manifest.get("defaults", {})}
+    file_ids: dict[str, str] = {}
+    if client is not None and not inline_figures:
+        all_figs = sorted({f for raw in manifest["jobs"]
+                           for f in {**defaults, **raw}["figures"]})
+        file_ids = hb.upload_figures(client, [Path(f) for f in all_figs])
     prompt_text = hb.load_prompt(Path(prompt_path)) if prompt_path else None
     prefix_cache: dict = {}
     alloc: dict[str, int] = {}
@@ -225,7 +242,7 @@ def expand_jobs(manifest: dict, jobs_stem: str, db: sqlite3.Connection,
         n = int(job["replicas"])
         start = next_replica(db, base, alloc.get(base, 0))
         alloc[base] = start + n - 1
-        params = build_job_params(job, prefix_cache, prompt_text)
+        params = build_job_params(job, prefix_cache, prompt_text, file_ids)
         for r in range(start, start + n):
             out = base_out.with_name(f"{out_stem}_r{r}.answers.json")
             tid = f"{base}_r{r}"
@@ -237,6 +254,7 @@ def expand_jobs(manifest: dict, jobs_stem: str, db: sqlite3.Connection,
                 "job": {**{k: job[k] for k in
                            ("model", "temperature", "thinking", "effort")},
                         "figures": list(job["figures"]),
+                        "tag": job["tag"],
                         "prompt": str(prompt_path) if prompt_path else None},
                 "params": params,
                 "status": "pending",        # pending|done|failed
@@ -260,6 +278,7 @@ def record_run(db: sqlite3.Connection, tid: str, rec: dict, jobs_file: str,
         "key": rec["key"], "prompt": j["prompt"], "model": j["model"],
         "temperature": j["temperature"], "thinking": int(bool(j["thinking"])),
         "effort": j["effort"], "figures_json": json.dumps(j["figures"]),
+        "tag": j.get("tag"),
         "batch_id": batch_id, "batch_created_at": created_iso,
         "finished_at": time.strftime("%Y-%m-%dT%H:%M:%S"),
         "result_type": result.result.type,
@@ -269,6 +288,7 @@ def record_run(db: sqlite3.Connection, tid: str, rec: dict, jobs_file: str,
         row["message_json"] = json.dumps(msg.model_dump(exclude_none=True))
         row["response_text"] = text
         row["stop_reason"] = msg.stop_reason
+        row["model_served"] = getattr(msg, "model", None)   # what the API actually ran
         if ar is not None:
             u = ar["usage"]
             s = ar.get("score") or {}
@@ -332,12 +352,13 @@ def finish_job(tid: str, rec: dict, message, key_cache: dict):
     if rec["key"]:
         if rec["key"] not in key_cache:
             key_cache[rec["key"]] = hs.load_key(Path(rec["key"]))
-        s = hs.score(ar["answers"], key_cache[rec["key"]], exam)
+        key = key_cache[rec["key"]]
+        s = hs.score(ar["answers"], key, exam)
         rec["score"] = {k: s[k] for k in
                         ("right", "wrong", "unanswered", "total", "pct", "passed")}
         ar["score"] = rec["score"]
         ar["misses"] = s["misses"]
-        ar["_key"] = key_cache[rec["key"]]      # for the answers table; not written
+        ar["_key"] = key                        # for the answers table; not written
         line += (f"  score {s['right']}/{s['total']} "
                  f"{'PASS' if s['passed'] else 'FAIL'}")
     out = Path(rec["output"])
@@ -358,6 +379,10 @@ def main() -> int:
                     help="Exam prompt file for the whole fleet (its stem joins "
                          "the trajectory id, like --bead-prompt)")
     ap.add_argument("--fresh", action="store_true")
+    ap.add_argument("--inline-figures", action="store_true",
+                    help="Embed figures as base64 in every request instead of "
+                         "uploading once via the Files API (needed only if the "
+                         "Files API is unavailable; ~390 KB per request)")
     ap.add_argument("--db", type=Path, default=Path("hamexam_evals.db"),
                     help="Sqlite db receiving runs + per-question answers "
                          "(and polecat_exhume transcripts when importable)")
@@ -368,9 +393,11 @@ def main() -> int:
 
     state = None if args.fresh else (
         json.loads(state_path.read_text()) if state_path.exists() else None)
+    client = anthropic.Anthropic()
     if state is None:
         manifest = json.loads(args.jobs.read_text(encoding="utf-8-sig"))
-        records = expand_jobs(manifest, args.jobs.stem, db, args.prompt)
+        records = expand_jobs(manifest, args.jobs.stem, db, args.prompt,
+                              client, args.inline_figures)
         state = {"batch_id": None, "records": records}
         print(f"built {len(records)} request(s) from {args.jobs}")
     else:
@@ -379,7 +406,6 @@ def main() -> int:
               f"{sum(1 for r in records.values() if r['status'] == 'pending')} "
               f"job(s) unfinished")
 
-    client = anthropic.Anthropic()
     live = {tid: rec for tid, rec in records.items() if rec["status"] == "pending"}
     if not live:
         print("nothing to do")
@@ -388,7 +414,15 @@ def main() -> int:
     if state["batch_id"] is None:
         requests = [{"custom_id": f"{tid}-t0", "params": rec["params"]}
                     for tid, rec in live.items()]
-        batch = client.messages.batches.create(requests=requests)
+        payload_mb = len(json.dumps(requests)) / 1e6
+        if len(requests) > 100_000 or payload_mb > 250:
+            print(f"error: {len(requests)} requests / {payload_mb:.0f} MB exceeds the "
+                  f"batch limit (100k requests, 256 MB); split the configuration file",
+                  file=sys.stderr)
+            return 2
+        print(f"batch payload {payload_mb:.1f} MB")
+        batch = client.messages.batches.create(
+            requests=requests, extra_headers={"anthropic-beta": hb.FILES_BETA})
         state["batch_id"] = batch.id
         state_path.write_text(json.dumps(state))
         print(f"submitted batch {batch.id} ({len(requests)} request(s))")
