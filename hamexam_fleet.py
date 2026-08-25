@@ -80,8 +80,6 @@ JOB_DEFAULTS = {
     "key": None,
     "replicas": 1,
     "output": None,
-    "tag": None,                        # free label stored with the run; the stats
-                                        # treat it as part of the configuration
 }
 
 _ID_BAD = re.compile(r"[^a-zA-Z0-9_-]")
@@ -115,12 +113,10 @@ CREATE TABLE IF NOT EXISTS runs (
     key               TEXT,
     prompt            TEXT,
     model             TEXT,
-    model_served      TEXT,
     temperature       REAL,
     thinking          INTEGER,
     effort            TEXT,
     figures_json      TEXT,
-    tag               TEXT,
     batch_id          TEXT,
     batch_created_at  TEXT,
     finished_at       TEXT,
@@ -162,13 +158,6 @@ def open_db(path: Path) -> sqlite3.Connection:
     db = sqlite3.connect(path)
     db.execute("PRAGMA journal_mode=WAL")
     db.executescript(SCHEMA)
-    cols = {r[1] for r in db.execute("PRAGMA table_info(runs)")}
-    if "tag" not in cols:                    # migrate dbs created before tags
-        db.execute("ALTER TABLE runs ADD COLUMN tag TEXT")
-    if "model_served" not in cols:
-        db.execute("ALTER TABLE runs ADD COLUMN model_served TEXT")
-        db.execute("UPDATE runs SET model_served = json_extract(message_json, '$.model') "
-                   "WHERE message_json IS NOT NULL")
     if px is not None:
         db.executescript(px.SCHEMA)
     return db
@@ -248,7 +237,6 @@ def expand_jobs(manifest: dict, jobs_stem: str, db: sqlite3.Connection,
                 "job": {**{k: job[k] for k in
                            ("model", "temperature", "thinking", "effort")},
                         "figures": list(job["figures"]),
-                        "tag": job["tag"],
                         "prompt": str(prompt_path) if prompt_path else None},
                 "params": params,
                 "status": "pending",        # pending|done|failed
@@ -272,7 +260,6 @@ def record_run(db: sqlite3.Connection, tid: str, rec: dict, jobs_file: str,
         "key": rec["key"], "prompt": j["prompt"], "model": j["model"],
         "temperature": j["temperature"], "thinking": int(bool(j["thinking"])),
         "effort": j["effort"], "figures_json": json.dumps(j["figures"]),
-        "tag": j.get("tag"),
         "batch_id": batch_id, "batch_created_at": created_iso,
         "finished_at": time.strftime("%Y-%m-%dT%H:%M:%S"),
         "result_type": result.result.type,
@@ -282,7 +269,6 @@ def record_run(db: sqlite3.Connection, tid: str, rec: dict, jobs_file: str,
         row["message_json"] = json.dumps(msg.model_dump(exclude_none=True))
         row["response_text"] = text
         row["stop_reason"] = msg.stop_reason
-        row["model_served"] = getattr(msg, "model", None)   # what the API actually ran
         if ar is not None:
             u = ar["usage"]
             s = ar.get("score") or {}
@@ -346,13 +332,12 @@ def finish_job(tid: str, rec: dict, message, key_cache: dict):
     if rec["key"]:
         if rec["key"] not in key_cache:
             key_cache[rec["key"]] = hs.load_key(Path(rec["key"]))
-        key = key_cache[rec["key"]]
-        s = hs.score(ar["answers"], key, exam)
+        s = hs.score(ar["answers"], key_cache[rec["key"]], exam)
         rec["score"] = {k: s[k] for k in
                         ("right", "wrong", "unanswered", "total", "pct", "passed")}
         ar["score"] = rec["score"]
         ar["misses"] = s["misses"]
-        ar["_key"] = key                        # for the answers table; not written
+        ar["_key"] = key_cache[rec["key"]]      # for the answers table; not written
         line += (f"  score {s['right']}/{s['total']} "
                  f"{'PASS' if s['passed'] else 'FAIL'}")
     out = Path(rec["output"])
