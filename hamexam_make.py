@@ -115,6 +115,14 @@ def main() -> int:
     ap.add_argument("--keys-dir", type=Path, default=Path("keys"))
     ap.add_argument("--jobs", type=Path, default=None,
                     help="Also write a fleet manifest covering the generated exams")
+    ap.add_argument("--jobs-only", action="store_true",
+                    help="Generate nothing; write --jobs over the existing "
+                         "<prefix>NN exams in --exams-dir")
+    ap.add_argument("--first", default=None,
+                    help="Derive exams from the existing <prefix>NN set with pool "
+                         "question ID placed first, replacing that exam's own draw "
+                         "from the same group. Writes <prefix>NN_first<ID>.json and "
+                         "keys; with --jobs, the manifest tags them first<ID>")
     ap.add_argument("--replicas", type=int, default=3, help="Replicas per job line")
     ap.add_argument("--config", default='[{}]',
                     help="JSON list of per-job overrides applied to every exam, "
@@ -123,6 +131,25 @@ def main() -> int:
     ap.add_argument("--defaults", default=None,
                     help="JSON object for the manifest's defaults block")
     args = ap.parse_args()
+
+    if args.first is not None:
+        return derive_first(args)
+
+    if args.jobs_only:
+        if not args.jobs:
+            print("error: --jobs-only needs --jobs", file=sys.stderr)
+            return 1
+        pat = re.compile(rf"^{re.escape(args.prefix)}(\d+)\.json$")
+        exams = sorted((p for p in args.exams_dir.glob(f"{args.prefix}*.json")
+                        if pat.match(p.name)), key=lambda p: int(pat.match(p.name).group(1)))
+        written = [(ep, args.keys_dir / f"{ep.stem}.key.json") for ep in exams]
+        missing = [kp for _, kp in written if not kp.exists()]
+        if missing:
+            print(f"error: missing keys: {missing[:3]}...", file=sys.stderr)
+            return 1
+        print(f"{len(written)} existing exam(s) under {args.exams_dir}")
+        write_manifest(args, written)
+        return 0
 
     rng = random.Random(args.seed)
     pool = load_pool(args.pool)
@@ -158,6 +185,54 @@ def main() -> int:
           f"questions covered")
 
     if args.jobs:
+        write_manifest(args, written)
+    return 0
+
+
+def existing_exams(args):
+    pat = re.compile(rf"^{re.escape(args.prefix)}(\d+)\.json$")
+    return sorted((p for p in args.exams_dir.glob(f"{args.prefix}*.json")
+                   if pat.match(p.name)), key=lambda p: int(pat.match(p.name).group(1)))
+
+
+def derive_first(args):
+    """<prefix>NN_first<ID>: question ID at position 1, its group's original
+    draw removed, the other 49 unchanged and in the original order. Still
+    one question per group, still 50 long."""
+    pool = load_pool(args.pool)
+    q = next((x for x in pool if str(x["id"]) == str(args.first)), None)
+    if q is None:
+        print(f"error: question {args.first} not in pool", file=sys.stderr)
+        return 1
+    first_exam, first_key = to_scraper_shape([q])
+    first_q, first_k = first_exam[0], first_key[0]
+    group = first_q["cluster"]
+    tag = f"first{args.first}"
+    written = []
+    for ep in existing_exams(args):
+        exam = json.loads(ep.read_text(encoding="utf-8-sig"))
+        key = {str(k["id"]): k["answer"] for k in
+               json.loads((args.keys_dir / f"{ep.stem}.key.json").read_text(encoding="utf-8-sig"))}
+        rest = [x for x in exam if x["cluster"] != group]
+        merged = [dict(first_q)] + [dict(x) for x in rest]
+        for n, x in enumerate(merged, 1):
+            x["number"] = n
+        name = f"{ep.stem}_{tag}"
+        out_e = args.exams_dir / f"{name}.json"
+        out_k = args.keys_dir / f"{name}.key.json"
+        out_e.write_text(json.dumps(merged, indent=2, ensure_ascii=False))
+        out_k.write_text(json.dumps([first_k] + [{"id": x["id"], "answer": key[x["id"]]}
+                                                 for x in rest], indent=2))
+        written.append((out_e, out_k))
+        print(f"  {out_e}  (dropped {[x['id'] for x in exam if x['cluster'] == group]})")
+    print(f"{len(written)} derived exam(s), question {args.first} ({group}) first")
+    if args.jobs:
+        write_manifest(args, written, tag=tag)
+    return 0
+
+
+def write_manifest(args, written, tag=None):
+    if True:
         configs = json.loads(args.config)
         defaults = json.loads(args.defaults) if args.defaults else {
             "model": "claude-sonnet-4-6", "max_tokens": 16000,
@@ -170,6 +245,8 @@ def main() -> int:
                 cfg = dict(cfg)
                 suffix = cfg.pop("suffix", None)
                 job = {"exam": str(ep), "key": str(kp)}
+                if tag:
+                    job["tag"] = tag
                 if suffix:
                     job["output"] = f"answers/{ep.stem}_{suffix}.answers.json"
                 job.update(cfg)
@@ -177,7 +254,6 @@ def main() -> int:
         args.jobs.write_text(json.dumps({"defaults": defaults, "jobs": jobs}, indent=2))
         print(f"wrote {args.jobs}: {len(jobs)} job line(s) x {args.replicas} replicas "
               f"= {len(jobs) * args.replicas} requests")
-    return 0
 
 
 if __name__ == "__main__":
