@@ -19,7 +19,8 @@ Jobs manifest:
     "max_tokens": 16000,
     "temperature": null,             // null = API default
     "thinking": false,
-    "effort": null,                  // low|medium|high|xhigh|max (implies thinking)
+    "effort": null,                  // low|medium|high|xhigh|max (implies thinking; adaptive models)
+    "thinking_budget": null,         // e.g. 16000 for Haiku 4.5, which lacks adaptive thinking
     "figures": ["figures/E5_E6.png", "figures/E7_E9-1.png", "figures/E9-2_E9-3.png"],
     "key": null,                     // answer key json -> scores go in the db
     "replicas": 1
@@ -76,6 +77,8 @@ JOB_DEFAULTS = {
     "temperature": None,
     "thinking": False,
     "effort": None,
+    "thinking_budget": None,            # for models without adaptive thinking (Haiku 4.5):
+                                        # sends {"type": "enabled", "budget_tokens": N}
     "figures": [str(p) for p in hb.DEFAULT_FIGURES],
     "key": None,
     "replicas": 1,
@@ -199,14 +202,21 @@ def build_job_params(job: dict, prefix_cache: dict, prompt_text: str | None,
     content = list(prefix_cache[figs]) + [hb.exam_block(Path(job["exam"]))]
     params = {"model": job["model"], "max_tokens": job["max_tokens"],
               "messages": [{"role": "user", "content": content}]}
-    thinking = job["thinking"] or bool(job["effort"])
+    thinking = job["thinking"] or bool(job["effort"]) or bool(job["thinking_budget"])
     if thinking:
         if job["temperature"] not in (None, 1.0):
             raise ValueError(f"job {job['exam']}: thinking requires temperature "
                              f"unset/1.0, got {job['temperature']}")
-        params["thinking"] = {"type": "adaptive", "display": "summarized"}
-        if job["effort"]:
-            params["output_config"] = {"effort": job["effort"]}
+        if job["thinking_budget"]:
+            budget = int(job["thinking_budget"])
+            if budget >= job["max_tokens"]:
+                raise ValueError(f"job {job['exam']}: thinking_budget {budget} must be "
+                                 f"below max_tokens {job['max_tokens']}")
+            params["thinking"] = {"type": "enabled", "budget_tokens": budget}
+        else:
+            params["thinking"] = {"type": "adaptive", "display": "summarized"}
+            if job["effort"]:
+                params["output_config"] = {"effort": job["effort"]}
     elif job["temperature"] is not None:
         params["temperature"] = job["temperature"]
     return params
@@ -247,7 +257,7 @@ def expand_jobs(manifest: dict, jobs_stem: str, db: sqlite3.Connection,
                 "key": job["key"],
                 "output": str(out),
                 "job": {**{k: job[k] for k in
-                           ("model", "temperature", "thinking", "effort")},
+                           ("model", "temperature", "thinking", "effort", "thinking_budget")},
                         "figures": list(job["figures"]),
                         "tag": job["tag"],
                         "prompt": str(prompt_path) if prompt_path else None},
