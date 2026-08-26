@@ -279,7 +279,7 @@ def pool_map_svg(cfg, pool, q_group):
         for qid, g in q_group.items():
             rows[g].append((qid.zfill(4), qid))
     groups = sorted(rows, key=lambda g: (int(g[1]), g[2:]))
-    cell, gap, left, top = 18, 3, 46, 8
+    cell, gap, left, top = 9, 2, 46, 8
     width = left + max(len(v) for v in rows.values()) * (cell + gap) + 8
     height = top + len(groups) * (cell + gap) + 4
     out = [f'<svg class="pool" viewBox="0 0 {width} {height}" width="{int(width * 1.5)}" '
