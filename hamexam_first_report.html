@@ -1,0 +1,297 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><title>Forced first question — hamexam_evals.db</title><style>
+:root{--ink:#1b2a49;--ink2:#4a5675;--rule:#c9cfdd;--paper:#f7f8fb;--card:#fff;
+--ok:#1f8f5f;--mid:#e0a800;--bad:#c8102e;--none:#e6e9f0;--ocean:#0d6efd}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+font:15px/1.5 ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace}
+header{padding:28px 36px 18px;border-bottom:3px double var(--rule);background:var(--card)}
+header h1{margin:0 0 4px;font:600 26px/1.2 ui-sans-serif,system-ui,"Segoe UI",Roboto,sans-serif;letter-spacing:-.01em}
+header .meta{color:var(--ink2);font-size:13px}
+main{padding:0 36px 48px;max-width:1400px}
+section{margin-top:40px}
+h2{font:600 18px/1.3 ui-sans-serif,system-ui,sans-serif;margin:0 0 6px;border-left:6px solid var(--ocean);padding-left:10px}
+.lede{color:var(--ink2);font-size:13px;margin:0 0 14px;max-width:80ch;font-family:ui-sans-serif,system-ui,sans-serif}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:13px}
+th,td{padding:6px 10px;border-bottom:1px solid var(--rule);text-align:right;vertical-align:top;white-space:nowrap}
+th{background:#eef1f7;text-align:right;font-weight:600;color:var(--ink2);position:sticky;top:0}
+th:first-child,td:first-child{text-align:left}
+td.l,th.l{text-align:left;white-space:normal}
+tr.flag td{background:#fff4f4}
+.pill{display:inline-block;padding:0 7px;border-radius:9px;font-size:12px;color:#fff;background:var(--ink2)}
+.pill.ok{background:var(--ok)}.pill.bad{background:var(--bad)}.pill.mid{background:var(--mid);color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:14px 16px}
+.card h3{margin:0 0 6px;font:600 14px/1.3 ui-sans-serif,system-ui,sans-serif}
+.big{font-size:30px;font-weight:600;line-height:1.1}
+.sub{color:var(--ink2);font-size:12px}
+.bar{height:10px;background:var(--none);border-radius:5px;overflow:hidden;display:inline-block;width:120px;vertical-align:middle;margin-right:6px}
+.bar i{display:block;height:100%;background:var(--ok)}
+svg.pool{max-width:100%;height:auto;background:var(--card);border:1px solid var(--rule);border-radius:8px}
+svg.pool text{font:10px ui-monospace,monospace;fill:var(--ink2)}
+.legend span{display:inline-block;width:14px;height:14px;vertical-align:middle;margin:0 4px 0 12px;border-radius:2px}
+details summary{cursor:pointer;color:var(--ocean);font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px}
+.qtext{font-family:ui-sans-serif,system-ui,sans-serif;color:var(--ink);white-space:normal;max-width:60ch}
+footer{color:var(--ink2);font-size:12px;padding:20px 36px;border-top:1px solid var(--rule)}
+</style></head><body><header><h1>Forced first question</h1><div class='meta'>hamexam_evals.db · 3 treatment/model pair(s) · generated 2026-08-25 20:36</div></header><main>
+<section><h2>Summary</h2><p class='lede'>Each row: runs whose exam had a forced question at position 1, against the same model's baseline on the same exams, over the 49 questions both presented. diff is treatment − baseline per-question accuracy; SE is over questions (Sec. 3.3), and again clustered by E-group (Eq. 4). Flagged runs are excluded.</p><table><tr><th class='l'>treatment</th><th class='l'>model</th><th>runs (t/b)</th><th>exams</th><th>shared q</th><th>baseline p̂</th><th>treatment p̂</th><th>diff</th><th>SE</th><th>95% CI</th><th>95% CI (E-group)</th><th class='l'>verdict</th></tr>
+<tr><td class='l'>first34</td><td class='l'>claude-haiku-4-5-20251001</td><td>45/45</td><td>15</td><td>735</td><td>86.4%</td><td>87.0%</td><td><span class='pill'>+0.6</span></td><td>0.4%</td><td>-0.2% – 1.4%</td><td>-0.1% – 1.3%</td><td class='l'>no separation</td></tr>
+<tr><td class='l'>first42</td><td class='l'>claude-haiku-4-5-20251001</td><td>45/45</td><td>15</td><td>735</td><td>85.5%</td><td>86.8%</td><td><span class='pill ok'>+1.3</span></td><td>0.5%</td><td>0.3% – 2.3%</td><td>0.3% – 2.3%</td><td class='l'>treatment higher</td></tr>
+<tr><td class='l'>first9</td><td class='l'>claude-haiku-4-5-20251001</td><td>45/45</td><td>15</td><td>735</td><td>85.8%</td><td>86.5%</td><td><span class='pill'>+0.8</span></td><td>0.4%</td><td>-0.1% – 1.6%</td><td>-0.0% – 1.6%</td><td class='l'>no separation</td></tr>
+</table></section>
+<section><h2>first34 · claude-haiku-4-5-20251001</h2>
+<p class='lede'>Forced question id 34 at position 1 was answered A×45 across 45 treatment runs — this is whether the treatment landed as designed.</p>
+<div class='grid'><div class='card'><h3>Difference by position</h3><div class='sub'>treatment − baseline, questions binned by their position in the treatment exam. A projection effect that decays shows as a gradient toward zero.</div><svg viewBox="0 0 520 140" width="520" style="max-width:100%" xmlns="http://www.w3.org/2000/svg" font-family="ui-monospace,monospace" font-size="11">
+<line x1="230.0" y1="0" x2="230.0" y2="140" stroke="#4a5675" stroke-dasharray="3,3"/>
+<text x="4" y="20" fill="#1b2a49">2–10</text>
+<rect x="230.0" y="10" width="54.3003917286797" height="14" fill="#9aa3b8"/>
+<line x1="141.27461406234642" y1="17" x2="427.3261693950129" y2="17" stroke="#1b2a49" stroke-width="1.5"/>
+<text x="514" y="20" text-anchor="end" fill="#4a5675">+1.2 ± 1.7 (n=135)</text>
+<text x="4" y="46" fill="#1b2a49">11–20</text>
+<rect x="230.0" y="36" width="29.322211533487007" height="14" fill="#9aa3b8"/>
+<line x1="208.68570102986592" y1="43" x2="309.95872203710815" y2="43" stroke="#1b2a49" stroke-width="1.5"/>
+<text x="514" y="46" text-anchor="end" fill="#4a5675">+0.7 ± 0.6 (n=150)</text>
+<text x="4" y="72" fill="#1b2a49">21–30</text>
+<rect x="230.0" y="62" width="39.09628204464934" height="14" fill="#1f8f5f"/>
+<line x1="231.169601951655" y1="69" x2="307.02296213764373" y2="69" stroke="#1b2a49" stroke-width="1.5"/>
+<text x="514" y="72" text-anchor="end" fill="#4a5675">+0.9 ± 0.4 (n=150)</text>
+<text x="4" y="98" fill="#1b2a49">31–40</text>
+<rect x="210.45185897767533" y="88" width="19.54814102232467" height="14" fill="#9aa3b8"/>
+<line x1="183.45058469865756" y1="95" x2="237.45313325669306" y2="95" stroke="#1b2a49" stroke-width="1.5"/>
+<text x="514" y="98" text-anchor="end" fill="#4a5675">-0.4 ± 0.3 (n=150)</text>
+<text x="4" y="124" fill="#1b2a49">41–50</text>
+<rect x="230.0" y="114" width="29.322211533487007" height="14" fill="#9aa3b8"/>
+<line x1="171.36481358660262" y1="121" x2="347.27960948037145" y2="121" stroke="#1b2a49" stroke-width="1.5"/>
+<text x="514" y="124" text-anchor="end" fill="#4a5675">+0.7 ± 1.0 (n=150)</text>
+</svg></div>
+<div class='card'><h3>Difference by subelement</h3><div class='sub'>same, grouped by subelement.</div><svg viewBox="0 0 520 270" width="520" style="max-width:100%" xmlns="http://www.w3.org/2000/svg" font-family="ui-monospace,monospace" font-size="11">
+<line x1="230.0" y1="0" x2="230.0" y2="270" stroke="#4a5675" stroke-dasharray="3,3"/>
+<text x="4" y="20" fill="#1b2a49">E0</text>
+<rect x="230.0" y="10" width="28.777716293321987" height="14" fill="#9aa3b8"/>
+<line x1="65.72749477368765" y1="17" x2="451.8279378129563" y2="17" stroke="#1b2a49" stroke-width="1.5"/>
+<text x="514" y="20" text-anchor="end" fill="#4a5675">+2.2 ± 7.6 (n=15)</text>
+<text x="4" y="46" fill="#1b2a49">E1</text>
+<rect x="230.0" y="36" width="1" height="14" fill="#9aa3b8"/>
+<line x1="172.09129678825963" y1="43" x2="287.9087032117404" y2="43" stroke="#1b2a49" stroke-width="1.5"/>
+<text x="514" y="46" text-anchor="end" fill="#4a5675">+0.0 ± 2.3 (n=75)</text>
+<text x="4" y="72" fill="#1b2a49">E2</text>
+<rect x="230.0" y="62" width="28.777716293321987" height="14" fill="#9aa3b8"/>
+<line x1="225.34411090560153" y1="69" x2="292.2113216810424" y2="69" stroke="#1b2a49" stroke-width="1.5"/>
+<text x="514" y="72" text-anchor="end" fill="#4a5675">+2.2 ± 1.3 (n=75)</text>
+<text x="4" y="98" fill="#1b2a49">E3</text>
+<rect x="230.0" y="88" width="1" height="14" fill="#9aa3b8"/>
+<line x1="230.0" y1="95" x2="230.0" y2="95" stroke="#1b2a49" stroke-width="1.5"/>
+<text x="514" y="98" text-anchor="end" fill="#4a5675">+0.0 ± 0.0 (n=45)</text>
+<text x="4" y="124" fill="#1b2a49">E4</text>
+<rect x="230.0" y="114" width="11.511086517328778" height="14" fill="#9aa3b8"/>
+<line x1="213.81655880813554" y1="121" x2="269.205614226522" y2="121" stroke="#1b2a49" stroke-width="1.5"/>
+<text x="514" y="124" text-anchor="end" fill="#4a5675">+0.9 ± 1.1 (n=75)</text>
+<text x="4" y="150" fill="#1b2a49">E5</text>
+<rect x="230.0" y="140" width="14.388858146660993" height="14" fill="#9aa3b8"/>
+<line x1="224.6166398998726" y1="147" x2="264.1610763934494" y2="147" stroke="#1b2a49" stroke-width="1.5"/>
+<text x="514" y="150" text-anchor="end" fill="#4a5675">+1.1 ± 0.8 (n=60)</text>
+<text x="4" y="176" fill="#1b2a49">E6</text>
+<rect x="230.0" y="166" width="9.592572097773996" height="14" fill="#9aa3b8"/>
+<line x1="226.3728453513005" y1="173" x2="252.8122988442475" y2="173" stroke="#1b2a49" stroke-width="1.5"/>
+<text x="514" y="176" text-anchor="end" fill="#4a5675">+0.7 ± 0.5 (n=90)</text>
+<text x="4" y="202" fill="#1b2a49">E7</text>
+<rect x="222.8055709266695" y="192" width="7.194429073330497" height="14" fill="#9aa3b8"/>
+<line x1="212.87658415900208" y1="199" x2="232.73455769433693" y2="199" stroke="#1b2a49" stroke-width="1.5"/>
+<text x="514" y="202" text-anchor="end" fill="#4a5675">-0.6 ± 0.4 (n=120)</text>
+<text x="4" y="228" fill="#1b2a49">E8</text>
+<rect x="222.8055709266695" y="218" width="7.194429073330497" height="14" fill="#9aa3b8"/>
+<line x1="208.70448994294173" y1="225" x2="236.90665191039727" y2="225" stroke="#1b2a49" stroke-width="1.5"/>
+<text x="514" y="228" text-anchor="end" fill="#4a5675">-0.6 ± 0.6 (n=60)</text>
+<text x="4" y="254" fill="#1b2a49">E9</text>
+<rect x="230.0" y="244" width="14.388858146660993" height="14" fill="#9aa3b8"/>
+<line x1="212.8313970163219" y1="251" x2="275.94631927700004" y2="251" stroke="#1b2a49" stroke-width="1.5"/>
+<text x="514" y="254" text-anchor="end" fill="#4a5675">+1.1 ± 1.2 (n=120)</text>
+</svg></div></div>
+<details><summary>Questions that moved most</summary><table><tr><th class='l'>exam</th><th>id</th><th>group</th><th>pos</th><th>baseline</th><th>treatment</th><th>diff</th></tr>
+<tr><td>Test05</td><td>58</td><td>E1F</td><td>7</td><td>100.0%</td><td>0.0%</td><td>-100</td></tr>
+<tr><td>Test09</td><td>75</td><td>E2A</td><td>8</td><td>33.3%</td><td>100.0%</td><td>+67</td></tr>
+<tr><td>Test11</td><td>218</td><td>E4D</td><td>19</td><td>33.3%</td><td>100.0%</td><td>+67</td></tr>
+<tr><td>Test05</td><td>39</td><td>E1D</td><td>5</td><td>100.0%</td><td>33.3%</td><td>-67</td></tr>
+<tr><td>Test13</td><td>592</td><td>E0A</td><td>2</td><td>33.3%</td><td>100.0%</td><td>+67</td></tr>
+<tr><td>Test03</td><td>21</td><td>E1B</td><td>4</td><td>33.3%</td><td>100.0%</td><td>+67</td></tr>
+<tr><td>Test10</td><td>511</td><td>E9B</td><td>44</td><td>66.7%</td><td>0.0%</td><td>-67</td></tr>
+<tr><td>Test11</td><td>601</td><td>E0A</td><td>2</td><td>66.7%</td><td>0.0%</td><td>-67</td></tr>
+<tr><td>Test12</td><td>91</td><td>E2B</td><td>9</td><td>0.0%</td><td>66.7%</td><td>+67</td></tr>
+<tr><td>Test13</td><td>559</td><td>E9F</td><td>48</td><td>0.0%</td><td>66.7%</td><td>+67</td></tr>
+<tr><td>Test01</td><td>1</td><td>E1A</td><td>3</td><td>0.0%</td><td>66.7%</td><td>+67</td></tr>
+<tr><td>Test11</td><td>478</td><td>E8C</td><td>41</td><td>100.0%</td><td>66.7%</td><td>-33</td></tr>
+<tr><td>Test04</td><td>398</td><td>E7D</td><td>34</td><td>100.0%</td><td>66.7%</td><td>-33</td></tr>
+<tr><td>Test04</td><td>513</td><td>E9B</td><td>44</td><td>66.7%</td><td>100.0%</td><td>+33</td></tr>
+<tr><td>Test12</td><td>536</td><td>E9D</td><td>46</td><td>100.0%</td><td>66.7%</td><td>-33</td></tr>
+</table></details></section>
+<section><h2>first42 · claude-haiku-4-5-20251001</h2>
+<p class='lede'>Forced question id 42 at position 1 was answered B×45 across 45 treatment runs — this is whether the treatment landed as designed.</p>
+<div class='grid'><div class='card'><h3>Difference by position</h3><div class='sub'>treatment − baseline, questions binned by their position in the treatment exam. A projection effect that decays shows as a gradient toward zero.</div><svg viewBox="0 0 520 140" width="520" style="max-width:100%" xmlns="http://www.w3.org/2000/svg" font-family="ui-monospace,monospace" font-size="11">
+<line x1="230.0" y1="0" x2="230.0" y2="140" stroke="#4a5675" stroke-dasharray="3,3"/>
+<text x="4" y="20" fill="#1b2a49">2–10</text>
+<rect x="230.0" y="10" width="84.28413438996472" height="14" fill="#1f8f5f"/>
+<line x1="230.0264923397501" y1="17" x2="398.5417764401793" y2="17" stroke="#1b2a49" stroke-width="1.5"/>
+<text x="514" y="20" text-anchor="end" fill="#4a5675">+4.0 ± 2.0 (n=135)</text>
+<text x="4" y="46" fill="#1b2a49">11–20</text>
+<rect x="230.0" y="36" width="18.963930237742062" height="14" fill="#9aa3b8"/>
+<line x1="216.81039574891602" y1="43" x2="281.1174647265681" y2="43" stroke="#1b2a49" stroke-width="1.5"/>
+<text x="514" y="46" text-anchor="end" fill="#4a5675">+0.9 ± 0.8 (n=150)</text>
+<text x="4" y="72" fill="#1b2a49">21–30</text>
+<rect x="230.0" y="62" width="9.481965118871017" height="14" fill="#9aa3b8"/>
+<line x1="210.03794596301742" y1="69" x2="268.92598427472467" y2="69" stroke="#1b2a49" stroke-width="1.5"/>
+<text x="514" y="72" text-anchor="end" fill="#4a5675">+0.4 ± 0.7 (n=150)</text>
+<text x="4" y="98" fill="#1b2a49">31–40</text>
+<rect x="230.0" y="88" width="4.740982559435508" height="14" fill="#9aa3b8"/>
+<line x1="225.4486567429419" y1="95" x2="244.03330837592912" y2="95" stroke="#1b2a49" stroke-width="1.5"/>
+<text x="514" y="98" text-anchor="end" fill="#4a5675">+0.2 ± 0.2 (n=150)</text>
+<text x="4" y="124" fill="#1b2a49">41–50</text>
+<rect x="230.0" y="114" width="28.445895356613107" height="14" fill="#9aa3b8"/>
+<line x1="202.69194045765144" y1="121" x2="314.19985025557475" y2="121" stroke="#1b2a49" stroke-width="1.5"/>
+<text x="514" y="124" text-anchor="end" fill="#4a5675">+1.3 ± 1.3 (n=150)</text>
+</svg></div>
+<div class='card'><h3>Difference by subelement</h3><div class='sub'>same, grouped by subelement.</div><svg viewBox="0 0 520 270" width="520" style="max-width:100%" xmlns="http://www.w3.org/2000/svg" font-family="ui-monospace,monospace" font-size="11">
+<line x1="230.0" y1="0" x2="230.0" y2="270" stroke="#4a5675" stroke-dasharray="3,3"/>
+<text x="4" y="20" fill="#1b2a49">E0</text>
+<rect x="230.0" y="10" width="28.777716293321987" height="14" fill="#9aa3b8"/>
+<line x1="65.72749477368765" y1="17" x2="451.8279378129563" y2="17" stroke="#1b2a49" stroke-width="1.5"/>
+<text x="514" y="20" text-anchor="end" fill="#4a5675">+2.2 ± 7.6 (n=15)</text>
+<text x="4" y="46" fill="#1b2a49">E1</text>
+<rect x="230.0" y="36" width="51.79988932797954" height="14" fill="#9aa3b8"/>
+<line x1="206.5357098551526" y1="43" x2="357.06406880080647" y2="43" stroke="#1b2a49" stroke-width="1.5"/>
+<text x="514" y="46" text-anchor="end" fill="#4a5675">+4.0 ± 3.0 (n=75)</text>
+<text x="4" y="72" fill="#1b2a49">E2</text>
+<rect x="230.0" y="62" width="28.777716293321987" height="14" fill="#9aa3b8"/>
+<line x1="215.28436461491572" y1="69" x2="302.2710679717282" y2="69" stroke="#1b2a49" stroke-width="1.5"/>
+<text x="514" y="72" text-anchor="end" fill="#4a5675">+2.2 ± 1.7 (n=75)</text>
+<text x="4" y="98" fill="#1b2a49">E3</text>
+<rect x="230.0" y="88" width="19.18514419554799" height="14" fill="#9aa3b8"/>
+<line x1="211.58226157227395" y1="95" x2="286.788026818822" y2="95" stroke="#1b2a49" stroke-width="1.5"/>
+<text x="514" y="98" text-anchor="end" fill="#4a5675">+1.5 ± 1.5 (n=45)</text>
+<text x="4" y="124" fill="#1b2a49">E4</text>
+<rect x="230.0" y="114" width="17.26662977599318" height="14" fill="#9aa3b8"/>
+<line x1="222.17856995171752" y1="121" x2="272.35468960026884" y2="121" stroke="#1b2a49" stroke-width="1.5"/>
+<text x="514" y="124" text-anchor="end" fill="#4a5675">+1.3 ± 1.0 (n=75)</text>
+<text x="4" y="150" fill="#1b2a49">E5</text>
+<rect x="230.0" y="140" width="28.777716293321987" height="14" fill="#9aa3b8"/>
+<line x1="224.72861744541467" y1="147" x2="292.82681514122925" y2="147" stroke="#1b2a49" stroke-width="1.5"/>
+<text x="514" y="150" text-anchor="end" fill="#4a5675">+2.2 ± 1.3 (n=60)</text>
+<text x="4" y="176" fill="#1b2a49">E6</text>
+<rect x="220.407427902226" y="166" width="9.592572097773996" height="14" fill="#9aa3b8"/>
+<line x1="201.605986590589" y1="173" x2="239.20886921386304" y2="173" stroke="#1b2a49" stroke-width="1.5"/>
+<text x="514" y="176" text-anchor="end" fill="#4a5675">-0.7 ± 0.7 (n=90)</text>
+<text x="4" y="202" fill="#1b2a49">E7</text>
+<rect x="230.0" y="192" width="1" height="14" fill="#9aa3b8"/>
+<line x1="230.0" y1="199" x2="230.0" y2="199" stroke="#1b2a49" stroke-width="1.5"/>
+<text x="514" y="202" text-anchor="end" fill="#4a5675">+0.0 ± 0.0 (n=120)</text>
+<text x="4" y="228" fill="#1b2a49">E8</text>
+<rect x="230.0" y="218" width="35.972145366652455" height="14" fill="#9aa3b8"/>
+<line x1="219.71133207871432" y1="225" x2="312.2329586545906" y2="225" stroke="#1b2a49" stroke-width="1.5"/>
+<text x="514" y="228" text-anchor="end" fill="#4a5675">+2.8 ± 1.8 (n=60)</text>
+<text x="4" y="254" fill="#1b2a49">E9</text>
+<rect x="230.0" y="244" width="7.194429073330497" height="14" fill="#9aa3b8"/>
+<line x1="201.11599703481028" y1="251" x2="273.2728611118507" y2="251" stroke="#1b2a49" stroke-width="1.5"/>
+<text x="514" y="254" text-anchor="end" fill="#4a5675">+0.6 ± 1.4 (n=120)</text>
+</svg></div></div>
+<details><summary>Questions that moved most</summary><table><tr><th class='l'>exam</th><th>id</th><th>group</th><th>pos</th><th>baseline</th><th>treatment</th><th>diff</th></tr>
+<tr><td>Test13</td><td>474</td><td>E8C</td><td>41</td><td>0.0%</td><td>100.0%</td><td>+100</td></tr>
+<tr><td>Test15</td><td>53</td><td>E1E</td><td>6</td><td>0.0%</td><td>100.0%</td><td>+100</td></tr>
+<tr><td>Test05</td><td>58</td><td>E1F</td><td>7</td><td>100.0%</td><td>0.0%</td><td>-100</td></tr>
+<tr><td>Test07</td><td>33</td><td>E1C</td><td>5</td><td>0.0%</td><td>100.0%</td><td>+100</td></tr>
+<tr><td>Test01</td><td>1</td><td>E1A</td><td>3</td><td>0.0%</td><td>100.0%</td><td>+100</td></tr>
+<tr><td>Test13</td><td>592</td><td>E0A</td><td>2</td><td>33.3%</td><td>100.0%</td><td>+67</td></tr>
+<tr><td>Test11</td><td>218</td><td>E4D</td><td>19</td><td>33.3%</td><td>100.0%</td><td>+67</td></tr>
+<tr><td>Test11</td><td>499</td><td>E9A</td><td>43</td><td>33.3%</td><td>100.0%</td><td>+67</td></tr>
+<tr><td>Test03</td><td>21</td><td>E1B</td><td>4</td><td>33.3%</td><td>100.0%</td><td>+67</td></tr>
+<tr><td>Test12</td><td>320</td><td>E6D</td><td>28</td><td>100.0%</td><td>33.3%</td><td>-67</td></tr>
+<tr><td>Test09</td><td>75</td><td>E2A</td><td>8</td><td>33.3%</td><td>100.0%</td><td>+67</td></tr>
+<tr><td>Test14</td><td>584</td><td>E9H</td><td>50</td><td>0.0%</td><td>66.7%</td><td>+67</td></tr>
+<tr><td>Test11</td><td>601</td><td>E0A</td><td>2</td><td>66.7%</td><td>0.0%</td><td>-67</td></tr>
+<tr><td>Test05</td><td>97</td><td>E2C</td><td>10</td><td>0.0%</td><td>66.7%</td><td>+67</td></tr>
+<tr><td>Test12</td><td>91</td><td>E2B</td><td>9</td><td>0.0%</td><td>66.7%</td><td>+67</td></tr>
+</table></details></section>
+<section><h2>first9 · claude-haiku-4-5-20251001</h2>
+<p class='lede'>Forced question id 9 at position 1 was answered D×28, C×17 across 45 treatment runs — this is whether the treatment landed as designed.</p>
+<div class='grid'><div class='card'><h3>Difference by position</h3><div class='sub'>treatment − baseline, questions binned by their position in the treatment exam. A projection effect that decays shows as a gradient toward zero.</div><svg viewBox="0 0 520 140" width="520" style="max-width:100%" xmlns="http://www.w3.org/2000/svg" font-family="ui-monospace,monospace" font-size="11">
+<line x1="230.0" y1="0" x2="230.0" y2="140" stroke="#4a5675" stroke-dasharray="3,3"/>
+<text x="4" y="20" fill="#1b2a49">2–10</text>
+<rect x="230.0" y="10" width="77.38232731136344" height="14" fill="#9aa3b8"/>
+<line x1="209.5971433870903" y1="17" x2="405.16751123563654" y2="17" stroke="#1b2a49" stroke-width="1.5"/>
+<text x="514" y="20" text-anchor="end" fill="#4a5675">+2.5 ± 1.6 (n=135)</text>
+<text x="4" y="46" fill="#1b2a49">11–20</text>
+<rect x="223.03559054197729" y="36" width="6.964409458022715" height="14" fill="#9aa3b8"/>
+<line x1="199.33984353861183" y1="43" x2="246.73133754534274" y2="43" stroke="#1b2a49" stroke-width="1.5"/>
+<text x="514" y="46" text-anchor="end" fill="#4a5675">-0.2 ± 0.4 (n=150)</text>
+<text x="4" y="72" fill="#1b2a49">21–30</text>
+<rect x="230.0" y="62" width="1" height="14" fill="#9aa3b8"/>
+<line x1="182.55576085284122" y1="69" x2="277.4442391471588" y2="69" stroke="#1b2a49" stroke-width="1.5"/>
+<text x="514" y="72" text-anchor="end" fill="#4a5675">+0.0 ± 0.8 (n=150)</text>
+<text x="4" y="98" fill="#1b2a49">31–40</text>
+<rect x="230.0" y="88" width="1" height="14" fill="#9aa3b8"/>
+<line x1="210.63097047581374" y1="95" x2="249.36902952418626" y2="95" stroke="#1b2a49" stroke-width="1.5"/>
+<text x="514" y="98" text-anchor="end" fill="#4a5675">+0.0 ± 0.3 (n=150)</text>
+<text x="4" y="124" fill="#1b2a49">41–50</text>
+<rect x="230.0" y="114" width="55.71527566418166" height="14" fill="#9aa3b8"/>
+<line x1="213.79729264937066" y1="121" x2="357.63325867899266" y2="121" stroke="#1b2a49" stroke-width="1.5"/>
+<text x="514" y="124" text-anchor="end" fill="#4a5675">+1.8 ± 1.2 (n=150)</text>
+</svg></div>
+<div class='card'><h3>Difference by subelement</h3><div class='sub'>same, grouped by subelement.</div><svg viewBox="0 0 520 270" width="520" style="max-width:100%" xmlns="http://www.w3.org/2000/svg" font-family="ui-monospace,monospace" font-size="11">
+<line x1="230.0" y1="0" x2="230.0" y2="270" stroke="#4a5675" stroke-dasharray="3,3"/>
+<text x="4" y="20" fill="#1b2a49">E0</text>
+<rect x="230.0" y="10" width="71.76589124209454" height="14" fill="#9aa3b8"/>
+<line x1="192.97249262205438" y1="17" x2="410.5592898621347" y2="17" stroke="#1b2a49" stroke-width="1.5"/>
+<text x="514" y="20" text-anchor="end" fill="#4a5675">+8.9 ± 6.9 (n=15)</text>
+<text x="4" y="46" fill="#1b2a49">E1</text>
+<rect x="230.0" y="36" width="7.176589124209443" height="14" fill="#9aa3b8"/>
+<line x1="204.00676155507244" y1="43" x2="270.34641669334644" y2="43" stroke="#1b2a49" stroke-width="1.5"/>
+<text x="514" y="46" text-anchor="end" fill="#4a5675">+0.9 ± 2.1 (n=75)</text>
+<text x="4" y="72" fill="#1b2a49">E2</text>
+<rect x="230.0" y="62" width="7.176589124209443" height="14" fill="#9aa3b8"/>
+<line x1="212.7038656338847" y1="69" x2="261.6493126145342" y2="69" stroke="#1b2a49" stroke-width="1.5"/>
+<text x="514" y="72" text-anchor="end" fill="#4a5675">+0.9 ± 1.5 (n=75)</text>
+<text x="4" y="98" fill="#1b2a49">E3</text>
+<rect x="230.0" y="88" width="1" height="14" fill="#9aa3b8"/>
+<line x1="230.0" y1="95" x2="230.0" y2="95" stroke="#1b2a49" stroke-width="1.5"/>
+<text x="514" y="98" text-anchor="end" fill="#4a5675">+0.0 ± 0.0 (n=45)</text>
+<text x="4" y="124" fill="#1b2a49">E4</text>
+<rect x="230.0" y="114" width="3.5882945621047213" height="14" fill="#9aa3b8"/>
+<line x1="226.55523722037947" y1="121" x2="240.62135190382998" y2="121" stroke="#1b2a49" stroke-width="1.5"/>
+<text x="514" y="124" text-anchor="end" fill="#4a5675">+0.4 ± 0.4 (n=75)</text>
+<text x="4" y="150" fill="#1b2a49">E5</text>
+<rect x="230.0" y="140" width="8.970736405261817" height="14" fill="#9aa3b8"/>
+<line x1="211.0291348498443" y1="147" x2="266.91233796067934" y2="147" stroke="#1b2a49" stroke-width="1.5"/>
+<text x="514" y="150" text-anchor="end" fill="#4a5675">+1.1 ± 1.8 (n=60)</text>
+<text x="4" y="176" fill="#1b2a49">E6</text>
+<rect x="224.01950906315878" y="166" width="5.980490936841221" height="14" fill="#9aa3b8"/>
+<line x1="215.77766785634122" y1="173" x2="232.26135026997636" y2="173" stroke="#1b2a49" stroke-width="1.5"/>
+<text x="514" y="176" text-anchor="end" fill="#4a5675">-0.7 ± 0.5 (n=90)</text>
+<text x="4" y="202" fill="#1b2a49">E7</text>
+<rect x="227.75731589868454" y="192" width="2.2426841013154615" height="14" fill="#9aa3b8"/>
+<line x1="223.36165506010624" y1="199" x2="232.15297673726283" y2="199" stroke="#1b2a49" stroke-width="1.5"/>
+<text x="514" y="202" text-anchor="end" fill="#4a5675">-0.3 ± 0.3 (n=120)</text>
+<text x="4" y="228" fill="#1b2a49">E8</text>
+<rect x="230.0" y="218" width="4.4853682026308945" height="14" fill="#9aa3b8"/>
+<line x1="219.17256570874292" y1="225" x2="249.79817069651892" y2="225" stroke="#1b2a49" stroke-width="1.5"/>
+<text x="514" y="228" text-anchor="end" fill="#4a5675">+0.6 ± 1.0 (n=60)</text>
+<text x="4" y="254" fill="#1b2a49">E9</text>
+<rect x="230.0" y="244" width="17.941472810523635" height="14" fill="#9aa3b8"/>
+<line x1="225.66597748662664" y1="251" x2="270.2169681344206" y2="251" stroke="#1b2a49" stroke-width="1.5"/>
+<text x="514" y="254" text-anchor="end" fill="#4a5675">+2.2 ± 1.4 (n=120)</text>
+</svg></div></div>
+<p class='lede' style='margin-top:14px'><b>Within-treatment split.</b> Runs that got question 1 right (28) vs wrong (17), compared on the rest of the exam: right-minus-wrong <span class='pill'>+1.3</span> ± 0.8% (E-group ± 0.8%) over 341 questions — no separation. This is the sharpest test when the forced question is one the model wobbles on.</p>
+<details><summary>Questions that moved most</summary><table><tr><th class='l'>exam</th><th>id</th><th>group</th><th>pos</th><th>baseline</th><th>treatment</th><th>diff</th></tr>
+<tr><td>Test05</td><td>39</td><td>E1D</td><td>5</td><td>100.0%</td><td>0.0%</td><td>-100</td></tr>
+<tr><td>Test05</td><td>97</td><td>E2C</td><td>10</td><td>0.0%</td><td>100.0%</td><td>+100</td></tr>
+<tr><td>Test07</td><td>33</td><td>E1C</td><td>4</td><td>0.0%</td><td>100.0%</td><td>+100</td></tr>
+<tr><td>Test13</td><td>269</td><td>E5C</td><td>23</td><td>0.0%</td><td>100.0%</td><td>+100</td></tr>
+<tr><td>Test14</td><td>544</td><td>E9D</td><td>46</td><td>33.3%</td><td>100.0%</td><td>+67</td></tr>
+<tr><td>Test13</td><td>592</td><td>E0A</td><td>2</td><td>33.3%</td><td>100.0%</td><td>+67</td></tr>
+<tr><td>Test03</td><td>584</td><td>E9H</td><td>50</td><td>33.3%</td><td>100.0%</td><td>+67</td></tr>
+<tr><td>Test14</td><td>584</td><td>E9H</td><td>50</td><td>0.0%</td><td>66.7%</td><td>+67</td></tr>
+<tr><td>Test10</td><td>511</td><td>E9B</td><td>44</td><td>66.7%</td><td>0.0%</td><td>-67</td></tr>
+<tr><td>Test01</td><td>559</td><td>E9F</td><td>48</td><td>0.0%</td><td>66.7%</td><td>+67</td></tr>
+<tr><td>Test09</td><td>598</td><td>E0A</td><td>2</td><td>0.0%</td><td>66.7%</td><td>+67</td></tr>
+<tr><td>Test15</td><td>119</td><td>E2E</td><td>12</td><td>100.0%</td><td>66.7%</td><td>-33</td></tr>
+<tr><td>Test15</td><td>220</td><td>E4E</td><td>20</td><td>66.7%</td><td>100.0%</td><td>+33</td></tr>
+<tr><td>Test02</td><td>477</td><td>E8C</td><td>41</td><td>66.7%</td><td>100.0%</td><td>+33</td></tr>
+<tr><td>Test01</td><td>592</td><td>E0A</td><td>2</td><td>66.7%</td><td>100.0%</td><td>+33</td></tr>
+</table></details></section>
+</main><footer>Paired differences per Miller, <i>Adding Error Bars to Evals</i> (2024), Sec. 3.3; E-group clustering per Eq. 4.</footer></body></html>
