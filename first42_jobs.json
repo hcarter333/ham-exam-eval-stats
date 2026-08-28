@@ -1,0 +1,104 @@
+{
+  "defaults": {
+    "model": "claude-sonnet-4-6",
+    "max_tokens": 16000,
+    "figures": [
+      "figures/E5_E6.png",
+      "figures/E7_E9-1.png",
+      "figures/E9-2_E9-3.png"
+    ],
+    "replicas": 3
+  },
+  "jobs": [
+    {
+      "exam": "exams/Test01_first42.json",
+      "key": "keys/Test01_first42.key.json",
+      "tag": "first42",
+      "model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "exam": "exams/Test02_first42.json",
+      "key": "keys/Test02_first42.key.json",
+      "tag": "first42",
+      "model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "exam": "exams/Test03_first42.json",
+      "key": "keys/Test03_first42.key.json",
+      "tag": "first42",
+      "model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "exam": "exams/Test04_first42.json",
+      "key": "keys/Test04_first42.key.json",
+      "tag": "first42",
+      "model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "exam": "exams/Test05_first42.json",
+      "key": "keys/Test05_first42.key.json",
+      "tag": "first42",
+      "model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "exam": "exams/Test06_first42.json",
+      "key": "keys/Test06_first42.key.json",
+      "tag": "first42",
+      "model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "exam": "exams/Test07_first42.json",
+      "key": "keys/Test07_first42.key.json",
+      "tag": "first42",
+      "model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "exam": "exams/Test08_first42.json",
+      "key": "keys/Test08_first42.key.json",
+      "tag": "first42",
+      "model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "exam": "exams/Test09_first42.json",
+      "key": "keys/Test09_first42.key.json",
+      "tag": "first42",
+      "model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "exam": "exams/Test10_first42.json",
+      "key": "keys/Test10_first42.key.json",
+      "tag": "first42",
+      "model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "exam": "exams/Test11_first42.json",
+      "key": "keys/Test11_first42.key.json",
+      "tag": "first42",
+      "model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "exam": "exams/Test12_first42.json",
+      "key": "keys/Test12_first42.key.json",
+      "tag": "first42",
+      "model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "exam": "exams/Test13_first42.json",
+      "key": "keys/Test13_first42.key.json",
+      "tag": "first42",
+      "model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "exam": "exams/Test14_first42.json",
+      "key": "keys/Test14_first42.key.json",
+      "tag": "first42",
+      "model": "claude-haiku-4-5-20251001"
+    },
+    {
+      "exam": "exams/Test15_first42.json",
+      "key": "keys/Test15_first42.key.json",
+      "tag": "first42",
+      "model": "claude-haiku-4-5-20251001"
+    }
+  ]
+}
