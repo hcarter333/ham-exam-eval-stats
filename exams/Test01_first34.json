@@ -1,0 +1,652 @@
+[
+  {
+    "number": 1,
+    "cluster": "E1C",
+    "id": "34",
+    "header": "E1C12 (id 34)",
+    "question": "In what portion of the 630 -meter band are phone emissions permitted?",
+    "choices": [
+      "A. None",
+      "B. Only the top 3 kHz",
+      "C. Only the bottom 3 kHz",
+      "D. The entire band"
+    ]
+  },
+  {
+    "number": 2,
+    "cluster": "E0A",
+    "id": "592",
+    "header": "E0A03 (id 592)",
+    "question": "Over what range of frequencies are the FCC human body RF exposure limits most restrictive?",
+    "choices": [
+      "A. 300 kHz - 3 MHz",
+      "B. 3 - 30 MHz",
+      "C. 30 - 300 MHz",
+      "D. 300 - 3000 MHz"
+    ]
+  },
+  {
+    "number": 3,
+    "cluster": "E1A",
+    "id": "1",
+    "header": "E1A01 (id 1)",
+    "question": "Why is it not legal to transmit a 3 kHz bandwidth USB signal with a carrier frequency of 14.348 MHz?",
+    "choices": [
+      "A. USB is not used on 20 -meter phone",
+      "B. The lower 1 kHz of the signal is outside the 20 -meter band",
+      "C. 14.348 MHz is outside the 20- meter band",
+      "D. The upper 1 kHz of the signal is outside the 20 -meter band"
+    ]
+  },
+  {
+    "number": 4,
+    "cluster": "E1B",
+    "id": "12",
+    "header": "E1B01 (id 12)",
+    "question": "Which of the following constitutes a spurious emission?",
+    "choices": [
+      "A. An amateur station transmission made without the proper call sign identification",
+      "B. A signal transmitted to prevent its detection by any station other than the intended recipient",
+      "C. Any transmitted signal that unintentionally interferes with another licensed radio station and whose levels exceed 40 dB below the fundamental power level",
+      "D. An emission outside the signal’s necessary bandwidth that can be reduced or eliminated without affecting the information transmitted"
+    ]
+  },
+  {
+    "number": 5,
+    "cluster": "E1D",
+    "id": "43",
+    "header": "E1D09 (id 43)",
+    "question": "Which UHF amateur band s have frequencies authorized for space stations?",
+    "choices": [
+      "A. 70 centimeters only",
+      "B. 70 centimeters and 13 centimeters",
+      "C. 70 centimeters and 33 centimeters",
+      "D. 33 centimeters and 13 centimeters"
+    ]
+  },
+  {
+    "number": 6,
+    "cluster": "E1E",
+    "id": "51",
+    "header": "E1E05 (id 51)",
+    "question": "What must the VE team do with the application form if the examinee does not pass the exam?",
+    "choices": [
+      "A. Maintain the application form with the VEC’s records",
+      "B. Return the application document to the examinee",
+      "C. Send the application form to the FCC and inform the FCC of the grade",
+      "D. Destroy the application form"
+    ]
+  },
+  {
+    "number": 7,
+    "cluster": "E1F",
+    "id": "68",
+    "header": "E1F11 (id 68)",
+    "question": "Which of the following best describes one of the standards that must be met by an external RF power amplifier if it is to qualify for a grant of FCC certification?",
+    "choices": [
+      "A. It must produce full legal outp ut when driven by not more than 5 watts of mean RF input power",
+      "B. It must have received an Underwriters Laboratory certification for electrical safety as well as having met IEEE standard 14.101(B)",
+      "C. It must exhibit a gain of less than 23 dB when driven by 10 watts or less",
+      "D. It must satisfy the FCC’s spurious emission standards when operated at the lesser of 1500 watts or its full output power"
+    ]
+  },
+  {
+    "number": 8,
+    "cluster": "E2A",
+    "id": "76",
+    "header": "E2A08 (id 76)",
+    "question": "Why should effective radiated power (ERP) be limited to a satellite that uses a linear transponder?",
+    "choices": [
+      "A. To prevent creating errors in the satellite telemetry",
+      "B. To avoid reducing the downlink power to all other users",
+      "C. To prevent the satellite from emittin g out -of-band signals",
+      "D. To avoid interfering with terrestrial QSOs"
+    ]
+  },
+  {
+    "number": 9,
+    "cluster": "E2B",
+    "id": "90",
+    "header": "E2B09 (id 90)",
+    "question": "What kind of receiver can be used to receive and decode SSTV using the Digital Radio Mondiale (DRM) protocol ?",
+    "choices": [
+      "A. CDMA",
+      "B. AREDN",
+      "C. AM",
+      "D. SSB"
+    ]
+  },
+  {
+    "number": 10,
+    "cluster": "E2C",
+    "id": "100",
+    "header": "E2C07 (id 100)",
+    "question": "What is the Cabrillo format?",
+    "choices": [
+      "A. A standard for submission of electronic contest logs",
+      "B. A method of exchanging information during a contest QSO",
+      "C. The most common set of contest rules",
+      "D. A digital protocol specifically designed for rapid contest exchanges"
+    ]
+  },
+  {
+    "number": 11,
+    "cluster": "E2D",
+    "id": "113",
+    "header": "E2D08 (id 113)",
+    "question": "What type of packet frame is used to transm it APRS beacon data?",
+    "choices": [
+      "A. Acknowledgement",
+      "B. Burst",
+      "C. Unnumbered Information",
+      "D. Connect"
+    ]
+  },
+  {
+    "number": 12,
+    "cluster": "E2E",
+    "id": "127",
+    "header": "E2E11 (id 127)",
+    "question": "What is the difference between direct FSK and audio FSK?",
+    "choices": [
+      "A. Direct FSK modulates the transmitter VFO",
+      "B. Direct FSK occupies less bandwidth",
+      "C. Direct FSK can transmit higher baud rates",
+      "D. All these choices are correct"
+    ]
+  },
+  {
+    "number": 13,
+    "cluster": "E3A",
+    "id": "143",
+    "header": "E3A14 (id 143)",
+    "question": "What are circularly polarized elec tromagnetic waves?",
+    "choices": [
+      "A. Waves with an electric field bent into a circular shape",
+      "B. Waves with rotating electric and magnetic field s",
+      "C. Waves that circle Earth",
+      "D. Waves produced by a loop antenna"
+    ]
+  },
+  {
+    "number": 14,
+    "cluster": "E3B",
+    "id": "146",
+    "header": "E3B03 (id 146)",
+    "question": "At what time of day is transequatorial propagation most likely to occur ?",
+    "choices": [
+      "A. Morning",
+      "B. Noon",
+      "C. Afternoon or early evening",
+      "D. Late at night"
+    ]
+  },
+  {
+    "number": 15,
+    "cluster": "E3C",
+    "id": "161",
+    "header": "E3C05 (id 161)",
+    "question": "What orientation of Bz (B sub z) increases the likelihood that charge d particles from the S un will cause disturbed conditions?",
+    "choices": [
+      "A. Southward",
+      "B. Northward",
+      "C. Eastward",
+      "D. Westward"
+    ]
+  },
+  {
+    "number": 16,
+    "cluster": "E4A",
+    "id": "172",
+    "header": "E4A04 (id 172)",
+    "question": "How is compensation of an oscilloscope probe performed ?",
+    "choices": [
+      "A. A square wave is displayed , and the probe is adjusted until the horizontal portions of the displayed wave are as nearly flat as possible",
+      "B. A high frequency sine wave is displayed , and the probe is adjusted for maximum amplitude",
+      "C. A frequency standard is displayed , and the probe is adjusted until the deflection time is accurate",
+      "D. A DC voltage standard is displayed , and the probe is adjusted until the displayed voltage is accurate"
+    ]
+  },
+  {
+    "number": 17,
+    "cluster": "E4B",
+    "id": "190",
+    "header": "E4B11 (id 190)",
+    "question": "Which of the following can be measured with a vector network analyzer?",
+    "choices": [
+      "A. Input impedance",
+      "B. Output impedance",
+      "C. Reflection coefficient",
+      "D. All these choices are correct"
+    ]
+  },
+  {
+    "number": 18,
+    "cluster": "E4C",
+    "id": "191",
+    "header": "E4C01 (id 191)",
+    "question": "What is an effect of excessive phase noise in an SDR receiver’s master clock oscill ator?",
+    "choices": [
+      "A. It limits the receiver’s ability to receive strong signals",
+      "B. It can affect the receiver’s frequency calibration",
+      "C. It decreases the receiver ’s third -order intercept point",
+      "D. It can combine with strong signals on nearby frequencies to generate int erference"
+    ]
+  },
+  {
+    "number": 19,
+    "cluster": "E4D",
+    "id": "214",
+    "header": "E4D10 (id 214)",
+    "question": "What does a third -order intercept level of 40 dBm mean with respect to receiver performance?",
+    "choices": [
+      "A. Signals less than 40 dBm will not generate audible third -order intermodulation products",
+      "B. The receiver can tolerate signals up to 40 dB above the noise floor without producing third -order intermodulation products",
+      "C. A pair of 40 dBm input signals will theoretically generate a third -order intermodulation product that has the same output amplitude as either of the input signals",
+      "D. A pair of 1 mW input signals will produce a third -order intermodulation product that is 40 dB stronger than the input signal"
+    ]
+  },
+  {
+    "number": 20,
+    "cluster": "E4E",
+    "id": "220",
+    "header": "E4E02 (id 220)",
+    "question": "Which of the following types of noise can often be reduced by a digital noise reduction ?",
+    "choices": [
+      "A. Broadband white noise",
+      "B. Ignition noise",
+      "C. Power line noise",
+      "D. All these choices are correct"
+    ]
+  },
+  {
+    "number": 21,
+    "cluster": "E5A",
+    "id": "238",
+    "header": "E5A06 (id 238)",
+    "question": "What is the magnitude of the circulating current within the components of a parallel LC circuit at resonance?",
+    "choices": [
+      "A. It is at a minimum",
+      "B. It is at a maximum",
+      "C. It equals 1 divided by the quantity 2 times pi, times the square root of ( inductance L multiplied by capacitanc e C)",
+      "D. It equals 2 times pi, times the square root of (inductance L multiplied by capacitance C)"
+    ]
+  },
+  {
+    "number": 22,
+    "cluster": "E5B",
+    "id": "250",
+    "header": "E5B05 (id 250)",
+    "question": "What is the effect on the magnitude of pure reactance when it is converted to susceptance ?",
+    "choices": [
+      "A. It is unchanged",
+      "B. The sign is reversed",
+      "C. It is shifted by 90 degrees",
+      "D. It is replaced by its reciprocal"
+    ]
+  },
+  {
+    "number": 23,
+    "cluster": "E5C",
+    "id": "269",
+    "header": "E5C12 (id 269)",
+    "question": "Which point on Figure E5 -1 best represents the impedance of a series circuit consisting of a 300 -ohm resistor and a 19-picofarad capacitor at 21.200 MHz?",
+    "choices": [
+      "A. Point 1",
+      "B. Point 3",
+      "C. Point 7",
+      "D. Point 8"
+    ]
+  },
+  {
+    "number": 24,
+    "cluster": "E5D",
+    "id": "275",
+    "header": "E5D06 (id 275)",
+    "question": "What parasitic characteristic creates an inductor’s self -resonance?",
+    "choices": [
+      "A. Skin effect",
+      "B. Dielectric loss",
+      "C. Coupling",
+      "D. Inter -turn capacitance"
+    ]
+  },
+  {
+    "number": 25,
+    "cluster": "E6A",
+    "id": "282",
+    "header": "E6A01 (id 282)",
+    "question": "In what application is gallium arsenide used as a semiconductor material?",
+    "choices": [
+      "A. In high -current rectifier circuits",
+      "B. In high -power audio circuits",
+      "C. In m icrowave circuits",
+      "D. In very low -frequency RF circuits"
+    ]
+  },
+  {
+    "number": 26,
+    "cluster": "E6B",
+    "id": "303",
+    "header": "E6B10 (id 303)",
+    "question": "In Figure E6 -2, which is the schematic symbol for a Schottky diode?",
+    "choices": [
+      "A. 1",
+      "B. 6",
+      "C. 2",
+      "D. 3"
+    ]
+  },
+  {
+    "number": 27,
+    "cluster": "E6C",
+    "id": "305",
+    "header": "E6C01 (id 305)",
+    "question": "What is the function of hysteresis in a comparator?",
+    "choices": [
+      "A. To prevent input noise from causing unstable output signals",
+      "B. To allow the comparator to be used with AC input signals",
+      "C. To cause the output to continually change states",
+      "D. To increase the sensitivity"
+    ]
+  },
+  {
+    "number": 28,
+    "cluster": "E6D",
+    "id": "318",
+    "header": "E6D03 (id 318)",
+    "question": "Which of the following is an aspect of the piezoelectric effect?",
+    "choices": [
+      "A. Mechanical deformation of material due to the application of a voltage",
+      "B. Mechanical deformation of material due to the application of a magnetic field",
+      "C. Generation of electrical energy in the presence of light",
+      "D. Increased conductivity in the presence of light"
+    ]
+  },
+  {
+    "number": 29,
+    "cluster": "E6E",
+    "id": "339",
+    "header": "E6E12 (id 339)",
+    "question": "Why are DIP through -hole package ICs not typically used at UHF and higher frequencies?",
+    "choices": [
+      "A. Excessive dielectric loss",
+      "B. Epoxy coating is conductive above 300 MHz",
+      "C. Excessive lead length",
+      "D. Unsuitable for combining analog and digital signals"
+    ]
+  },
+  {
+    "number": 30,
+    "cluster": "E6F",
+    "id": "347",
+    "header": "E6F08 (id 347)",
+    "question": "Why are optoisolators often used in conjunction with solid -state circuits that control 120 VAC circuits ?",
+    "choices": [
+      "A. Optoisolators provide a low -impedance link between a control circuit and a power circuit",
+      "B. Optoisolators provide impedance matching between the con trol circuit and power circuit",
+      "C. Optoisolators provide an electrical isolation between a control circuit and the circuit being switched",
+      "D. Optoisolators eliminate the effects of reflected light in the control circuit"
+    ]
+  },
+  {
+    "number": 31,
+    "cluster": "E7A",
+    "id": "360",
+    "header": "E7A10 (id 360)",
+    "question": "What is a truth table?",
+    "choices": [
+      "A. A list of inputs and corresponding outputs for an op -amp",
+      "B. A list of inputs and corresponding outputs for a digital device",
+      "C. A diagram showing logic states when the digital gate output is true",
+      "D. A table of logic symbols that indicate the logic states of an op -amp"
+    ]
+  },
+  {
+    "number": 32,
+    "cluster": "E7B",
+    "id": "367",
+    "header": "E7B06 (id 367)",
+    "question": "What is a characteristic of a grounded -grid amplifier?",
+    "choices": [
+      "A. High power gain",
+      "B. Low input impedance",
+      "C. High electrostatic damage protection",
+      "D. Low bandwidth"
+    ]
+  },
+  {
+    "number": 33,
+    "cluster": "E7C",
+    "id": "374",
+    "header": "E7C01 (id 374)",
+    "question": "How are the capacitors and inductors of a low -pass filter Pi- network arranged between the netwo rk’s input and output?",
+    "choices": [
+      "A. Two inductors are in series between the input and output, and a capacitor is connected between the two inductors and ground",
+      "B. Two capacitors are in series between the input and output, and an inductor is connected between the two capacitors and ground",
+      "C. An inductor is connected between the input and ground, another inductor is connected between the output and ground, and a capacitor is connected between the input and output",
+      "D. A capacitor is connected between the input and gro und, another capacitor is connected between the output and ground, and an inductor is connected between the input and output"
+    ]
+  },
+  {
+    "number": 34,
+    "cluster": "E7D",
+    "id": "388",
+    "header": "E7D04 (id 388)",
+    "question": "Which of the following describes a three -terminal voltage regulator?",
+    "choices": [
+      "A. A series current source",
+      "B. A series regulator",
+      "C. A shunt regulator",
+      "D. A shunt current source"
+    ]
+  },
+  {
+    "number": 35,
+    "cluster": "E7E",
+    "id": "407",
+    "header": "E7E08 (id 407)",
+    "question": "What are the principal frequencies that appear at the output of a mixer?",
+    "choices": [
+      "A. Two and four times the input frequency",
+      "B. The square root of the product of input freque ncies",
+      "C. The two input frequencies along with their sum and difference frequencies",
+      "D. 1.414 and 0.707 times the input frequency"
+    ]
+  },
+  {
+    "number": 36,
+    "cluster": "E7F",
+    "id": "415",
+    "header": "E7F05 (id 415)",
+    "question": "How frequently must an analog signal be sampled to be accurately reproduced?",
+    "choices": [
+      "A. At least half the rate of the highest frequency component of the signal",
+      "B. At least twice the rate of the highest frequency component of the signal",
+      "C. At the same rate as the highest frequency component of the signal",
+      "D. At four times the rate of the highest frequency compon ent of the signal"
+    ]
+  },
+  {
+    "number": 37,
+    "cluster": "E7G",
+    "id": "429",
+    "header": "E7G05 (id 429)",
+    "question": "How can unwanted ringing and audio instability be prevented in an op -amp audio filter?",
+    "choices": [
+      "A. Restrict both gain and Q",
+      "B. Restrict gain but in crease Q",
+      "C. Restrict Q but increase gain",
+      "D. Increase both gain and Q"
+    ]
+  },
+  {
+    "number": 38,
+    "cluster": "E7H",
+    "id": "445",
+    "header": "E7H09 (id 445)",
+    "question": "What type of frequency synthesizer circuit uses a phase accumulator, lookup table, digital- to-analog converter, and a low -pass anti-alias filter?",
+    "choices": [
+      "A. A direct digital synthesizer",
+      "B. A hybrid synthesizer",
+      "C. A phase -locked loop synthesizer",
+      "D. A direct conversion synthesizer"
+    ]
+  },
+  {
+    "number": 39,
+    "cluster": "E8A",
+    "id": "460",
+    "header": "E8A11 (id 460)",
+    "question": "Which of the following is a measure of the quality of an analog -to-digital converter?",
+    "choices": [
+      "A. Total harmonic distortion",
+      "B. Peak envelope power",
+      "C. Rec iprocal mixing",
+      "D. Power factor"
+    ]
+  },
+  {
+    "number": 40,
+    "cluster": "E8B",
+    "id": "465",
+    "header": "E8B05 (id 465)",
+    "question": "What is the deviation ratio of an FM phone signal having a maximum frequency swing of plus or minus 5 kHz if the highest modulation frequency is 3 kHz?",
+    "choices": [
+      "A. 6",
+      "B. 0.167",
+      "C. 0.6",
+      "D. 1.67"
+    ]
+  },
+  {
+    "number": 41,
+    "cluster": "E8C",
+    "id": "480",
+    "header": "E8C09 (id 480)",
+    "question": "Which digital code allows only one bit to change between sequential code values?",
+    "choices": [
+      "A. Binary Coded Decimal Code",
+      "B. Extended Binary Coded Decimal Interchange Code",
+      "C. Extended ASCII",
+      "D. Gray code"
+    ]
+  },
+  {
+    "number": 42,
+    "cluster": "E8D",
+    "id": "495",
+    "header": "E8D09 (id 495)",
+    "question": "What is considered an acceptable maximum IMD level for an idling PSK signal?",
+    "choices": [
+      "A. +5 dB",
+      "B. +10 dB",
+      "C. +15 dB",
+      "D. -30 dB"
+    ]
+  },
+  {
+    "number": 43,
+    "cluster": "E9A",
+    "id": "502",
+    "header": "E9A05 (id 502)",
+    "question": "What does the term “ground g ain” mean?",
+    "choices": [
+      "A. The change in signal strength caused by grounding the antenna",
+      "B. The gain of the antenna with respect to a dipole at ground level",
+      "C. To force net gain to 0 dB by grounding part of the antenna",
+      "D. An increase in signal strength from ground reflections in the environment of the antenna"
+    ]
+  },
+  {
+    "number": 44,
+    "cluster": "E9B",
+    "id": "512",
+    "header": "E9B03 (id 512)",
+    "question": "What is the front- to-side ratio of the antenna radiation pattern shown in Figure E9 -1?",
+    "choices": [
+      "A. 12 dB",
+      "B. 24 dB",
+      "C. 18 dB",
+      "D. 14 dB"
+    ]
+  },
+  {
+    "number": 45,
+    "cluster": "E9C",
+    "id": "527",
+    "header": "E9C07 (id 527)",
+    "question": "What is the approximate feed point impedance at the center of a two -wire half- wave folded dipole antenna?",
+    "choices": [
+      "A. 300 ohms",
+      "B. 72 ohms",
+      "C. 50 ohms",
+      "D. 450 ohms"
+    ]
+  },
+  {
+    "number": 46,
+    "cluster": "E9D",
+    "id": "543",
+    "header": "E9D10 (id 543)",
+    "question": "How does radiation resistance of a base -fed whip antenna change below its resonant frequency?",
+    "choices": [
+      "A. Radiation resistance increases",
+      "B. Radiation resistance decreases",
+      "C. Radiation resistance becomes imaginary",
+      "D. Radiation resistance does not depend on frequency"
+    ]
+  },
+  {
+    "number": 47,
+    "cluster": "E9E",
+    "id": "548",
+    "header": "E9E03 (id 548)",
+    "question": "What matching system uses a short length of transmission line connected in parallel with the feed line at or near the feed point?",
+    "choices": [
+      "A. Gamma match",
+      "B. Delta match",
+      "C. T-match",
+      "D. Stub match"
+    ]
+  },
+  {
+    "number": 48,
+    "cluster": "E9F",
+    "id": "559",
+    "header": "E9F04 (id 559)",
+    "question": "What impedance does a 1/2 -wavelength transmission line present to an RF generator when the line is shorted at the far end?",
+    "choices": [
+      "A. Very high impedance",
+      "B. Very low impedance",
+      "C. The same as the characteristic impedance of the line",
+      "D. The same as the out put impedance of the RF generator"
+    ]
+  },
+  {
+    "number": 49,
+    "cluster": "E9G",
+    "id": "571",
+    "header": "E9G04 (id 571)",
+    "question": "What are the two families of circles and arcs that make up a Smith chart?",
+    "choices": [
+      "A. Inductance and capacitance",
+      "B. Reactance and voltage",
+      "C. Resistance and reactance",
+      "D. Voltage and impedance"
+    ]
+  },
+  {
+    "number": 50,
+    "cluster": "E9H",
+    "id": "581",
+    "header": "E9H03 (id 581)",
+    "question": "What is r eceiving directivity factor (RDF)?",
+    "choices": [
+      "A. Forward gain compared to the gain in the reverse direction",
+      "B. Relative directivity compared to isotropic",
+      "C. Relative directivity com pared to a dipole",
+      "D. Peak a ntenna gain compared to average gain over the hemisphere around and above the antenna"
+    ]
+  }
+]

@@ -1,0 +1,652 @@
+[
+  {
+    "number": 1,
+    "cluster": "E1C",
+    "id": "34",
+    "header": "E1C12 (id 34)",
+    "question": "In what portion of the 630 -meter band are phone emissions permitted?",
+    "choices": [
+      "A. None",
+      "B. Only the top 3 kHz",
+      "C. Only the bottom 3 kHz",
+      "D. The entire band"
+    ]
+  },
+  {
+    "number": 2,
+    "cluster": "E0A",
+    "id": "590",
+    "header": "E0A01 (id 590)",
+    "question": "What is the primary function of an external earth connection or ground rod?",
+    "choices": [
+      "A. Prevent static build up on power lines",
+      "B. Lightning charge dissipation",
+      "C. Reduce RF current flow between pieces of equipment",
+      "D. Protect breaker panel from power surges"
+    ]
+  },
+  {
+    "number": 3,
+    "cluster": "E1A",
+    "id": "8",
+    "header": "E1A08 (id 8)",
+    "question": "If a station in a message forwarding system inadvertently forwards a message that is in violation of FCC rules, who is primarily accountable for the rules violation?",
+    "choices": [
+      "A. The control operator of the packet bulletin board station",
+      "B. The control operator of the originating station",
+      "C. The control operators of all the stations in the system",
+      "D. The control operators of all the stations in the system not authenticating the source from which they accept communications"
+    ]
+  },
+  {
+    "number": 4,
+    "cluster": "E1B",
+    "id": "19",
+    "header": "E1B08 (id 19)",
+    "question": "What limitations may the FCC place on an amateur station if its signal causes interference to domestic broad cast reception, assuming that the receivers involved are of good engineering design?",
+    "choices": [
+      "A. The amateur station must cease operation",
+      "B. The amateur station must cease operation on all frequencies below 30 MHz",
+      "C. The amateur station must cease operation on all frequencies above 30 MHz",
+      "D. The amateur station must avoid transmitting during certain hours on frequencies that cause the interference"
+    ]
+  },
+  {
+    "number": 5,
+    "cluster": "E1D",
+    "id": "42",
+    "header": "E1D08 (id 42)",
+    "question": "Which VHF amateur bands have frequencies authorized for space stations?",
+    "choices": [
+      "A. 6 meters and 2 meters",
+      "B. 6 meters, 2 meters, and 1.25 meters",
+      "C. 2 meters and 1.25 meters",
+      "D. 2 meters"
+    ]
+  },
+  {
+    "number": 6,
+    "cluster": "E1E",
+    "id": "55",
+    "header": "E1E09 (id 55)",
+    "question": "What may be the penalty for a VE who fraudulently administers or certifies an examination?",
+    "choices": [
+      "A. Revocation of the VE’s amateur station license grant and the suspension of the VE’s amateur operator licen se grant",
+      "B. A fine of up to $1 ,000 per occurrence",
+      "C. A sentence of up to one year in prison",
+      "D. All these choices are correct"
+    ]
+  },
+  {
+    "number": 7,
+    "cluster": "E1F",
+    "id": "59",
+    "header": "E1F02 (id 59)",
+    "question": "What privileges are authorized in the US to persons holding an amateur service license granted by the government of Canada?",
+    "choices": [
+      "A. None, they must obtain a US license",
+      "B. Full privileges of the Ge neral class license on the 80 -, 40-, 20-, 15-, and 10 -meter bands",
+      "C. The operating terms and conditions of the Canadian amateur service license, not to exceed US Amateur Extra c lass license privileges",
+      "D. Full privileges, up to and including those of the Am ateur Extra c lass license, on the 80 -, 40-, 20-, 15-, and 10 -meter bands"
+    ]
+  },
+  {
+    "number": 8,
+    "cluster": "E2A",
+    "id": "72",
+    "header": "E2A04 (id 72)",
+    "question": "What is meant by the “mode” of an amateur radio satellite?",
+    "choices": [
+      "A. Whether the satellite is in a low earth or geostationary orbit",
+      "B. The satellite’s uplink and downlink frequency bands",
+      "C. The satellite’s orientation with respect to the Earth",
+      "D. Whether the satell ite is in a polar or equatorial orbit"
+    ]
+  },
+  {
+    "number": 9,
+    "cluster": "E2B",
+    "id": "83",
+    "header": "E2B02 (id 83)",
+    "question": "How many horizontal lines make up a fast -scan (NTSC) television frame?",
+    "choices": [
+      "A. 30",
+      "B. 60",
+      "C. 525",
+      "D. 1080"
+    ]
+  },
+  {
+    "number": 10,
+    "cluster": "E2C",
+    "id": "98",
+    "header": "E2C05 (id 98)",
+    "question": "What is the function of a DX QSL Manager?",
+    "choices": [
+      "A. Allocate frequencies for DXpeditions",
+      "B. Handle the receiving and sending of confirmations for a DX station",
+      "C. Run a net to allow many stations to contact a rare DX st ation",
+      "D. Communicate to a DXpedition about propagation, band openings, pileup conditions, etc."
+    ]
+  },
+  {
+    "number": 11,
+    "cluster": "E2D",
+    "id": "114",
+    "header": "E2D09 (id 114)",
+    "question": "What type of modulation is used by JT65?",
+    "choices": [
+      "A. Multitone AFSK",
+      "B. PSK",
+      "C. RTTY",
+      "D. QAM"
+    ]
+  },
+  {
+    "number": 12,
+    "cluster": "E2E",
+    "id": "117",
+    "header": "E2E01 (id 117)",
+    "question": "Which of the following types of modulation is used for data emissions below 30 MHz?",
+    "choices": [
+      "A. DTMF tones modulating an FM signal",
+      "B. FSK",
+      "C. Pulse modulation",
+      "D. Spread spectrum"
+    ]
+  },
+  {
+    "number": 13,
+    "cluster": "E3A",
+    "id": "131",
+    "header": "E3A02 (id 131)",
+    "question": "What characterizes libration fading of an EME signal?",
+    "choices": [
+      "A. A slow change in the pitch of the CW signal",
+      "B. A fluttery , irregular fading",
+      "C. A gradual loss of signal as the sun rises",
+      "D. The returning echo is several hertz lower in frequency than the transmitted signal ~~"
+    ]
+  },
+  {
+    "number": 14,
+    "cluster": "E3B",
+    "id": "150",
+    "header": "E3B07 (id 150)",
+    "question": "What effect does lowering a signal’s transmitted elevation angle have on ionospheric HF skip propa gation?",
+    "choices": [
+      "A. Faraday rotation becomes stronger",
+      "B. The MUF decreases",
+      "C. The distance covered by each hop increases",
+      "D. The critical frequency increases"
+    ]
+  },
+  {
+    "number": 15,
+    "cluster": "E3C",
+    "id": "168",
+    "header": "E3C12 (id 168)",
+    "question": "Which of the following is indicated by a sudden rise in radio background noise across a large portion of the HF spectrum?",
+    "choices": [
+      "A. A temperature inversion has occurred",
+      "B. A coronal mass ejection impact or a solar flare has occurred",
+      "C. Transequatorial propagation on 6 meters is likely",
+      "D. Long -path pr opagation on the higher HF bands is likely"
+    ]
+  },
+  {
+    "number": 16,
+    "cluster": "E4A",
+    "id": "173",
+    "header": "E4A05 (id 173)",
+    "question": "What is the purpose of using a prescal er with a frequency counter ?",
+    "choices": [
+      "A. Amplify low-level signals for more accurate counting",
+      "B. Multiply a higher frequency signal so a low -frequency counter can display the operating frequency",
+      "C. Prevent oscillation in a low -frequency counter circuit",
+      "D. Reduce the signal frequency to within the counter's operating range"
+    ]
+  },
+  {
+    "number": 17,
+    "cluster": "E4B",
+    "id": "181",
+    "header": "E4B02 (id 181)",
+    "question": "What is the significance of voltmeter sensitivity expressed in ohms per volt?",
+    "choices": [
+      "A. The full scale reading of the voltmeter multiplied by its ohms per volt rating is the input imped ance of the voltmeter",
+      "B. The reading in volts multiplied by the ohms per volt rating will determine the power drawn by the device under test",
+      "C. The reading in ohms divided by the ohms per volt rating will determine the voltage applied to the circuit",
+      "D. The full scale reading in amps divided by ohms per volt rating will determine the size of shunt needed"
+    ]
+  },
+  {
+    "number": 18,
+    "cluster": "E4C",
+    "id": "201",
+    "header": "E4C11 (id 201)",
+    "question": "Why does input attenuation reduce receiver overload on the lower frequency HF bands with little or no impact on signal- to-noise ratio?",
+    "choices": [
+      "A. The attenuator has a low -pass filter to increase the strength of lower frequency signals",
+      "B. The attenuator has a noise filter to suppress interference",
+      "C. Signals are attenuated separately from the noise",
+      "D. Atmospheric noise is gen erally greater than internally generated noise even after attenuation"
+    ]
+  },
+  {
+    "number": 19,
+    "cluster": "E4D",
+    "id": "206",
+    "header": "E4D02 (id 206)",
+    "question": "Which of the following describes problems caused by poor dynamic range in a receiver?",
+    "choices": [
+      "A. Spurious signals caused by cross modulation and desensitization from strong adjac ent signals",
+      "B. Oscillator instability requiring frequent retuning and loss of ability to recover the opposite sideband",
+      "C. Poor weak signal reception caused by insufficient local oscillator injection",
+      "D. Oscillator instability and severe audio distortion of all but the strongest received signals"
+    ]
+  },
+  {
+    "number": 20,
+    "cluster": "E4E",
+    "id": "227",
+    "header": "E4E09 (id 227)",
+    "question": "What undesirable effect can occur when using a noise blanker?",
+    "choices": [
+      "A. Received audio in the speech range might have an echo effect",
+      "B. The a udio frequency bandwidth of the received signal might be compressed",
+      "C. Strong signals may be distorted and appear to caus e spurious emissions",
+      "D. FM signals can no longer be demodulated"
+    ]
+  },
+  {
+    "number": 21,
+    "cluster": "E5A",
+    "id": "243",
+    "header": "E5A11 (id 243)",
+    "question": "What is the half- power bandwidth of a resonant circuit that has a resonant frequency of 7.1 MHz and a Q of 150?",
+    "choices": [
+      "A. 157.8 Hz",
+      "B. 315.6 Hz",
+      "C. 47.3 kHz",
+      "D. 23.67 kHz"
+    ]
+  },
+  {
+    "number": 22,
+    "cluster": "E5B",
+    "id": "248",
+    "header": "E5B03 (id 248)",
+    "question": "How is impe dance in polar form converted to an equivalent admittance?",
+    "choices": [
+      "A. Take the reciprocal of the angle and change the sign of the magnitude",
+      "B. Take the reciprocal of the magnitude and change the sign of the angle",
+      "C. Take the square root of the magnitude and add 18 0 degrees to the angle",
+      "D. Square the magnitude and subtract 90 degrees from the angle"
+    ]
+  },
+  {
+    "number": 23,
+    "cluster": "E5C",
+    "id": "263",
+    "header": "E5C06 (id 263)",
+    "question": "What does the impedance 50 - j25 ohms represent?",
+    "choices": [
+      "A. 50 ohms resistance in series with 25 ohms inductive reactance",
+      "B. 50 ohms resistance in series with 25 ohms capacitive reactance",
+      "C. 25 ohms resistance in series with 50 ohms inductive reactance",
+      "D. 25 ohms resistance in series with 50 ohms capacitive reactance"
+    ]
+  },
+  {
+    "number": 24,
+    "cluster": "E5D",
+    "id": "272",
+    "header": "E5D03 (id 272)",
+    "question": "What is the phase relationship between current and voltage for reactive power?",
+    "choices": [
+      "A. Th ey are out of phase",
+      "B. They are in phase",
+      "C. They are 90 degrees out of phase",
+      "D. They are 45 degrees out of phase"
+    ]
+  },
+  {
+    "number": 25,
+    "cluster": "E6A",
+    "id": "286",
+    "header": "E6A05 (id 286)",
+    "question": "How does DC input impedance at the gate of a field -effect transistor (FET) compare with that of a bipolar transistor?",
+    "choices": [
+      "A. They are both low impedance",
+      "B. An FET has lower input impedance",
+      "C. An FET has higher input impedance",
+      "D. They are both high impedance"
+    ]
+  },
+  {
+    "number": 26,
+    "cluster": "E6B",
+    "id": "298",
+    "header": "E6B05 (id 298)",
+    "question": "What characteristic of a PIN diode makes it useful as an RF switch?",
+    "choices": [
+      "A. Extremely high reverse breakdown voltage",
+      "B. Ability to dissipate large amounts of power",
+      "C. Reverse bias controls its forward voltage drop",
+      "D. Low junction capacitance"
+    ]
+  },
+  {
+    "number": 27,
+    "cluster": "E6C",
+    "id": "307",
+    "header": "E6C03 (id 307)",
+    "question": "What is tri- state logic?",
+    "choices": [
+      "A. Logic devices with 0, 1, and high -impedance output states",
+      "B. Logic devices that utilize ternary math",
+      "C. Logic with three output impedances which can be selected to better match the load impedance",
+      "D. A coun ter with eight states"
+    ]
+  },
+  {
+    "number": 28,
+    "cluster": "E6D",
+    "id": "322",
+    "header": "E6D07 (id 322)",
+    "question": "What is the current that flows in the primary winding of a transformer when there is no load on the secondary winding?",
+    "choices": [
+      "A. Stabilizing current",
+      "B. Direct current",
+      "C. Excitation current",
+      "D. Magnetizing current"
+    ]
+  },
+  {
+    "number": 29,
+    "cluster": "E6E",
+    "id": "338",
+    "header": "E6E11 (id 338)",
+    "question": "What is a characteristic of DIP packaging used for integrated circuits?",
+    "choices": [
+      "A. Extremely low stray capacitance ( dielectrically isolated package)",
+      "B. Extremely high resistance between pin s (doubly insulated package)",
+      "C. Two chips in each package ( dual in package)",
+      "D. Two rows of connecting pins on opposite sides of package ( dual in-line package)"
+    ]
+  },
+  {
+    "number": 30,
+    "cluster": "E6F",
+    "id": "341",
+    "header": "E6F02 (id 341)",
+    "question": "What happens to photoconductive material when light shines on it?",
+    "choices": [
+      "A. Resistance decreases",
+      "B. Resistance increases",
+      "C. Reflectivity increases",
+      "D. Reflectivity decreases"
+    ]
+  },
+  {
+    "number": 31,
+    "cluster": "E7A",
+    "id": "351",
+    "header": "E7A01 (id 351)",
+    "question": "Which circuit is bistable?",
+    "choices": [
+      "A. An AND gate",
+      "B. An OR gate",
+      "C. A flip -flop",
+      "D. A bipolar amplifier"
+    ]
+  },
+  {
+    "number": 32,
+    "cluster": "E7B",
+    "id": "368",
+    "header": "E7B07 (id 368)",
+    "question": "Which of the following is the likely result of using a Class C amplifier to amplify a single -sideband phone signal?",
+    "choices": [
+      "A. Reduced intermodulation products",
+      "B. Increased overall intelligibility",
+      "C. Reduced third -order intermodulation",
+      "D. Signal distortion and excessive bandwidth"
+    ]
+  },
+  {
+    "number": 33,
+    "cluster": "E7C",
+    "id": "384",
+    "header": "E7C11 (id 384)",
+    "question": "Which of the following measures a filter’s ability to reject signals in adjacent channel s?",
+    "choices": [
+      "A. Passband ripple",
+      "B. Phase response",
+      "C. Shape factor",
+      "D. Noise factor"
+    ]
+  },
+  {
+    "number": 34,
+    "cluster": "E7D",
+    "id": "397",
+    "header": "E7D13 (id 397)",
+    "question": "Which of the following calculates power dissipated by a series linear voltage regulator?",
+    "choices": [
+      "A. Input voltage multiplied by input current",
+      "B. Input voltage divided by output current",
+      "C. Voltage difference from input to output multiplied by outp ut current",
+      "D. Output voltage multiplied by output current"
+    ]
+  },
+  {
+    "number": 35,
+    "cluster": "E7E",
+    "id": "409",
+    "header": "E7E10 (id 409)",
+    "question": "How does a diode envelope detector function?",
+    "choices": [
+      "A. By rectification and filtering of RF signals",
+      "B. By breakdown of the Zener voltage",
+      "C. By mixing signals with noise in the transition region of the diode",
+      "D. By sensing the change of reactance in the diode with respect to frequency"
+    ]
+  },
+  {
+    "number": 36,
+    "cluster": "E7F",
+    "id": "421",
+    "header": "E7F11 (id 421)",
+    "question": "What sets the minimum detectable signal level for a direct -sampling software defined receiver in the absence of atmospheric or thermal noise?",
+    "choices": [
+      "A. Sampl e clock phase noise",
+      "B. Reference voltage level and sample width in bits",
+      "C. Data storage transfer rate",
+      "D. Missing codes and jitter"
+    ]
+  },
+  {
+    "number": 37,
+    "cluster": "E7G",
+    "id": "432",
+    "header": "E7G08 (id 432)",
+    "question": "How does the gain of an ideal operational amplifier vary with frequency?",
+    "choices": [
+      "A. It increases linearly with increasing frequency",
+      "B. It decreases linearly with increasing frequency",
+      "C. It decreases logarithmically with increasing frequency",
+      "D. It does not vary with frequency"
+    ]
+  },
+  {
+    "number": 38,
+    "cluster": "E7H",
+    "id": "438",
+    "header": "E7H02 (id 438)",
+    "question": "What is a microphonic?",
+    "choices": [
+      "A. An IC used for amplifying microphone signals",
+      "B. Distortion caused by RF pickup on the microphone cable",
+      "C. Changes in oscillator frequency caused by mechanical vibration",
+      "D. Excess loading of the microphone by an oscillator"
+    ]
+  },
+  {
+    "number": 39,
+    "cluster": "E8A",
+    "id": "457",
+    "header": "E8A08 (id 457)",
+    "question": "Why are direct or flash conversion analog -to-digital converters used for a software defined radio?",
+    "choices": [
+      "A. Very low power consumption decreases frequency drift",
+      "B. Immunity to out -of-sequence coding reduces spurious responses",
+      "C. Very high speed allows digitizing high frequencies",
+      "D. Al l these choices are correct"
+    ]
+  },
+  {
+    "number": 40,
+    "cluster": "E8B",
+    "id": "466",
+    "header": "E8B06 (id 466)",
+    "question": "What is the deviation ratio of an FM phone signal having a maximum frequency swing of plus or minus 7.5 kHz if the highest modulation frequency is 3.5 kHz?",
+    "choices": [
+      "A. 2.14",
+      "B. 0.214",
+      "C. 0.47",
+      "D. 47"
+    ]
+  },
+  {
+    "number": 41,
+    "cluster": "E8C",
+    "id": "483",
+    "header": "E8C12 (id 483)",
+    "question": "What factors affect the bandwidth of a transmitted CW signal?",
+    "choices": [
+      "A. IF bandwidth and Q",
+      "B. Modulation index and output power",
+      "C. Keying speed and shape factor (rise and fall time)",
+      "D. All these choices are correct"
+    ]
+  },
+  {
+    "number": 42,
+    "cluster": "E8D",
+    "id": "494",
+    "header": "E8D08 (id 494)",
+    "question": "What parameter evaluates distortion of an AFSK signal caused by excessive input audio levels?",
+    "choices": [
+      "A. Signal -to-noise ratio",
+      "B. Baud error rate",
+      "C. Repeat Request Rate (RRR)",
+      "D. Intermodulation Distortion (IMD)"
+    ]
+  },
+  {
+    "number": 43,
+    "cluster": "E9A",
+    "id": "508",
+    "header": "E9A11 (id 508)",
+    "question": "Which of the following determines ground losses for a ground -mounted vertical antenna operating on HF?",
+    "choices": [
+      "A. The standing wave ratio",
+      "B. Distance from the transmitter",
+      "C. Soil conductivity",
+      "D. Take -off angle"
+    ]
+  },
+  {
+    "number": 44,
+    "cluster": "E9B",
+    "id": "511",
+    "header": "E9B02 (id 511)",
+    "question": "What is the front- to-back ratio of the antenna radiation pattern shown in Figure E9 -1?",
+    "choices": [
+      "A. 36 dB",
+      "B. 14 dB",
+      "C. 24 dB",
+      "D. 18 dB"
+    ]
+  },
+  {
+    "number": 45,
+    "cluster": "E9C",
+    "id": "530",
+    "header": "E9C10 (id 530)",
+    "question": "Which of the following describes a Zepp antenna?",
+    "choices": [
+      "A. A horizontal array capable of quickly changing the direction of maximum radiation by changing phasing lines",
+      "B. An end -fed half- wavelength dipole",
+      "C. An omni -directional antenna commonly used for satellite communications",
+      "D. A vertical array capable of quickly changing the direction of maximum radiation by changing phasing lines"
+    ]
+  },
+  {
+    "number": 46,
+    "cluster": "E9D",
+    "id": "602",
+    "header": "E9D01 (id 602)",
+    "question": "How much does the gain of an ideal parabolic reflector antenna increase when the operating frequency is doubled?",
+    "choices": [
+      "A. 2 dB",
+      "B. 3 dB",
+      "C. 4 dB",
+      "D. 6 dB"
+    ]
+  },
+  {
+    "number": 47,
+    "cluster": "E9E",
+    "id": "555",
+    "header": "E9E11 (id 555)",
+    "question": "What is the purpose of using multiple driven elements connected through phasing lines ?",
+    "choices": [
+      "A. To control the antenna’s radiation pattern",
+      "B. To prevent harmonic radiation from the transmitter",
+      "C. To allow single -band antennas to operate on other bands",
+      "D. To create a low -angle radiation pattern"
+    ]
+  },
+  {
+    "number": 48,
+    "cluster": "E9F",
+    "id": "561",
+    "header": "E9F06 (id 561)",
+    "question": "What is the approximate physical length of an air- insulated, parallel cond uctor transmission line that is electrically 1/2 wavelength long at 14.10 MHz?",
+    "choices": [
+      "A. 7.0 meters",
+      "B. 8.5 meters",
+      "C. 10.6 meters",
+      "D. 13.3 meters"
+    ]
+  },
+  {
+    "number": 49,
+    "cluster": "E9G",
+    "id": "573",
+    "header": "E9G06 (id 573)",
+    "question": "On the Smith chart shown in Figure E9 -3, what is the name for the large outer circle on which the reactanc e arcs terminate?",
+    "choices": [
+      "A. Prime axis",
+      "B. Reactance axis",
+      "C. Impedance axis",
+      "D. Polar axis"
+    ]
+  },
+  {
+    "number": 50,
+    "cluster": "E9H",
+    "id": "583",
+    "header": "E9H05 (id 583)",
+    "question": "What challenge is presented by a small wire -loop antenna for direction finding?",
+    "choices": [
+      "A. It has a bidirectional null pattern",
+      "B. It does not have a clearly defined null",
+      "C. It is practical for use only on VHF and higher bands",
+      "D. All these choices are correct"
+    ]
+  }
+]

@@ -1,0 +1,652 @@
+[
+  {
+    "number": 1,
+    "cluster": "E1A",
+    "id": "9",
+    "header": "E1A09 (id 9)",
+    "question": "Except in some parts of Alaska, what is the maximum power permitted on the 630 -meter band?",
+    "choices": [
+      "A. 50 watts PEP (peak envelope power)",
+      "B. 100 watts PEP (peak envelope power)",
+      "C. 1 watt EIRP (equivalent isotropic radiated power)",
+      "D. 5 watts EIRP (equivalent isotropic radiated power)"
+    ]
+  },
+  {
+    "number": 2,
+    "cluster": "E0A",
+    "id": "597",
+    "header": "E0A08 (id 597)",
+    "question": "What does SAR measure?",
+    "choices": [
+      "A. Signal attenuati on ratio",
+      "B. Signal a mplification rating",
+      "C. The rate at which RF energy is absorbed by the body",
+      "D. The rate of RF energy reflected from stationary terrain"
+    ]
+  },
+  {
+    "number": 3,
+    "cluster": "E1B",
+    "id": "12",
+    "header": "E1B01 (id 12)",
+    "question": "Which of the following constitutes a spurious emission?",
+    "choices": [
+      "A. An amateur station transmission made without the proper call sign identification",
+      "B. A signal transmitted to prevent its detection by any station other than the intended recipient",
+      "C. Any transmitted signal that unintentionally interferes with another licensed radio station and whose levels exceed 40 dB below the fundamental power level",
+      "D. An emission outside the signal’s necessary bandwidth that can be reduced or eliminated without affecting the information transmitted"
+    ]
+  },
+  {
+    "number": 4,
+    "cluster": "E1C",
+    "id": "25",
+    "header": "E1C03 (id 25)",
+    "question": "How long must an operator wait after filing a notification with the Utilities Technology Council (UTC) before operating on the 2200 -meter or 630 -meter band?",
+    "choices": [
+      "A. Operators must not operat e until approval is received",
+      "B. Operators may operate after 30 days, providing they have not been told that their station is within 1 kilometer of PLC systems using those frequencies",
+      "C. Operators may not operate until a test signal has been transmitted in coordination with the local power company",
+      "D. Operations may commence immediately, and may continue unless interference is reported by the UTC"
+    ]
+  },
+  {
+    "number": 5,
+    "cluster": "E1D",
+    "id": "44",
+    "header": "E1D10 (id 44)",
+    "question": "Which amateur stations are eligible to be telecommand stations of space stations , subject to the privileges of the class of operator license held by the control operator of the station ?",
+    "choices": [
+      "A. Any amateur station a pproved by AMSAT",
+      "B. Any amateur station so designated by the space station licensee",
+      "C. Any amateur station so designated by the ITU",
+      "D. All these choices are correct"
+    ]
+  },
+  {
+    "number": 6,
+    "cluster": "E1E",
+    "id": "51",
+    "header": "E1E05 (id 51)",
+    "question": "What must the VE team do with the application form if the examinee does not pass the exam?",
+    "choices": [
+      "A. Maintain the application form with the VEC’s records",
+      "B. Return the application document to the examinee",
+      "C. Send the application form to the FCC and inform the FCC of the grade",
+      "D. Destroy the application form"
+    ]
+  },
+  {
+    "number": 7,
+    "cluster": "E1F",
+    "id": "68",
+    "header": "E1F11 (id 68)",
+    "question": "Which of the following best describes one of the standards that must be met by an external RF power amplifier if it is to qualify for a grant of FCC certification?",
+    "choices": [
+      "A. It must produce full legal outp ut when driven by not more than 5 watts of mean RF input power",
+      "B. It must have received an Underwriters Laboratory certification for electrical safety as well as having met IEEE standard 14.101(B)",
+      "C. It must exhibit a gain of less than 23 dB when driven by 10 watts or less",
+      "D. It must satisfy the FCC’s spurious emission standards when operated at the lesser of 1500 watts or its full output power"
+    ]
+  },
+  {
+    "number": 8,
+    "cluster": "E2A",
+    "id": "77",
+    "header": "E2A09 (id 77)",
+    "question": "What do the terms “L band” and “S band” specify?",
+    "choices": [
+      "A. The 23 - and 13 -centimeter bands",
+      "B. The 2 -meter and 70 -centimeter bands",
+      "C. FM and d igital store -and-forward systems",
+      "D. Which sideband to use"
+    ]
+  },
+  {
+    "number": 9,
+    "cluster": "E2B",
+    "id": "91",
+    "header": "E2B10 (id 91)",
+    "question": "What aspect of an analog slow -scan television signal encodes the brightness of the picture?",
+    "choices": [
+      "A. Tone frequency",
+      "B. Tone amplitude",
+      "C. Sync amplitude",
+      "D. Sync frequency"
+    ]
+  },
+  {
+    "number": 10,
+    "cluster": "E2C",
+    "id": "95",
+    "header": "E2C02 (id 95)",
+    "question": "Which of the following file formats is used for exchanging amateur radio log data?",
+    "choices": [
+      "A. NEC",
+      "B. ARLD",
+      "C. ADIF",
+      "D. OCF"
+    ]
+  },
+  {
+    "number": 11,
+    "cluster": "E2D",
+    "id": "113",
+    "header": "E2D08 (id 113)",
+    "question": "What type of packet frame is used to transm it APRS beacon data?",
+    "choices": [
+      "A. Acknowledgement",
+      "B. Burst",
+      "C. Unnumbered Information",
+      "D. Connect"
+    ]
+  },
+  {
+    "number": 12,
+    "cluster": "E2E",
+    "id": "120",
+    "header": "E2E04 (id 120)",
+    "question": "Which of the following is characteristic of the FST4 mode?",
+    "choices": [
+      "A. Four -tone Gaussian frequency shift keying",
+      "B. Variable transmit/receive periods",
+      "C. Seven different tone spacings",
+      "D. All these choices are correct"
+    ]
+  },
+  {
+    "number": 13,
+    "cluster": "E3A",
+    "id": "135",
+    "header": "E3A06 (id 135)",
+    "question": "What should be done to continue a long- distance contact when the MUF for that pa th decreases due to darkness ?",
+    "choices": [
+      "A. Switch to a higher frequency HF band",
+      "B. Switch to a lower frequency HF band",
+      "C. Change to an antenna with a higher takeoff angle",
+      "D. Change to an antenna with greater beam width"
+    ]
+  },
+  {
+    "number": 14,
+    "cluster": "E3B",
+    "id": "144",
+    "header": "E3B01 (id 144)",
+    "question": "Where is transequatorial propagation (TEP) most likely to occur ?",
+    "choices": [
+      "A. Between points separated by 2 ,000 miles to 3,000 miles over a path perpendicular to the geomagnetic equator",
+      "B. Between points located 1 ,500 miles to 2,000 miles apart on the geomagnetic equator",
+      "C. Between points located at each other’s antipode",
+      "D. Through the region where the terminator crosses the geographic equator"
+    ]
+  },
+  {
+    "number": 15,
+    "cluster": "E3C",
+    "id": "166",
+    "header": "E3C10 (id 166)",
+    "question": "What does the 304A solar parameter measure?",
+    "choices": [
+      "A. The ratio of X-ray flux to radio flux, correlated to sunspot number",
+      "B. UV emissions at 304 angstroms, correlated to the solar flux index",
+      "C. The solar wind velocity at an angle of 304 degrees from the solar equator, correlated to geomagnetic storms",
+      "D. The solar emission at 304 GHz, correlated to X-ray flare levels"
+    ]
+  },
+  {
+    "number": 16,
+    "cluster": "E4A",
+    "id": "172",
+    "header": "E4A04 (id 172)",
+    "question": "How is compensation of an oscilloscope probe performed ?",
+    "choices": [
+      "A. A square wave is displayed , and the probe is adjusted until the horizontal portions of the displayed wave are as nearly flat as possible",
+      "B. A high frequency sine wave is displayed , and the probe is adjusted for maximum amplitude",
+      "C. A frequency standard is displayed , and the probe is adjusted until the deflection time is accurate",
+      "D. A DC voltage standard is displayed , and the probe is adjusted until the displayed voltage is accurate"
+    ]
+  },
+  {
+    "number": 17,
+    "cluster": "E4B",
+    "id": "190",
+    "header": "E4B11 (id 190)",
+    "question": "Which of the following can be measured with a vector network analyzer?",
+    "choices": [
+      "A. Input impedance",
+      "B. Output impedance",
+      "C. Reflection coefficient",
+      "D. All these choices are correct"
+    ]
+  },
+  {
+    "number": 18,
+    "cluster": "E4C",
+    "id": "200",
+    "header": "E4C10 (id 200)",
+    "question": "What is an advantage of having a variety of receiver bandwidths from which to select?",
+    "choices": [
+      "A. The noise figure of the RF a mplifier can be adjusted to match the modulation type, thus increasing receiver sensitivity",
+      "B. Receiver power consumption can be reduced when wider bandwidth is not required",
+      "C. Receive bandwidth can be set to match the modulation bandwidth, maximizing signal -to-noise ratio and minimizing interference",
+      "D. Multiple frequencies can be received simultaneously if desired"
+    ]
+  },
+  {
+    "number": 19,
+    "cluster": "E4D",
+    "id": "211",
+    "header": "E4D07 (id 211)",
+    "question": "Which of the following reduces the likelihood of receiver desensitization?",
+    "choices": [
+      "A. Insert attenuation before the first RF stage",
+      "B. Raise the receiver ’s IF frequency",
+      "C. Increase the receiver ’s front -end gain",
+      "D. Switch from fast AGC to slow AGC"
+    ]
+  },
+  {
+    "number": 20,
+    "cluster": "E4E",
+    "id": "223",
+    "header": "E4E05 (id 223)",
+    "question": "What is used to suppress radio frequency interference from a line-driven AC motor?",
+    "choices": [
+      "A. A high -pass filter in series with the motor’s power leads",
+      "B. A brute -force AC -line filter in series with the motor’s power leads",
+      "C. A bypass capacitor in series with the motor’s field winding",
+      "D. A bypass choke in parallel with the motor’s field winding"
+    ]
+  },
+  {
+    "number": 21,
+    "cluster": "E5A",
+    "id": "245",
+    "header": "E5A13 (id 245)",
+    "question": "What is an effect of increasing Q in a series resonant circuit?",
+    "choices": [
+      "A. Fewer components are needed for the same performance",
+      "B. Parasitic effects are minimized",
+      "C. Internal voltages increase",
+      "D. Phase shift can become uncontrolled"
+    ]
+  },
+  {
+    "number": 22,
+    "cluster": "E5B",
+    "id": "255",
+    "header": "E5B10 (id 255)",
+    "question": "What is the relationship between the AC current through an inductor and the voltage across an inductor?",
+    "choices": [
+      "A. Voltage l eads current by 90 degrees",
+      "B. Current leads voltage by 90 degrees",
+      "C. Voltage and current are 180 degrees out of phase",
+      "D. Voltage and current are in phase"
+    ]
+  },
+  {
+    "number": 23,
+    "cluster": "E5C",
+    "id": "268",
+    "header": "E5C11 (id 268)",
+    "question": "Which point in Figure E5-1 best represents the impedance of a series circuit consisting of a 300-ohm resistor and an 18-microhenry inductor at 3.505 MHz?",
+    "choices": [
+      "A. Point 1",
+      "B. Point 3",
+      "C. Point 7",
+      "D. Point 8"
+    ]
+  },
+  {
+    "number": 24,
+    "cluster": "E5D",
+    "id": "280",
+    "header": "E5D11 (id 280)",
+    "question": "How much real power is consumed in a circuit consisting of a 100 -ohm resistor in series with a 100 -ohm inductive reactance drawing 1 ampere?",
+    "choices": [
+      "A. 70.7 watts",
+      "B. 100 watts",
+      "C. 141.4 watts",
+      "D. 200 watts"
+    ]
+  },
+  {
+    "number": 25,
+    "cluster": "E6A",
+    "id": "285",
+    "header": "E6A04 (id 285)",
+    "question": "What is the name given to an impurity atom that adds holes to a semiconductor crysta l structure?",
+    "choices": [
+      "A. Insulator impurity",
+      "B. N-type impurity",
+      "C. Acceptor impurity",
+      "D. Donor impurity"
+    ]
+  },
+  {
+    "number": 26,
+    "cluster": "E6B",
+    "id": "303",
+    "header": "E6B10 (id 303)",
+    "question": "In Figure E6 -2, which is the schematic symbol for a Schottky diode?",
+    "choices": [
+      "A. 1",
+      "B. 6",
+      "C. 2",
+      "D. 3"
+    ]
+  },
+  {
+    "number": 27,
+    "cluster": "E6C",
+    "id": "305",
+    "header": "E6C01 (id 305)",
+    "question": "What is the function of hysteresis in a comparator?",
+    "choices": [
+      "A. To prevent input noise from causing unstable output signals",
+      "B. To allow the comparator to be used with AC input signals",
+      "C. To cause the output to continually change states",
+      "D. To increase the sensitivity"
+    ]
+  },
+  {
+    "number": 28,
+    "cluster": "E6D",
+    "id": "320",
+    "header": "E6D05 (id 320)",
+    "question": "How do ferrite and powdered iron compare for use in an inductor core ?",
+    "choices": [
+      "A. Ferrite cores generally have lower initial permeability",
+      "B. Ferrite cores generally have better temperature stability",
+      "C. Fer rite cores generally require fewer turns to produce a given inductance value",
+      "D. Ferrite cores are easier to use with surface -mount technology"
+    ]
+  },
+  {
+    "number": 29,
+    "cluster": "E6E",
+    "id": "334",
+    "header": "E6E07 (id 334)",
+    "question": "What type of transmission line is often used for connections to MMI Cs?",
+    "choices": [
+      "A. Miniature coax",
+      "B. Circular waveguide",
+      "C. Parallel wire",
+      "D. Microstrip"
+    ]
+  },
+  {
+    "number": 30,
+    "cluster": "E6F",
+    "id": "347",
+    "header": "E6F08 (id 347)",
+    "question": "Why are optoisolators often used in conjunction with solid -state circuits that control 120 VAC circuits ?",
+    "choices": [
+      "A. Optoisolators provide a low -impedance link between a control circuit and a power circuit",
+      "B. Optoisolators provide impedance matching between the con trol circuit and power circuit",
+      "C. Optoisolators provide an electrical isolation between a control circuit and the circuit being switched",
+      "D. Optoisolators eliminate the effects of reflected light in the control circuit"
+    ]
+  },
+  {
+    "number": 31,
+    "cluster": "E7A",
+    "id": "360",
+    "header": "E7A10 (id 360)",
+    "question": "What is a truth table?",
+    "choices": [
+      "A. A list of inputs and corresponding outputs for an op -amp",
+      "B. A list of inputs and corresponding outputs for a digital device",
+      "C. A diagram showing logic states when the digital gate output is true",
+      "D. A table of logic symbols that indicate the logic states of an op -amp"
+    ]
+  },
+  {
+    "number": 32,
+    "cluster": "E7B",
+    "id": "365",
+    "header": "E7B04 (id 365)",
+    "question": "What is the operating point of a Class A common emitter amplifier?",
+    "choices": [
+      "A. Approximately halfway between saturation and cutoff",
+      "B. Approximately halfway between the emitter voltage and the base voltage",
+      "C. At a point where the bias resistor equals the load resistor",
+      "D. At a point where the load line intersects the zero bias current curve"
+    ]
+  },
+  {
+    "number": 33,
+    "cluster": "E7C",
+    "id": "374",
+    "header": "E7C01 (id 374)",
+    "question": "How are the capacitors and inductors of a low -pass filter Pi- network arranged between the netwo rk’s input and output?",
+    "choices": [
+      "A. Two inductors are in series between the input and output, and a capacitor is connected between the two inductors and ground",
+      "B. Two capacitors are in series between the input and output, and an inductor is connected between the two capacitors and ground",
+      "C. An inductor is connected between the input and ground, another inductor is connected between the output and ground, and a capacitor is connected between the input and output",
+      "D. A capacitor is connected between the input and gro und, another capacitor is connected between the output and ground, and an inductor is connected between the input and output"
+    ]
+  },
+  {
+    "number": 34,
+    "cluster": "E7D",
+    "id": "393",
+    "header": "E7D09 (id 393)",
+    "question": "How is battery operating time calculated?",
+    "choices": [
+      "A. Average current divided by capacity in amp -hours",
+      "B. Average current divided by internal resistance",
+      "C. Capacity in amp -hours divided by average current",
+      "D. Internal resistance divided by average current"
+    ]
+  },
+  {
+    "number": 35,
+    "cluster": "E7E",
+    "id": "407",
+    "header": "E7E08 (id 407)",
+    "question": "What are the principal frequencies that appear at the output of a mixer?",
+    "choices": [
+      "A. Two and four times the input frequency",
+      "B. The square root of the product of input freque ncies",
+      "C. The two input frequencies along with their sum and difference frequencies",
+      "D. 1.414 and 0.707 times the input frequency"
+    ]
+  },
+  {
+    "number": 36,
+    "cluster": "E7F",
+    "id": "416",
+    "header": "E7F06 (id 416)",
+    "question": "What is the minimum number of bits required to sample a signal with a range of 1 volt at a resolution of 1 millivolt?",
+    "choices": [
+      "A. 4 bits",
+      "B. 6 bits",
+      "C. 8 bits",
+      "D. 10 bits"
+    ]
+  },
+  {
+    "number": 37,
+    "cluster": "E7G",
+    "id": "428",
+    "header": "E7G04 (id 428)",
+    "question": "What is meant by the term “op -amp input offset voltage”?",
+    "choices": [
+      "A. The output voltage of the op -amp minus its input voltage",
+      "B. The difference between the output voltage of the op -amp and the input voltage required in the immediately following stage",
+      "C. The differential input voltage needed to bring the open loop output voltage to zero",
+      "D. The potential between the amplifier input terminals of the op -amp in an open loop condition"
+    ]
+  },
+  {
+    "number": 38,
+    "cluster": "E7H",
+    "id": "448",
+    "header": "E7H12 (id 448)",
+    "question": "Which of the following ensure s that a crystal oscillator operates on the frequency specified by the crystal manufacturer?",
+    "choices": [
+      "A. Provide the crystal with a specified parallel inductance",
+      "B. Provide the crystal with a specified parallel capacitance",
+      "C. Bias the crystal at a specified voltage",
+      "D. Bias the crystal at a specified current"
+    ]
+  },
+  {
+    "number": 39,
+    "cluster": "E8A",
+    "id": "460",
+    "header": "E8A11 (id 460)",
+    "question": "Which of the following is a measure of the quality of an analog -to-digital converter?",
+    "choices": [
+      "A. Total harmonic distortion",
+      "B. Peak envelope power",
+      "C. Rec iprocal mixing",
+      "D. Power factor"
+    ]
+  },
+  {
+    "number": 40,
+    "cluster": "E8B",
+    "id": "465",
+    "header": "E8B05 (id 465)",
+    "question": "What is the deviation ratio of an FM phone signal having a maximum frequency swing of plus or minus 5 kHz if the highest modulation frequency is 3 kHz?",
+    "choices": [
+      "A. 6",
+      "B. 0.167",
+      "C. 0.6",
+      "D. 1.67"
+    ]
+  },
+  {
+    "number": 41,
+    "cluster": "E8C",
+    "id": "473",
+    "header": "E8C02 (id 473)",
+    "question": "What is the definition of symbol rate in a digital transmission?",
+    "choices": [
+      "A. The number of control characters in a message packet",
+      "B. The maximum rate at which the forward error correction code can make corrections",
+      "C. The rate at which the waveform changes to convey information",
+      "D. The number of charact ers carried per second by the station -to-station link"
+    ]
+  },
+  {
+    "number": 42,
+    "cluster": "E8D",
+    "id": "495",
+    "header": "E8D09 (id 495)",
+    "question": "What is considered an acceptable maximum IMD level for an idling PSK signal?",
+    "choices": [
+      "A. +5 dB",
+      "B. +10 dB",
+      "C. +15 dB",
+      "D. -30 dB"
+    ]
+  },
+  {
+    "number": 43,
+    "cluster": "E9A",
+    "id": "505",
+    "header": "E9A08 (id 505)",
+    "question": "Which frequency band has the smallest first Fresnel zone?",
+    "choices": [
+      "A. 5.8 GHz",
+      "B. 3.4 GHz",
+      "C. 2.4 GHz",
+      "D. 900 MHz"
+    ]
+  },
+  {
+    "number": 44,
+    "cluster": "E9B",
+    "id": "512",
+    "header": "E9B03 (id 512)",
+    "question": "What is the front- to-side ratio of the antenna radiation pattern shown in Figure E9 -1?",
+    "choices": [
+      "A. 12 dB",
+      "B. 24 dB",
+      "C. 18 dB",
+      "D. 14 dB"
+    ]
+  },
+  {
+    "number": 45,
+    "cluster": "E9C",
+    "id": "524",
+    "header": "E9C04 (id 524)",
+    "question": "What happens to the radiation pattern of an unterminated long wire antenna as the wire length is increased?",
+    "choices": [
+      "A. Fewer lobes form with the major lobes increasing closer to broadside to the wire",
+      "B. Additional lobes form with major lobes increasingly aligned with the axis of the antenna",
+      "C. The elevation angle increases, and the front- to-rear ratio decreases",
+      "D. The elevation angle increases, while the front -to-rear ratio is unaffected"
+    ]
+  },
+  {
+    "number": 46,
+    "cluster": "E9D",
+    "id": "536",
+    "header": "E9D03 (id 536)",
+    "question": "What is the most efficient location for a loading coil on an electrically short whip ?",
+    "choices": [
+      "A. Near the center of the vertical radiator",
+      "B. As low as possible on the vertical radiator",
+      "C. At a voltage maximum",
+      "D. At a voltage null"
+    ]
+  },
+  {
+    "number": 47,
+    "cluster": "E9E",
+    "id": "553",
+    "header": "E9E08 (id 553)",
+    "question": "What is a use for a Wilkinson divider?",
+    "choices": [
+      "A. To divide the operating freque ncy of a transmitter signal so it can be used on a lower frequency band",
+      "B. To feed high -impedance antennas from a low -impedance source",
+      "C. To divide power equally between two 50 -ohm loads while maintaining 50 -ohm input impedance",
+      "D. To divide the frequency o f the input to a counter to increase its frequency range"
+    ]
+  },
+  {
+    "number": 48,
+    "cluster": "E9F",
+    "id": "557",
+    "header": "E9F02 (id 557)",
+    "question": "Which of the following has the biggest effect on the velocity factor of a tran smission line?",
+    "choices": [
+      "A. The characteristic impedance",
+      "B. The transmission line length",
+      "C. The insulating dielectric material",
+      "D. The center conductor resistivity"
+    ]
+  },
+  {
+    "number": 49,
+    "cluster": "E9G",
+    "id": "571",
+    "header": "E9G04 (id 571)",
+    "question": "What are the two families of circles and arcs that make up a Smith chart?",
+    "choices": [
+      "A. Inductance and capacitance",
+      "B. Reactance and voltage",
+      "C. Resistance and reactance",
+      "D. Voltage and impedance"
+    ]
+  },
+  {
+    "number": 50,
+    "cluster": "E9H",
+    "id": "581",
+    "header": "E9H03 (id 581)",
+    "question": "What is r eceiving directivity factor (RDF)?",
+    "choices": [
+      "A. Forward gain compared to the gain in the reverse direction",
+      "B. Relative directivity compared to isotropic",
+      "C. Relative directivity com pared to a dipole",
+      "D. Peak a ntenna gain compared to average gain over the hemisphere around and above the antenna"
+    ]
+  }
+]

@@ -1,0 +1,652 @@
+[
+  {
+    "number": 1,
+    "cluster": "E1F",
+    "id": "66",
+    "header": "E1F09 (id 66)",
+    "question": "Which of the following cannot be transmitted over an amateur radio mesh network?",
+    "choices": [
+      "A. Third party traffic",
+      "B. Email",
+      "C. Messages encoded to obscure their meaning",
+      "D. All these choices are correct"
+    ]
+  },
+  {
+    "number": 2,
+    "cluster": "E0A",
+    "id": "599",
+    "header": "E0A10 (id 599)",
+    "question": "When must an RF exposure evaluation be performed on an amateur station operating on 80 meters ?",
+    "choices": [
+      "A. An evaluation must always be performed",
+      "B. When the ERP of the station is less than 10 watts",
+      "C. When the station’s operating mode is CW",
+      "D. When the output power from the transmitter is less than 100 watts"
+    ]
+  },
+  {
+    "number": 3,
+    "cluster": "E1A",
+    "id": "10",
+    "header": "E1A10 (id 10)",
+    "question": "If an amateur station is installed aboard a ship or aircraft, what condition must be met before the station is operated?",
+    "choices": [
+      "A. Its operation must be approved by the master of the ship or the pil ot in command of the aircraft",
+      "B. The amateur station operator must agree not to transmit when the main radio of the ship or aircraft is in use",
+      "C. The amateur station must have a power supply that is completely independent of the main ship or aircraft power supply",
+      "D. The amateur station must operate only i n specific segments of the amateur service HF and VHF bands"
+    ]
+  },
+  {
+    "number": 4,
+    "cluster": "E1B",
+    "id": "21",
+    "header": "E1B10 (id 21)",
+    "question": "What frequencies are authorized to an amateur station operating under RACES rules?",
+    "choices": [
+      "A. All amateur service frequencies authorized to the control operat or",
+      "B. Specific segments in the amateur service MF, HF, VHF , and UHF bands",
+      "C. Specific local government channels",
+      "D. All these choices are correct"
+    ]
+  },
+  {
+    "number": 5,
+    "cluster": "E1C",
+    "id": "34",
+    "header": "E1C12 (id 34)",
+    "question": "In what portion of the 630 -meter band are phone emissions permitted?",
+    "choices": [
+      "A. None",
+      "B. Only the top 3 kHz",
+      "C. Only the bottom 3 kHz",
+      "D. The entire band"
+    ]
+  },
+  {
+    "number": 6,
+    "cluster": "E1D",
+    "id": "45",
+    "header": "E1D11 (id 45)",
+    "question": "Which amateur stations are eligible to operate as Earth stations?",
+    "choices": [
+      "A. Any amateur licensee who has successfully completed the AMSAT space commun ications course",
+      "B. Only those of General, Advanced or Amateur Extra class operators",
+      "C. Only those of Amateur Extra c lass operators",
+      "D. Any amateur station, subject to the privileges of the class of operator license held by the control operator"
+    ]
+  },
+  {
+    "number": 7,
+    "cluster": "E1E",
+    "id": "54",
+    "header": "E1E08 (id 54)",
+    "question": "To which of the following examinees may a VE not administer an examination?",
+    "choices": [
+      "A. Employees of the VE",
+      "B. Friends of the VE",
+      "C. Relatives of the VE as listed in the FCC rules",
+      "D. All these choices are correct"
+    ]
+  },
+  {
+    "number": 8,
+    "cluster": "E2A",
+    "id": "76",
+    "header": "E2A08 (id 76)",
+    "question": "Why should effective radiated power (ERP) be limited to a satellite that uses a linear transponder?",
+    "choices": [
+      "A. To prevent creating errors in the satellite telemetry",
+      "B. To avoid reducing the downlink power to all other users",
+      "C. To prevent the satellite from emittin g out -of-band signals",
+      "D. To avoid interfering with terrestrial QSOs"
+    ]
+  },
+  {
+    "number": 9,
+    "cluster": "E2B",
+    "id": "85",
+    "header": "E2B04 (id 85)",
+    "question": "How is color information sent in analog SSTV?",
+    "choices": [
+      "A. Color lines are sent sequentially",
+      "B. Color information is sent on a 2.8 kHz subcarrier",
+      "C. Color is sent in a color burst at the end of each line",
+      "D. Color is amplitude modulated on the frequency modulated intensity signal"
+    ]
+  },
+  {
+    "number": 10,
+    "cluster": "E2C",
+    "id": "102",
+    "header": "E2C09 (id 102)",
+    "question": "What type of equipment is commonly used to implement an amateur radio mesh network?",
+    "choices": [
+      "A. A 2 -meter VHF transceiver with a 1 ,200 -baud modem",
+      "B. A computer running EchoLink to provide interface from the radio to the internet",
+      "C. A wireless router running custom firmware",
+      "D. A 440 MHz transceiver with a 9 ,600 -baud modem"
+    ]
+  },
+  {
+    "number": 11,
+    "cluster": "E2D",
+    "id": "112",
+    "header": "E2D07 (id 112)",
+    "question": "What digital protocol is used by APRS?",
+    "choices": [
+      "A. PACTOR",
+      "B. QAM",
+      "C. AX.25",
+      "D. AMTOR"
+    ]
+  },
+  {
+    "number": 12,
+    "cluster": "E2E",
+    "id": "127",
+    "header": "E2E11 (id 127)",
+    "question": "What is the difference between direct FSK and audio FSK?",
+    "choices": [
+      "A. Direct FSK modulates the transmitter VFO",
+      "B. Direct FSK occupies less bandwidth",
+      "C. Direct FSK can transmit higher baud rates",
+      "D. All these choices are correct"
+    ]
+  },
+  {
+    "number": 13,
+    "cluster": "E3A",
+    "id": "138",
+    "header": "E3A09 (id 138)",
+    "question": "Which of the following frequency ranges is most suited for meteor- scatter communications?",
+    "choices": [
+      "A. 1.8 MHz - 1.9 MHz",
+      "B. 10 MHz - 14 MHz",
+      "C. 28 MHz - 148 MHz",
+      "D. 220 MHz - 450 MHz"
+    ]
+  },
+  {
+    "number": 14,
+    "cluster": "E3B",
+    "id": "146",
+    "header": "E3B03 (id 146)",
+    "question": "At what time of day is transequatorial propagation most likely to occur ?",
+    "choices": [
+      "A. Morning",
+      "B. Noon",
+      "C. Afternoon or early evening",
+      "D. Late at night"
+    ]
+  },
+  {
+    "number": 15,
+    "cluster": "E3C",
+    "id": "163",
+    "header": "E3C07 (id 163)",
+    "question": "Which of the following indicates the greatest solar flare intensity?",
+    "choices": [
+      "A. Class A",
+      "B. Class Z",
+      "C. Class M",
+      "D. Class X"
+    ]
+  },
+  {
+    "number": 16,
+    "cluster": "E4A",
+    "id": "175",
+    "header": "E4A07 (id 175)",
+    "question": "Which of the following is an advantage of using an antenna analyzer compared to an SWR bridge?",
+    "choices": [
+      "A. Antenna analyzers automatically tune your antenna for resonance",
+      "B. Antenna analyzers compute SWR and impedance automatically",
+      "C. Antenna analyzers display a time -varying representation of the modulation envelope",
+      "D. All these choices are correct"
+    ]
+  },
+  {
+    "number": 17,
+    "cluster": "E4B",
+    "id": "187",
+    "header": "E4B08 (id 187)",
+    "question": "Which of the following can be used to determine the Q of a series -tuned circuit?",
+    "choices": [
+      "A. The ratio of inductive reactance to capacitive reactance",
+      "B. The frequency shift",
+      "C. The bandwidth of the circuit's frequency response",
+      "D. The resonant frequency of the circuit"
+    ]
+  },
+  {
+    "number": 18,
+    "cluster": "E4C",
+    "id": "192",
+    "header": "E4C02 (id 192)",
+    "question": "Which of the following receiver circuits can be effective in eliminating interference from strong out -ofband signals?",
+    "choices": [
+      "A. A front -end filter or preselector",
+      "B. A narrow IF filter",
+      "C. A notch filter",
+      "D. A properly adjusted product detec tor"
+    ]
+  },
+  {
+    "number": 19,
+    "cluster": "E4D",
+    "id": "216",
+    "header": "E4D12 (id 216)",
+    "question": "What is the link margin in a system with a transmit power level of 10 W (+40 dBm), a system antenna gain of 10 dBi, a cable loss of 3 dB, a path loss of 136 dB, a receiver minimum discernable signal of -103 dBm , and a required signal -to-noise ratio of 6 dB?",
+    "choices": [
+      "A. -8dB",
+      "B. -14dB",
+      "C. +8dB",
+      "D. +14dB"
+    ]
+  },
+  {
+    "number": 20,
+    "cluster": "E4E",
+    "id": "230",
+    "header": "E4E12 (id 230)",
+    "question": "What cause s interference received as a series of carriers at re gular intervals across a wide frequency range?",
+    "choices": [
+      "A. Switch- mode power supplies",
+      "B. Radar transmitters",
+      "C. Wireless security camera transmitters",
+      "D. Electric fences"
+    ]
+  },
+  {
+    "number": 21,
+    "cluster": "E5A",
+    "id": "238",
+    "header": "E5A06 (id 238)",
+    "question": "What is the magnitude of the circulating current within the components of a parallel LC circuit at resonance?",
+    "choices": [
+      "A. It is at a minimum",
+      "B. It is at a maximum",
+      "C. It equals 1 divided by the quantity 2 times pi, times the square root of ( inductance L multiplied by capacitanc e C)",
+      "D. It equals 2 times pi, times the square root of (inductance L multiplied by capacitance C)"
+    ]
+  },
+  {
+    "number": 22,
+    "cluster": "E5B",
+    "id": "256",
+    "header": "E5B11 (id 256)",
+    "question": "What is the phase angle between the voltage across and the current through a series RLC circuit if XC is 25 ohms, R is 100 ohms, and XL is 75 ohms?",
+    "choices": [
+      "A. 27 degrees with the voltage lagging the current",
+      "B. 27 degrees with the voltage leading the current",
+      "C. 63 degrees with the voltage lagging the current",
+      "D. 63 degrees with the voltage leading the current"
+    ]
+  },
+  {
+    "number": 23,
+    "cluster": "E5C",
+    "id": "258",
+    "header": "E5C01 (id 258)",
+    "question": "Which of the following represents pure capacitive reactance of 100 ohms in rectangular notation?",
+    "choices": [
+      "A. 0 - j100",
+      "B. 0 + j100",
+      "C. 100 - j0",
+      "D. 100 + j0"
+    ]
+  },
+  {
+    "number": 24,
+    "cluster": "E5D",
+    "id": "281",
+    "header": "E5D12 (id 281)",
+    "question": "What is reactive power?",
+    "choices": [
+      "A. Power consumed in circuit Q",
+      "B. Power consumed by an inductor’s wire resistance",
+      "C. The power consumed in inductors and capacitors",
+      "D. Wattless, nonproductive power"
+    ]
+  },
+  {
+    "number": 25,
+    "cluster": "E6A",
+    "id": "288",
+    "header": "E6A07 (id 288)",
+    "question": "Which of the following indicates that a silicon NPN junction transistor is biased on?",
+    "choices": [
+      "A. Base -to-emitter resistance of approximately 6 ohms to 7 ohms",
+      "B. Base -to-emitter resistance of approximately 0.6 ohms to 0.7 ohms",
+      "C. Base -to-emitter voltage of approximately 6 volts to 7 volts",
+      "D. Base -to-emitter voltage of approximately 0.6 volts to 0.7 volts"
+    ]
+  },
+  {
+    "number": 26,
+    "cluster": "E6B",
+    "id": "297",
+    "header": "E6B04 (id 297)",
+    "question": "What type of semiconductor device is designed for use as a voltage -controlled capacitor?",
+    "choices": [
+      "A. Varactor diode",
+      "B. Tunnel diode",
+      "C. Silicon -controlled rectifier",
+      "D. Zener diode"
+    ]
+  },
+  {
+    "number": 27,
+    "cluster": "E6C",
+    "id": "315",
+    "header": "E6C11 (id 315)",
+    "question": "In Figure E6 -3, which is the schematic symbol for the NOT operation ( inversion )?",
+    "choices": [
+      "A. 2",
+      "B. 4",
+      "C. 5",
+      "D. 6"
+    ]
+  },
+  {
+    "number": 28,
+    "cluster": "E6D",
+    "id": "317",
+    "header": "E6D02 (id 317)",
+    "question": "What is the equivalent circuit of a quartz crystal?",
+    "choices": [
+      "A. Series RLC in parallel with a shunt C representing electrode and s tray capacitance",
+      "B. Parallel RLC, where C is the parallel combination of resonance capacitance of the crystal and electrode and stray capacitance",
+      "C. Series RLC, where C is the parallel combination of resonance capacitance of the crystal and electrode and s tray capacitance",
+      "D. Parallel RLC, where C is the series combination of resonance capacitance of the crystal and electrode and stray capacitance"
+    ]
+  },
+  {
+    "number": 29,
+    "cluster": "E6E",
+    "id": "335",
+    "header": "E6E08 (id 335)",
+    "question": "How is power supplied to the most common type of MMIC?",
+    "choices": [
+      "A. Through a capacitor and RF choke connected to the amplifier input lead",
+      "B. MMICs require no operating bias",
+      "C. Through a resistor and/or RF choke connected to the amplifier output lead",
+      "D. Directly to the bias voltage (Vcc) lead"
+    ]
+  },
+  {
+    "number": 30,
+    "cluster": "E6F",
+    "id": "345",
+    "header": "E6F06 (id 345)",
+    "question": "Which of these materials is most commonly used to create photoconductive devices?",
+    "choices": [
+      "A. Polyphen ol acetate",
+      "B. Argon",
+      "C. Crystalline semiconductor",
+      "D. All these choices are correct"
+    ]
+  },
+  {
+    "number": 31,
+    "cluster": "E7A",
+    "id": "358",
+    "header": "E7A08 (id 358)",
+    "question": "What logical operation does an OR gate perform?",
+    "choices": [
+      "A. It produces a 1 at its ou tput if any input is 1",
+      "B. It produces a 0 at its output if all inputs are 1",
+      "C. It produces a 0 at its output if some but not all inputs are 1",
+      "D. It produces a 1 at its output if all inputs are 0"
+    ]
+  },
+  {
+    "number": 32,
+    "cluster": "E7B",
+    "id": "363",
+    "header": "E7B02 (id 363)",
+    "question": "What is a Class D amplifier?",
+    "choices": [
+      "A. An amplifier that uses switching technology to achieve high efficiency",
+      "B. A low power amplifier that uses a differential amplifier for improved linearity",
+      "C. An amplifier that uses drift -mode FETs for high efficiency",
+      "D. An amplifier biased to be relatively free from distortion"
+    ]
+  },
+  {
+    "number": 33,
+    "cluster": "E7C",
+    "id": "376",
+    "header": "E7C03 (id 376)",
+    "question": "What is the purpose of adding an inductor to a Pi -network to create a Pi -L-network ?",
+    "choices": [
+      "A. Greater harmonic suppression",
+      "B. Higher efficiency",
+      "C. To eliminate one capacitor",
+      "D. Greater transformation range"
+    ]
+  },
+  {
+    "number": 34,
+    "cluster": "E7D",
+    "id": "387",
+    "header": "E7D03 (id 387)",
+    "question": "What device is used as a stable voltage reference?",
+    "choices": [
+      "A. A Zener diode",
+      "B. A digital- to-analog converter",
+      "C. An SCR",
+      "D. An analog -to-digital converter"
+    ]
+  },
+  {
+    "number": 35,
+    "cluster": "E7E",
+    "id": "401",
+    "header": "E7E02 (id 401)",
+    "question": "What is the function of a reactance modulator?",
+    "choices": [
+      "A. Produce PM or FM signals by varying a resistance",
+      "B. Produce AM signals by varying an inductance",
+      "C. Produce AM signals by varying a resistance",
+      "D. Produce PM or FM signals by varying a capacitance"
+    ]
+  },
+  {
+    "number": 36,
+    "cluster": "E7F",
+    "id": "418",
+    "header": "E7F08 (id 418)",
+    "question": "What is the function of decimation?",
+    "choices": [
+      "A. Converting data to binary -code d decimal form",
+      "B. Reducing the effective sample rate by removing samples",
+      "C. Attenuating the signal",
+      "D. Removing unnecessary significant digits"
+    ]
+  },
+  {
+    "number": 37,
+    "cluster": "E7G",
+    "id": "431",
+    "header": "E7G07 (id 431)",
+    "question": "What voltage gain can be expected from the circuit in Figure E7 -3 when R1 is 10 ohms and RF is 470 ohms?",
+    "choices": [
+      "A. 0.21",
+      "B. 4700",
+      "C. 47",
+      "D. 24"
+    ]
+  },
+  {
+    "number": 38,
+    "cluster": "E7H",
+    "id": "445",
+    "header": "E7H09 (id 445)",
+    "question": "What type of frequency synthesizer circuit uses a phase accumulator, lookup table, digital- to-analog converter, and a low -pass anti-alias filter?",
+    "choices": [
+      "A. A direct digital synthesizer",
+      "B. A hybrid synthesizer",
+      "C. A phase -locked loop synthesizer",
+      "D. A direct conversion synthesizer"
+    ]
+  },
+  {
+    "number": 39,
+    "cluster": "E8A",
+    "id": "450",
+    "header": "E8A01 (id 450)",
+    "question": "What technique shows that a square wave i s made up of a sine wave and its odd harmonics?",
+    "choices": [
+      "A. Fourier analysis",
+      "B. Vector analysis",
+      "C. Numerical analysis",
+      "D. Differential analysis"
+    ]
+  },
+  {
+    "number": 40,
+    "cluster": "E8B",
+    "id": "467",
+    "header": "E8B07 (id 467)",
+    "question": "Orthogonal frequency -division multiplexing (OFDM) is a technique used for which types of amateur communication?",
+    "choices": [
+      "A. Digital modes",
+      "B. Extremely low- power contacts",
+      "C. EME",
+      "D. OFDM signals are not allowed on amateur bands"
+    ]
+  },
+  {
+    "number": 41,
+    "cluster": "E8C",
+    "id": "476",
+    "header": "E8C05 (id 476)",
+    "question": "What is the approximate bandwidth of a 13 -WPM International Morse Code transmission?",
+    "choices": [
+      "A. 13 Hz",
+      "B. 26 Hz",
+      "C. 52 Hz",
+      "D. 104 Hz"
+    ]
+  },
+  {
+    "number": 42,
+    "cluster": "E8D",
+    "id": "491",
+    "header": "E8D05 (id 491)",
+    "question": "What is the most common method of reducing key clicks?",
+    "choices": [
+      "A. Increase keying waveform rise and fall times",
+      "B. Insert l ow-pass filters at the transmit ter output",
+      "C. Reduce keying waveform rise and fall times",
+      "D. Insert h igh-pass filters at the transmitter output"
+    ]
+  },
+  {
+    "number": 43,
+    "cluster": "E9A",
+    "id": "509",
+    "header": "E9A12 (id 509)",
+    "question": "How much gain does an antenna have compared to a half- wavelength dipole if it has 6 dB gain over an isotropic radiator ?",
+    "choices": [
+      "A. 3.85 dB",
+      "B. 6.0 dB",
+      "C. 8.15 dB",
+      "D. 2.79 dB"
+    ]
+  },
+  {
+    "number": 44,
+    "cluster": "E9B",
+    "id": "516",
+    "header": "E9B07 (id 516)",
+    "question": "What is the difference in radiated power between a lossles s antenna with gain and an isotropic radiator driven by the same power ?",
+    "choices": [
+      "A. The power radiated from the directional antenna is increased by the gain of the antenna",
+      "B. The power radiated from the directional antenna is stronger by its front -to-back ratio",
+      "C. They are the same",
+      "D. The power radiated from the isotropic radiator is 2.15 dB greater than that from the directional antenna"
+    ]
+  },
+  {
+    "number": 45,
+    "cluster": "E9C",
+    "id": "528",
+    "header": "E9C08 (id 528)",
+    "question": "What is a folded dipole antenna?",
+    "choices": [
+      "A. A dipole one-quarter wavelength long",
+      "B. A center -fed dipole with the ends folded down 90 degrees at the midpoint of each side",
+      "C. A half- wave dipole with an additional parallel wire connecting its two ends",
+      "D. A dipole configured to provide forward gain"
+    ]
+  },
+  {
+    "number": 46,
+    "cluster": "E9D",
+    "id": "544",
+    "header": "E9D11 (id 544)",
+    "question": "Why do most two -element Yagis with normal spacing have a reflector instead of a director?",
+    "choices": [
+      "A. Lower SWR",
+      "B. Higher receiving directivity factor",
+      "C. Greater front -to-side",
+      "D. Higher gain"
+    ]
+  },
+  {
+    "number": 47,
+    "cluster": "E9E",
+    "id": "546",
+    "header": "E9E01 (id 546)",
+    "question": "Which matching system for Yagi antennas requires the driven element to be insulated from the boom?",
+    "choices": [
+      "A. Gamma",
+      "B. Beta or hairpin",
+      "C. Shunt -fed",
+      "D. T-match"
+    ]
+  },
+  {
+    "number": 48,
+    "cluster": "E9F",
+    "id": "562",
+    "header": "E9F07 (id 562)",
+    "question": "How does parallel conductor transmission line compare to coaxial cable with a plastic dielectric ?",
+    "choices": [
+      "A. Lower loss",
+      "B. Higher SWR",
+      "C. Smaller reflection coefficient",
+      "D. Lower velocity factor"
+    ]
+  },
+  {
+    "number": 49,
+    "cluster": "E9G",
+    "id": "572",
+    "header": "E9G05 (id 572)",
+    "question": "Which of the following is a common use for a Smith chart?",
+    "choices": [
+      "A. Determine the length and position of an impedance matching stub",
+      "B. Determine the impedance of a transmission line, given the physical dimensions",
+      "C. Determine the gain of an antenna given the phys ical and electrical parameters",
+      "D. Determine the loss/100 feet of a transmission line, given the velocity factor and conductor materials"
+    ]
+  },
+  {
+    "number": 50,
+    "cluster": "E9H",
+    "id": "584",
+    "header": "E9H06 (id 584)",
+    "question": "What indicates the correct value of terminating resistance for a Beverage antenna?",
+    "choices": [
+      "A. Maximum feed point DC resistance at the center of the desired frequency range",
+      "B. Min imum low -angle front -to-back ratio at the design frequency",
+      "C. Maximum DC current in the terminating resistor",
+      "D. Minimum variation in SWR over the desired frequency range"
+    ]
+  }
+]
