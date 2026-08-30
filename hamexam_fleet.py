@@ -256,8 +256,11 @@ def expand_jobs(manifest: dict, jobs_stem: str, db: sqlite3.Connection,
                 "exam": str(exam_path),
                 "key": job["key"],
                 "output": str(out),
-                "job": {**{k: job[k] for k in
-                           ("model", "temperature", "thinking", "effort", "thinking_budget")},
+                "job": {"model": job["model"], "temperature": job["temperature"],
+                        "thinking": bool(job["thinking"] or job["effort"] or job["thinking_budget"]),
+                        "effort": (job["effort"] or
+                                   (f"budget{int(job['thinking_budget'])}" if job["thinking_budget"] else None)),
+                        "thinking_budget": job["thinking_budget"],
                         "figures": list(job["figures"]),
                         "tag": job["tag"],
                         "prompt": str(prompt_path) if prompt_path else None},
