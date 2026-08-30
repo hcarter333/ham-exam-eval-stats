@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Ham exam fleet — many exams / many parameter arms / N replicas, one batch.
+Ham exam fleet — many exams / many configurations / N replicas, one batch.
 
 Sibling of polecat_fleet.py. Because the exam prompt forbids tools, every
 request is a single turn: there is no pause_turn, no continuation round, no
@@ -21,21 +21,28 @@ Jobs manifest:
     "thinking": false,
     "effort": null,                  // low|medium|high|xhigh|max (implies thinking; adaptive models)
     "thinking_budget": null,         // e.g. 16000 for Haiku 4.5, which lacks adaptive thinking
+    "prompt": "This is a ham radio extra class exam...",  // the exam prompt text;
+                                     // null = the built-in hb.EXAM_PROMPT. Bundled
+                                     // with the figures as the cached material
     "figures": ["figures/E5_E6.png", "figures/E7_E9-1.png", "figures/E9-2_E9-3.png"],
-    "key": null,                     // answer key json -> scores go in the db
     "replicas": 1
   },
   "jobs": [
-    { "exam": "exams/FirstTest.json", "key": "keys/FirstTest.key.json",
-      "replicas": 10 },                                        // variance floor
-    { "exam": "exams/FirstTest.json", "key": "keys/FirstTest.key.json",
+    { "exam": "exams/FirstTest.json", "replicas": 10 },        // variance floor
+    { "exam": "exams/FirstTest.json",
       "output": "answers/FirstTest_think.answers.json",
       "thinking": true, "effort": "high", "replicas": 10 },    // thinking variant
-    { "exam": "exams/FirstTest.json", "key": "keys/FirstTest.key.json",
+    { "exam": "exams/FirstTest.json",
       "output": "answers/FirstTest_opus.answers.json",
       "model": "claude-opus-4-8", "replicas": 5 }
   ]
 }
+
+Scoring needs no per-exam key files: the raw pool json (fetched from the
+GitHub raw URL / cached extra_pool.json, or --pool) is indexed by question
+id, its answer field is the correct letter, and each id in the batch API
+results is compared against it. "key" fields in older configuration files
+are accepted and ignored; the runs table's key column records the pool.
 
 Trajectory ids follow the polecat scheme: <jobs stem>[_<prompt stem>]_<output
 stem>_rN, with rN continued past whatever the transcript db already holds,
@@ -64,6 +71,7 @@ from pathlib import Path
 import anthropic
 
 import hamexam_batch as hb
+import hamexam_make as hm
 import hamexam_score as hs
 
 try:
@@ -80,7 +88,10 @@ JOB_DEFAULTS = {
     "thinking_budget": None,            # for models without adaptive thinking (Haiku 4.5):
                                         # sends {"type": "enabled", "budget_tokens": N}
     "figures": [str(p) for p in hb.DEFAULT_FIGURES],
-    "key": None,
+    "prompt": None,                     # exam prompt text, from the configuration
+                                        # file; None -> hb.EXAM_PROMPT
+    "key": None,                        # ignored (scoring is against the pool);
+                                        # accepted so old configuration files load
     "replicas": 1,
     "output": None,
     "tag": None,                        # free label stored with the run; the stats
@@ -190,16 +201,18 @@ def next_replica(db: sqlite3.Connection, base: str, floor: int) -> int:
     return best + 1
 
 
-def build_job_params(job: dict, prefix_cache: dict, prompt_text: str | None,
-                     ) -> dict:
+def build_job_params(job: dict, prefix_cache: dict) -> dict:
     """One job -> Messages API params. The static block (prompt + figures) is
-    built once per distinct figure set and shared across jobs so the cache
-    breakpoint lands on identical bytes."""
+    built once per distinct (prompt, figure set) and shared across jobs so the
+    cache breakpoint lands on identical bytes. The prompt is the first block
+    and the breakpoint is on the last figure, so prompt + figures together are
+    the cached material."""
+    prompt = job["prompt"] or hb.EXAM_PROMPT
     figs = tuple(str(f) for f in job["figures"])
-    if figs not in prefix_cache:
-        prefix_cache[figs] = hb.static_blocks(prompt_text or hb.EXAM_PROMPT,
-                                              [Path(f) for f in figs])
-    content = list(prefix_cache[figs]) + [hb.exam_block(Path(job["exam"]))]
+    ck = (prompt, figs)
+    if ck not in prefix_cache:
+        prefix_cache[ck] = hb.static_blocks(prompt, [Path(f) for f in figs])
+    content = list(prefix_cache[ck]) + [hb.exam_block(Path(job["exam"]))]
     params = {"model": job["model"], "max_tokens": job["max_tokens"],
               "messages": [{"role": "user", "content": content}]}
     thinking = job["thinking"] or bool(job["effort"]) or bool(job["thinking_budget"])
@@ -223,7 +236,7 @@ def build_job_params(job: dict, prefix_cache: dict, prompt_text: str | None,
 
 
 def expand_jobs(manifest: dict, jobs_stem: str, db: sqlite3.Connection,
-                prompt_path) -> dict[str, dict]:
+                prompt_path, pool_label: str) -> dict[str, dict]:
     defaults = {**JOB_DEFAULTS, **manifest.get("defaults", {})}
     prompt_text = hb.load_prompt(Path(prompt_path)) if prompt_path else None
     prefix_cache: dict = {}
@@ -231,13 +244,13 @@ def expand_jobs(manifest: dict, jobs_stem: str, db: sqlite3.Connection,
     records: dict[str, dict] = {}
     for raw in manifest["jobs"]:
         job = {**defaults, **raw}
+        if prompt_text is not None:          # --prompt flag beats the file
+            job["prompt"] = prompt_text
         if "exam" not in raw:
             raise ValueError(f"job missing 'exam': {raw}")
         exam_path = Path(job["exam"])
         if not exam_path.exists():
             raise ValueError(f"exam json not found: {exam_path}")
-        if job["key"] and not Path(job["key"]).exists():
-            raise ValueError(f"key not found: {job['key']}")
         base_out = Path(job["output"]) if job["output"] else (
             Path("answers") / f"{exam_path.stem}.answers.json")
         # ".answers.json" is a two-part suffix; keep the stem before it.
@@ -247,14 +260,14 @@ def expand_jobs(manifest: dict, jobs_stem: str, db: sqlite3.Connection,
         n = int(job["replicas"])
         start = next_replica(db, base, alloc.get(base, 0))
         alloc[base] = start + n - 1
-        params = build_job_params(job, prefix_cache, prompt_text)
+        params = build_job_params(job, prefix_cache)
         for r in range(start, start + n):
             out = base_out.with_name(f"{out_stem}_r{r}.answers.json")
             tid = f"{base}_r{r}"
             records[tid] = {
                 "cid": sanitize_id(f"{out_stem}_r{r}"),
                 "exam": str(exam_path),
-                "key": job["key"],
+                "key": pool_label,
                 "output": str(out),
                 "job": {"model": job["model"], "temperature": job["temperature"],
                         "thinking": bool(job["thinking"] or job["effort"] or job["thinking_budget"]),
@@ -263,7 +276,7 @@ def expand_jobs(manifest: dict, jobs_stem: str, db: sqlite3.Connection,
                         "thinking_budget": job["thinking_budget"],
                         "figures": list(job["figures"]),
                         "tag": job["tag"],
-                        "prompt": str(prompt_path) if prompt_path else None},
+                        "prompt": job["prompt"] or hb.EXAM_PROMPT},
                 "params": params,
                 "status": "pending",        # pending|done|failed
                 "score": None,
@@ -323,17 +336,16 @@ def record_run(db: sqlite3.Connection, tid: str, rec: dict, jobs_file: str,
                list(row.values()))
 
     if ar is not None and exam is not None:
-        key = ar.get("_key") or {}
-        given = {a["id"]: a["answer"] for a in ar["answers"]}
+        graded = {str(a["id"]): a for a in ar["answers"]}
         db.execute("DELETE FROM answers WHERE trajectory_id=?", (tid,))
         db.executemany(
             "INSERT INTO answers (trajectory_id, question_id, number, cluster, "
             "subelement, given, correct, right) VALUES (?,?,?,?,?,?,?,?)",
             [(tid, str(q["id"]), q.get("number"), q.get("cluster"),
-              (q.get("cluster") or "")[:2], given.get(str(q["id"])),
-              key.get(str(q["id"])),
-              None if str(q["id"]) not in key
-              else int(given.get(str(q["id"])) == key[str(q["id"])]))
+              (q.get("cluster") or "")[:2],
+              graded.get(str(q["id"]), {}).get("answer"),
+              graded.get(str(q["id"]), {}).get("correct"),
+              graded.get(str(q["id"]), {}).get("right"))
              for q in exam])
 
     if px is not None:
@@ -348,8 +360,10 @@ def record_run(db: sqlite3.Connection, tid: str, rec: dict, jobs_file: str,
         px.upsert(db, trow)
 
 
-def finish_job(tid: str, rec: dict, message, key_cache: dict):
-    """Parse, score, write the answers file. Returns (answers_record, exam, text)."""
+def finish_job(tid: str, rec: dict, message, pool: list[dict]):
+    """Parse, grade, write the answers file. Grading: for each id the batch
+    API returned, find the pool entry with that "id", read its "answer",
+    compare (case-insensitively). Returns (answers_record, exam, text)."""
     exam = hb.load_exam(Path(rec["exam"]))
     text = hb.message_text(message)
     answers, how = hb.extract_answers(text)
@@ -357,21 +371,37 @@ def finish_job(tid: str, rec: dict, message, key_cache: dict):
     ar["trajectory_id"] = tid
     ar["job"] = rec["job"]
     line = f"  {tid}: {len(answers)}/{len(exam)} answered ({how})"
-    if rec["key"]:
-        if rec["key"] not in key_cache:
-            key_cache[rec["key"]] = hs.load_key(Path(rec["key"]))
-        key = key_cache[rec["key"]]
-        s = hs.score(ar["answers"], key, exam)
-        rec["score"] = {k: s[k] for k in
-                        ("right", "wrong", "unanswered", "total", "pct", "passed")}
-        ar["score"] = rec["score"]
-        ar["misses"] = s["misses"]
-        ar["_key"] = key                        # for the answers table; not written
-        line += (f"  score {s['right']}/{s['total']} "
-                 f"{'PASS' if s['passed'] else 'FAIL'}")
+
+    right = wrong = blank = 0
+    misses = []
+    for a in ar["answers"]:
+        qid = str(a["id"])
+        pq = next((q for q in pool if str(q["id"]) == qid), None)
+        correct = str(pq["answer"]).strip().upper()[:1] if pq else None
+        given = (a["answer"] or "").strip().upper()[:1]
+        a["correct"] = correct
+        a["right"] = None if correct is None else int(given == correct)
+        if correct is None:
+            continue
+        if not given:
+            blank += 1
+            misses.append([qid, "-", correct])
+        elif given == correct:
+            right += 1
+        else:
+            wrong += 1
+            misses.append([qid, given, correct])
+    total = right + wrong + blank
+    rec["score"] = {"right": right, "wrong": wrong, "unanswered": blank,
+                    "total": total, "pct": (100.0 * right / total) if total else 0.0,
+                    "passed": right >= hs.PASS_MARK}
+    ar["score"] = rec["score"]
+    ar["misses"] = misses
+    line += (f"  score {right}/{total} "
+             f"{'PASS' if rec['score']['passed'] else 'FAIL'}")
     out = Path(rec["output"])
     out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text(json.dumps({k: v for k, v in ar.items() if k != "_key"}, indent=1))
+    out.write_text(json.dumps(ar, indent=1))
     out.with_suffix(".raw.txt").write_text(text)
     rec["status"] = "done"
     print(line)
@@ -387,6 +417,10 @@ def main() -> int:
                     help="Exam prompt file for the whole fleet (its stem joins "
                          "the trajectory id, like --bead-prompt)")
     ap.add_argument("--fresh", action="store_true")
+    ap.add_argument("--pool", type=Path, default=None,
+                    help="Local extra_pool.json; default fetches/caches the "
+                         "GitHub raw copy (see hamexam_make). All scoring is "
+                         "against this pool's answer fields, by question id")
     ap.add_argument("--db", type=Path, default=Path("hamexam_evals.db"),
                     help="Sqlite db receiving runs + per-question answers "
                          "(and polecat_exhume transcripts when importable)")
@@ -395,12 +429,15 @@ def main() -> int:
     state_path = args.jobs.with_suffix(args.jobs.suffix + ".state.json")
     db = open_db(args.db)
 
+    pool = hm.load_pool(args.pool)          # parsed pool json, kept as-is
+    pool_label = str(args.pool) if args.pool else "extra_pool.json"
+
     state = None if args.fresh else (
         json.loads(state_path.read_text()) if state_path.exists() else None)
     client = anthropic.Anthropic()
     if state is None:
         manifest = json.loads(args.jobs.read_text(encoding="utf-8-sig"))
-        records = expand_jobs(manifest, args.jobs.stem, db, args.prompt)
+        records = expand_jobs(manifest, args.jobs.stem, db, args.prompt, pool_label)
         state = {"batch_id": None, "records": records}
         print(f"built {len(records)} request(s) from {args.jobs}")
     else:
@@ -432,7 +469,6 @@ def main() -> int:
     created = batch.created_at
     created_iso = created.isoformat() if hasattr(created, "isoformat") else str(created)
 
-    key_cache: dict = {}
     jobs_file = str(args.jobs)
     for result in client.messages.batches.results(state["batch_id"]):
         tid = result.custom_id.rsplit("-t", 1)[0]
@@ -445,7 +481,7 @@ def main() -> int:
             rec["status"] = "failed"
             record_run(db, tid, rec, jobs_file, result, state["batch_id"], created_iso)
             continue
-        ar, exam, text = finish_job(tid, rec, result.result.message, key_cache)
+        ar, exam, text = finish_job(tid, rec, result.result.message, pool)
         record_run(db, tid, rec, jobs_file, result, state["batch_id"], created_iso,
                    ar, exam, text)
         db.commit()
